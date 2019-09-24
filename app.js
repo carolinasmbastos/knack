@@ -1,41 +1,50 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const app = express();
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+app.use(express.urlencoded({ extended: false }));
 
-var app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+//This is to serve dynamic contents
+//Use EJS view engine
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+var data = {artists:{}};
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.get('/artists', (req, res) => {
+    
+    // don't need extension, the file is the views folder
+    res.render('artists', data);
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.post('/artistSearch', (req, res) => {
+    
+    //get form param
+    let artist = req.body.artist;
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    data = {artists:
+        [{name: "Emily Carr",
+          birthDate: "Sept 27 1500"},
+         {name: "Emily Carr",
+          birthDate: "Jan 15 1500"},
+         {name:"Van Gogh",
+          birthDate: "Aug 10 1900"}]
+    };
+
+    console.log("artist param: " + artist);
+
+    if (artist) {
+        var results = data.artists.filter(item => 
+            item.name === artist);
+
+        data.artists = results; 
+    }
+
+    console.log("results: " + data.artists);
+
+    res.render('artists', data);
 });
 
-module.exports = app;
+app.set('port', process.env.PORT || 8080);
+
+const server = app.listen(app.get('port'), ()=>{
+    console.log("Listening on port: "+ app.get('port'));
+});
