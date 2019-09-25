@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: false }));
 
@@ -19,7 +22,7 @@ app.post('/artistSearch', (req, res) => {
     
     //get form param
     let artist = req.body.artist;
-
+    console.log(req.body)
     data = {artists:
         [{name: "Emily Carr",
           birthDate: "Sept 27 1500"},
@@ -40,7 +43,8 @@ app.post('/artistSearch', (req, res) => {
 
     console.log("results: " + data.artists);
 
-    res.render('artists', data);
+    res.send(data.artists)
+    //res.render('artists', data);
 });
 
 app.set('port', process.env.PORT || 8080);
