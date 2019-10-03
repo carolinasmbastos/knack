@@ -8,11 +8,6 @@ app.use(express.urlencoded({ extended: false }));
 
 let artistModel = require(__dirname + "/model/artistModel.js");
 
-app.get('/artists', (req, res) => {
-    
-    res.render('artists', {});
-});
-
 app.post('/artistSearch', (req, res) => {
     
 
