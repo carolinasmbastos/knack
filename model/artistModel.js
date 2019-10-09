@@ -1,4 +1,3 @@
-//var sql = require('');
 const {connectionPool} = require("../db.js");
 
 exports.findArtistByName = (artistName, result) => {
