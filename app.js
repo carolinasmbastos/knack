@@ -14,7 +14,7 @@ app.post('/artistSearch', (req, res) => {
     let artistSearch = req.body.artist;
     console.log("artist param: " + artistSearch);
 
-    artistModel.listArtists(artistSearch, (err, artists)=>{
+    artistModel.findArtistByName(artistSearch, (err, artists)=>{
 
         console.log('listing artists');
         if (err)

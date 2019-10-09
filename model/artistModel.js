@@ -1,7 +1,8 @@
-var sql = require('../db.js');
+//var sql = require('');
+const {connectionPool} = require("../db.js");
 
-exports.listArtists = (artistName, result) => {
-    sql.query("SELECT name, birthDate from artist where name like CONCAT('%', ?,  '%')", artistName, (err, res)=>{
+exports.findArtistByName = (artistName, result) => {
+    connectionPool.query("SELECT name, nationality from Artist where name like CONCAT('%', ?,  '%')", artistName, (err, res)=>{
         if (err) {
             console.log("Error listing Artists", err);
             result(err, null);

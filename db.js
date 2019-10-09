@@ -1,15 +1,12 @@
-var mysql = require('mysql');
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
+//Create a pool of connections
+exports.connectionPool = mysql.createPool({
   host: 'carolinabastos.wmdd.ca',
   user: 'owl_knack',
   port: '3306',
   password: '&a20pAq8',
-  database: 'owl_knack'
-})
-
-connection.connect(function(err) {
-    if (err) throw err;
+  database: 'owl_knack',
+  multipleStatements: true,
+  connectionLimit: 100
 });
-
-module.exports = connection;

@@ -33,7 +33,7 @@ export default class ArtistSearchResult extends React.Component {
             {this.state.artists.map(artist => (
                 <div>
                     <li>{artist.name}</li>
-                    <li>{artist.birthDate}</li>
+                    <li>{artist.nationality}</li>
                     <br/>
                 </div>
             ))}
