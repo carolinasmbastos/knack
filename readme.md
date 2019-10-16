@@ -1,4 +1,5 @@
-create route folder
-create controller folder
-restart the strudture because of package.json
-change connnection for connectionPool
+to start app in dev mode:
+
+npm run dev
+
+
