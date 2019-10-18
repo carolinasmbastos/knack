@@ -66,3 +66,23 @@ exports.getArtistByID = (artistID, result) => {
         } 
     });
 }
+
+// Developer: John
+exports.getAllArtists = (result) => {
+    let sqlQuery = 'SELECT' + '\n' +
+                        'name,' + '\n' +
+                        'nationality,' + '\n' +
+                        'bio,' + '\n' +
+                        'active' + '\n' +
+                    'FROM' + '\n' +
+                        'Artist'
+
+    connectionPool.query(sqlQuery, (err, res)=>{
+        if (err) {
+            console.log("Error finding Artists", err);
+            result(err, null);
+        } else {
+            result(null, res);
+        } 
+    });
+}
