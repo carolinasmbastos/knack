@@ -44,3 +44,25 @@ exports.fetchPopularArtists = (result) => {
         } 
     });
 }
+
+// Developer: Pratt
+exports.getArtistByID = (artistID, result) => {
+    let sqlQuery = 'SELECT' + '\n' +
+                        'name,' + '\n' +
+                        'nationality,' + '\n' +
+                        'bio,' + '\n' +
+                        'active' + '\n' +
+                    'FROM' + '\n' +
+                        'Artist' + '\n' +
+                    'WHERE' + '\n' +
+                        'idArtist  = ?'
+
+    connectionPool.query(sqlQuery, artistID, (err, res)=>{
+        if (err) {
+            console.log("Error finding the Artist", err);
+            result(err, null);
+        } else {
+            result(null, res);
+        } 
+    });
+}
