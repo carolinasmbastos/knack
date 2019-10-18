@@ -27,6 +27,17 @@ app.post('/artistSearch', (req, res) => {
     });
 });
 
+// Developer: John
+// Endpoint to fetch all the artists in the Database
+app.get('/getAllArtists', (req, res) => {
+    artistModel.getAllArtists((err, artists)=>{
+        if (err)
+            res.send(err);
+        else
+            res.send(artists);
+    });
+})
+
 app.get('/artworkByArtist/:artistName', (req, res) => {
     
     let artistName = req.params.artistName;
