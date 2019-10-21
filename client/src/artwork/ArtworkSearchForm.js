@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import {Button, Form, FormGroup, Input, Container, Row, Col} from 'reactstrap'
+import {Form, FormGroup, Input, Container, Row, Col} from 'reactstrap'
 
 const styles = {
   formContainer:{
-    display: 'grid',
-    alignItems: 'center'
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   formGroup: {
     marginBottom: 0

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
+import Footer from './Footer'
 import Home from '../home/Home'
 import Discovery from '../discovery/Discovery'
 
@@ -21,6 +22,7 @@ class MainRouter extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/discovery" component={Discovery} />
       </Switch>
+      <Footer />
     </div>)
   }
 }
