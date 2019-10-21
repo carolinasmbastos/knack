@@ -6,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink} from 'reactstrap';
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +21,7 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink>Discovery</NavLink>
+              <NavLink href="/discovery">Discovery</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
