@@ -5,10 +5,10 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink} from 'reactstrap';
+  NavItem} from 'reactstrap';
+import { Link, withRouter } from "react-router-dom";
 
-const NavBar = (props) => {
+const NavBar = withRouter(({ history }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -16,18 +16,18 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Knack</NavbarBrand>
+        <Link to="/" className="navbar-brand">Knack</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/discovery">Discovery</NavLink>
+            <Link to="/discovery" className="nav-link">Discovery</Link>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+})
 
 export default NavBar;
