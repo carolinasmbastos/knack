@@ -24,7 +24,7 @@ exports.placeOrder = (purchaseInfo, result) => {
                         15 AS shippingCost,
                         NOW() AS dateCreation,
                         ${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} as price,
-                        ${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} * 0.15 AS taxes,
+                        ${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} * 0.12 AS taxes,
                         ${mysql.escape(purchaseInfo.idPaymentMethod)} AS idPaymentMethod,
                         NOW() AS paymentDate,
                         ${purchaseInfo.rentalStartDate.length > 0 ? mysql.escape(purchaseInfo.rentalStartDate) + ',' : ''}
