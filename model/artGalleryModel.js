@@ -25,12 +25,8 @@ exports.getArtGalleryByID = (artGalleryID, result) => {
 exports.getArtGalleries = (result) => {
     let sqlQuery = 'SELECT' + '\n' +
                         'name,' + '\n' +
-                        'description' + '\n' +
-                    'FROM' + '\n' +
-                        'ArtGallery' + '\n' +
-                    'WHERE' + '\n' +
-                        'idArtGallery  = ?'
-
+                        'description' + '\n' 
+                    
     connectionPool.query(sqlQuery,(err, res)=>{
         if (err) {
             console.log("Error finding the ArtGallery", err);
