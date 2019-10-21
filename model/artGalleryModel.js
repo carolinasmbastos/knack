@@ -19,3 +19,23 @@ exports.getArtGalleryByID = (artGalleryID, result) => {
         } 
     });
 }
+
+// Developer: John
+
+exports.getArtGalleries = (result) => {
+    let sqlQuery = 'SELECT' + '\n' +
+                        'name,' + '\n' +
+                        'description' + '\n' + 
+                        'FROM' + '\n' +
+                        'ArtGallery' + '\n' 
+                       
+                    
+    connectionPool.query(sqlQuery,(err, res)=>{
+        if (err) {
+            console.log("Error finding the ArtGallery", err);
+            result(err, null);
+        } else {
+            result(null, res);
+        } 
+    });
+}

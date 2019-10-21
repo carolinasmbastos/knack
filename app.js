@@ -54,6 +54,7 @@ app.get('/artworkByArtist/:artistName', (req, res) => {
 
 });
 
+
 // Developer: Pratt
 // Get Artist information by ID
 app.get('/getArtistByID', (req, res) => {
@@ -89,6 +90,17 @@ app.get('/getArtGalleryByID', (req, res) => {
         else 
             res.send(artGallery);
     })
+})
+
+// Developer: John
+// Get Art Galleries
+app.get('/getArtGalleries', (req, res) => {
+    artGalleryModel.getArtGalleries((err, artGallery)=>{
+        if (err)
+            res.send(err);
+        else
+            res.send(artGallery);
+    });
 })
 
 
