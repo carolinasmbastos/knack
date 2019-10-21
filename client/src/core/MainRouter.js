@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
-import ArtistSearchResult from '../artist/ArtistSearchResult'
+import ArtworkSearchResult from '../artwork/ArtworkSearchResult'
 import Discovery from '../discovery/Discovery'
 
 class MainRouter extends Component {
@@ -18,8 +18,8 @@ class MainRouter extends Component {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/" component={ArtistSearchResult} />
-        <Route exact path="/discovery" component={Discovery} />
+        <Route exact path="/" component={ArtworkSearchResult} />
+        <Route path="/discovery" component={Discovery} />
       </Switch>
     </div>)
   }
