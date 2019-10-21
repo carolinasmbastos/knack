@@ -3,8 +3,12 @@ import PropTypes from 'prop-types'
 import {Button, Form, FormGroup, Input, Container, Row, Col} from 'reactstrap'
 
 const styles = {
-  container: {
-    marginTop: "1rem"
+  formContainer:{
+    display: 'grid',
+    alignItems: 'center'
+  },
+  formGroup: {
+    marginBottom: 0
   }
 }
 
@@ -37,17 +41,17 @@ export default class ArtworkSearchForm extends React.Component {
 
     render() {
         return (
-          <Container style={styles.container}>
+          <Container>
             <Row>
-              <Col sm="12" md={{ size: 6, offset: 3 }}>
-                <Form sm="12" onSubmit={this.handleSubmit}>
-                  <FormGroup row>
-                    <Col sm={{ size: 6, offset: 2 }}>
-                      <Input type="text" name="search" id="artist" placeholder="Search Artwork by it's Artist"
+              <Col style={styles.formContainer}>
+                <Form onSubmit={this.handleSubmit}>
+                  <FormGroup row style={styles.formGroup}>
+                    <Col sm="12">
+                      <Input type="text" name="search" id="artist" placeholder="Search Artworks"
                       value={this.state.search}
                       onChange={this.handleChange} />
                     </Col>
-                    <Button color="info" onClick={this.handleSubmit}>Search</Button>
+                    {/* <Button color="info" onClick={this.handleSubmit}>Search</Button> */}
                   </FormGroup>
                 </Form>
               </Col>
