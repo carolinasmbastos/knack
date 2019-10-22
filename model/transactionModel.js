@@ -1,5 +1,8 @@
-const {connectionPool} = require("../db.js");
+const {cp} = require("../db/connection.js"); 
+const {query} = require("../db/promise-mysql.js");
 const mysql = require('mysql')
+
+
 
 // Place a rental or purchase order
 exports.placeOrder = (purchaseInfo, result) => {
@@ -36,15 +39,5 @@ exports.placeOrder = (purchaseInfo, result) => {
                         idArtwork = ${mysql.escape(purchaseInfo.idArtwork)}`
                     // Hardcoding for the shipping cost needs to be avoided
 
-    connectionPool.query(
-        sqlQuery,  
-        (err, res)=>{
-            if (err) {
-                console.log("Error listing Artists", err);
-                result(err, null);
-            } else {
-                result(null, res);
-            } 
-        }
-    );
+    return query(cp, sqlQuery);
 }

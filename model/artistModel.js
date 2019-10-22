@@ -1,23 +1,18 @@
-const {connectionPool} = require("../db.js");
+const {cp} = require("../db/connection.js"); 
+const {query} = require("../db/promise-mysql.js");
 
 //api to find artists, searching by artist Name
 exports.findArtistByName = (artistName, result) => {
-    connectionPool.query("SELECT name, nationality from Artist where name like CONCAT('%', ?,  '%')", artistName, (err, res)=>{
-        if (err) {
-            console.log("Error listing Artists", err);
-            result(err, null);
-            
-        } else {
 
-            result(null, res);
-        } 
-    });
+    var options = {sql: `SELECT * from Artist where name like '%${artistName}%'`, nestTables: true};
+
+    return query(cp, options);
 }
 
 // Developer: Pratt
 exports.fetchPopularArtists = (result) => {
     // We should probably look for a string method (if there's any in Javascript) that can help us avoid concatenating strings with the new line character.
-    let sqlQuery = 'SELECT' + '\n' +
+    let sqlQuery =  'SELECT' + '\n' +
                         'A.idArtist,' + '\n' +
                         'A.name,' + '\n' +
                         'SUM(O.paymentAmount) AS netGross' + '\n' + // Total income calculated by summing up all the sales of all of the artist's artworks.
@@ -33,56 +28,39 @@ exports.fetchPopularArtists = (result) => {
                         'A.name' + '\n' +
                     'ORDER BY' + '\n' +
                         'SUM(O.paymentAmount) DESC' + '\n' +    // This helps us place the highest grossing artists at the top of the results array.
-                    'LIMIT 30'  // Limit to Top 30. This can be changed later if D3 needs more/less records for visualization.
+                    'LIMIT 30'
+                      // Limit to Top 30. This can be changed later if D3 needs more/less records for visualization.
 
-    connectionPool.query(sqlQuery, (err, res)=>{
-        if (err) {
-            console.log("Error listing Popular Artists", err);
-            result(err, null);
-        } else {
-            result(null, res);
-        } 
-    });
+    
+    let options = {sql: sqlQuery, nestTables: true};
+
+    return query(cp, options);
 }
 
 // Developer: Pratt
 exports.getArtistByID = (artistID, result) => {
-    let sqlQuery = 'SELECT' + '\n' +
-                        'name,' + '\n' +
-                        'nationality,' + '\n' +
-                        'bio,' + '\n' +
-                        'active' + '\n' +
-                    'FROM' + '\n' +
-                        'Artist' + '\n' +
-                    'WHERE' + '\n' +
-                        'idArtist  = ?'
+    let sqlQuery = `SELECT
+                        *
+                        FROM
+                        Artist
+                        WHERE
+                        idArtist  = ${artistID}`
 
-    connectionPool.query(sqlQuery, artistID, (err, res)=>{
-        if (err) {
-            console.log("Error finding the Artist", err);
-            result(err, null);
-        } else {
-            result(null, res);
-        } 
-    });
+    console.log(sqlQuery)
+    let options = {sql: sqlQuery, nestTables: true};
+
+    return query(cp, options);
 }
 
 // Developer: John
 exports.getAllArtists = (result) => {
-    let sqlQuery = 'SELECT' + '\n' +
-                        'name,' + '\n' +
-                        'nationality,' + '\n' +
-                        'bio,' + '\n' +
-                        'active' + '\n' +
-                    'FROM' + '\n' +
-                        'Artist'
+    let sqlQuery = `SELECT
+                        *
+                        FROM
+                        Artist`
 
-    connectionPool.query(sqlQuery, (err, res)=>{
-        if (err) {
-            console.log("Error finding Artists", err);
-            result(err, null);
-        } else {
-            result(null, res);
-        } 
-    });
+    console.log(sqlQuery)
+    let options = {sql: sqlQuery, nestTables: true};
+
+    return query(cp, options);
 }
