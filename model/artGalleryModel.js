@@ -1,41 +1,32 @@
-const {connectionPool} = require("../db.js");
+const {cp} = require("../db/connection.js"); 
+const {query} = require("../db/promise-mysql.js");
 
 // Developer: Pratt
 exports.getArtGalleryByID = (artGalleryID, result) => {
-    let sqlQuery = 'SELECT' + '\n' +
-                        'name,' + '\n' +
-                        'description' + '\n' +
-                    'FROM' + '\n' +
-                        'ArtGallery' + '\n' +
-                    'WHERE' + '\n' +
-                        'idArtGallery  = ?'
+    let sqlQuery = `SELECT  
+                        *
+                    FROM 
+                        ArtGallery 
+                    WHERE 
+                        idArtGallery  = ${artGalleryID}`
 
-    connectionPool.query(sqlQuery, artGalleryID, (err, res)=>{
-        if (err) {
-            console.log("Error finding the ArtGallery", err);
-            result(err, null);
-        } else {
-            result(null, res);
-        } 
-    });
+    console.log(sqlQuery)
+    let options = {sql: sqlQuery, nestTables: true};
+
+    return query(cp, options);
 }
 
 // Developer: John
 
 exports.getArtGalleries = (result) => {
-    let sqlQuery = 'SELECT' + '\n' +
-                        'name,' + '\n' +
-                        'description' + '\n' + 
-                        'FROM' + '\n' +
-                        'ArtGallery' + '\n' 
+    let sqlQuery = `SELECT  
+                        *
+                    FROM 
+                        ArtGallery `
                        
                     
-    connectionPool.query(sqlQuery,(err, res)=>{
-        if (err) {
-            console.log("Error finding the ArtGallery", err);
-            result(err, null);
-        } else {
-            result(null, res);
-        } 
-    });
+    console.log(sqlQuery)
+    let options = {sql: sqlQuery, nestTables: true};
+
+    return query(cp, options);
 }
