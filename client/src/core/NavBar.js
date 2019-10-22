@@ -6,7 +6,7 @@ import {
   Nav,
   NavItem} from 'reactstrap';
 import { Link, withRouter } from "react-router-dom";
-import ArtworkSearchResult from '../artwork/ArtworkSearchResult'
+import ArtworkSearchForm from '../artwork/ArtworkSearchForm'
 
 const NavBar = withRouter(({ history }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +19,9 @@ const NavBar = withRouter(({ history }) => {
         <Link to="/" className="navbar-brand">Knack</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mx-auto" navbar sm="12">
-            <NavItem sm="12">
-              <ArtworkSearchResult />
+          <Nav className="mx-auto col-sm-4" navbar>
+            <NavItem className="col-sm-12">
+              <ArtworkSearchForm />
             </NavItem>
           </Nav>
           <Nav navbar>

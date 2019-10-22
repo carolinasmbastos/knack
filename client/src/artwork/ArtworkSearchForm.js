@@ -1,19 +1,14 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom';
 import {Form, FormGroup, Input, Container, Row, Col} from 'reactstrap'
 
 const styles = {
-  formContainer:{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   formGroup: {
     marginBottom: 0
   }
 }
 
-export default class ArtworkSearchForm extends React.Component {
+class ArtworkSearchForm extends React.Component {
     
     constructor(props) {
         super(props);
@@ -28,31 +23,29 @@ export default class ArtworkSearchForm extends React.Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("search form value:" + this.state.search);
-        this.props.onSubmit(
-            this.state.search
-        );
-        this.setState({
-            search: ""
-        })
+      event.preventDefault();
+      this.setState({
+        search: ""
+      })
 
-
+      const { history } = this.props;
+      
+      if(history) 
+        history.push(`/browse/${this.state.search}`);
     }
 
     render() {
         return (
           <Container>
             <Row>
-              <Col style={styles.formContainer}>
+              <Col>
                 <Form onSubmit={this.handleSubmit}>
                   <FormGroup row style={styles.formGroup}>
-                    <Col sm="12">
+                    <Col >
                       <Input type="text" name="search" id="artist" placeholder="Search Artworks"
                       value={this.state.search}
                       onChange={this.handleChange} />
                     </Col>
-                    {/* <Button color="info" onClick={this.handleSubmit}>Search</Button> */}
                   </FormGroup>
                 </Form>
               </Col>
@@ -62,6 +55,4 @@ export default class ArtworkSearchForm extends React.Component {
     }
 }
 
-ArtworkSearchForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-}
+export default withRouter(ArtworkSearchForm);
