@@ -29,4 +29,16 @@ router.get('/artworkByArtist/:artistName', (req, res) => {
 
 });
 
+//Developer: Carol
+// EndPoint to fetch all the artwork by id
+router.get('/artworkById/:id', (req, res) => {
+
+    let id = req.params.id;
+
+    artworkModel.findArtworkByArtistId(id)
+    .then(artwork=>{res.send(artwork)})
+    .catch(err=>{res.send(err)})
+
+});
+
 exports.artworkRouter = router;
