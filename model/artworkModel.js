@@ -19,7 +19,7 @@ exports.findArtworkByKeyword = (keyword) => {
                             left join ArtGallery artGallery on artwork.idSeller = artGallery.idSeller
                             inner join Artist artist on artwork.idArtist = artist.idArtist
                             inner join Period period on artwork.idPeriod = period.idPeriod
-                            and (artist.name like '%${keyword}%'
+                            where (artist.name like '%${keyword}%'
                             or (artwork.title like '%${keyword}%')
                             or (artwork.description like '%${keyword}%')
                             or (period.periodDescription like '%${keyword}%')
