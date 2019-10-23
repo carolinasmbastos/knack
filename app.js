@@ -68,9 +68,9 @@ app.get('/artworkByArtist/:artistName', (req, res) => {
 //Developer: Carol
 // EndPoint to fetch all the artwork 
 // by keywords: Artwork Description, Artist (Creator) name, Seller (Gallery or Artist) name, Period, Medium, 
-app.get('/artworkByKeyword/:keyword', (req, res) => {
+app.get('/artworkByKeyword/:keyword?', (req, res) => {
 
-    let keyword = req.params.keyword;
+    let keyword = (req.params.keyword == undefined ? "" : req.params.keyword);
 
     artworkModel.findArtworkByKeyword(keyword)
     .then(artwork=>{res.send(artwork)})
