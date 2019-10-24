@@ -1,13 +1,13 @@
 .map-container {
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-  
+    top:25vh;
+    left:2%;
+    width:75%;
+    height:70vh;
+    margin: auto;
     z-index: -1;
     display: block;
-  }
+}
 
 
 
@@ -16,5 +16,4 @@
   top: 0;
   bottom: 0;
   width: 100%;
-
 }

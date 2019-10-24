@@ -7,23 +7,23 @@ const mapTools = new MapTools();
 
 class Map extends React.Component {
 
-  componentDidMount(){
+    componentDidMount() {
 
-    // Initial map setup
-    const map = mapTools.initializeMap();
-    mapTools.updateMap();
-  }
+        // Initial map setup
+        const map = mapTools.initializeMap();
+        mapTools.updateMap();
+    }
 
-  render() {
+    render() {
 
-   // mapTools.updateMap();
-    
-    return (
-      <div className="map-container">
-        <div id="map"></div>
-      </div>
-    );
-  }
+        // mapTools.updateMap();
+
+        return (
+            <div className="map-container">
+                <div id="map"></div>
+            </div>
+        );
+    }
 }
 
 export default Map;
