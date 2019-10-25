@@ -11,6 +11,14 @@ exports.findArtworkByArtistName = (artistName, result) => {
     return query(cp, options);
 }
 
+exports.findArtworkByArtistId = (id, result) => {
+
+    var options = {sql: `SELECT * from Artwork artwork 
+                    where artwork.idArtwork = ${id}`, nestTables: true};
+
+    return query(cp, options);
+}
+
 exports.findArtworkByKeyword = (keyword) => {
 
     var options = {sql: `select * from Artwork artwork
