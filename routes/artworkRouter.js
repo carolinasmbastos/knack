@@ -35,7 +35,7 @@ router.get('/artworkById/:id', (req, res) => {
 
     let id = req.params.id;
 
-    artworkModel.findArtworkByArtistId(id)
+    artworkModel.findArtworkByArtworkId(id)
     .then(artwork=>{res.send(artwork)})
     .catch(err=>{res.send(err)})
 

@@ -24,9 +24,6 @@ class ArtworkSearchForm extends React.Component {
 
     handleSubmit = (event) => {
       event.preventDefault();
-      this.setState({
-        search: ""
-      })
 
       const { history } = this.props;
       
