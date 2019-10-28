@@ -28,11 +28,11 @@ export default class Artworks extends React.Component {
           console.log(data.error)
         } else {
           this.setState({
-            artwork: data[0].Aw,
-            artist: data[0].Ar,
-            medium: data[0].Md,
-            sellerInfo: data[0].Sel,
-            sellerEntity: data[0].SelAg.idSeller == null ? data[0].SelAr : data[0].SelAg, //Can be either Art Gallery or Artist
+            artwork: data[0].artwork,
+            artist: data[0].artist,
+            medium: data[0].medium,
+            sellerInfo: data[0].seller,
+            sellerEntity: data[0].seller_gallery.idSeller == null ? data[0].seller_artist : data[0].seller_gallery, // Can be either Art Gallery or Artist
             id: this.props.match.params.id
           })
         }
