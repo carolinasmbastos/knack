@@ -11,9 +11,15 @@ exports.findArtworkByArtistName = (artistName, result) => {
     return query(cp, options);
 }
 
-exports.findArtworkByArtistId = (id, result) => {
+exports.findArtworkByArtworkId = (id, result) => {
 
-    var options = {sql: `SELECT * from Artwork artwork 
+    var options = {sql: `SELECT artwork.*, artist.name, medium.mediumType, seller.*, seller_gallery.*, seller_artist.*
+                    from Artwork artwork
+                    inner join Artist artist on artwork.idArtist = artist.idArtist
+                    inner join mediumType medium on artwork.idMediumType = medium.idMediumType
+                    inner join Seller seller on artwork.idSeller = seller.idSeller
+                    left join ArtGallery seller_gallery on seller.idSeller = seller_gallery.idSeller
+                    left join Artist seller_artist on seller.idSeller = seller_artist.idSeller
                     where artwork.idArtwork = ${id}`, nestTables: true};
 
     return query(cp, options);

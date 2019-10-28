@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
+import Artwork from '../artwork/Artwork'
+
 import Home from '../home/Home'
 import BrowseArtworks from '../home/BrowseArtworks'
 
@@ -26,6 +28,7 @@ class MainRouter extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/discovery" component={Discovery} />
         <Route path="/browse/:searchString" component={BrowseArtworks} />
+        <Route path="/artwork/:id" component={Artwork} />
       </Switch>
       <Footer />
     </div>)
