@@ -17,3 +17,8 @@
   bottom: 0;
   width: 100%;
 }
+
+.thumbnailMap {
+    width: 100px;
+    display: block;
+}
