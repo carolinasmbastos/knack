@@ -1,8 +1,9 @@
 import React from "react";
-import {findArtwork} from '../artwork/api-artwork.js'
-import {Col, Container, Row, Button} from 'reactstrap'
+import {findArtwork, requestOrder} from '../artwork/api-artwork.js'
+import {Col, Container, Row} from 'reactstrap'
 import ArtworkInfo from './ArtworkInfo'
 import OrderSummary from './OrderSummary'
+import {formatDate} from '../helpers/dateOps'
 
 const styles = {
   containerSpacing: {
@@ -10,7 +11,7 @@ const styles = {
   }  
 }
 
-export default class Artworks extends React.Component {
+export default class Artwork extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -37,7 +38,7 @@ export default class Artworks extends React.Component {
             artist: data[0].artist,
             medium: data[0].medium,
             sellerInfo: data[0].seller,
-            sellerEntity: data[0].seller_gallery.idSeller == null ? data[0].seller_artist : data[0].seller_gallery, // Can be either Art Gallery or Artist
+            sellerEntity: data[0].artGallery.idSeller == null ? data[0].artistSeller : data[0].artGallery, // Can be either Art Gallery or Artist
             id: this.props.match.params.id
           })
         }
@@ -51,7 +52,32 @@ export default class Artworks extends React.Component {
   }
 
   requestArtwork() {
-    alert('Artwork resuqested')
+    let rentalStartDate = new Date()
+    rentalStartDate.setDate(rentalStartDate.getDate() + 5)
+
+    let rentalEndDate = new Date()
+    rentalEndDate.setDate(rentalEndDate.getDate() + 95)
+
+    const info = {
+      idArtwork: this.state.id,
+      idCustomer: 2,  // remove hardcoding when sign in is implemented
+      orderType: 'rent',
+      idPaymentMethod: 26, // remove parameter since this isn't a purchase; it's a mere request
+      rentalStartDate: formatDate(rentalStartDate),  // DESIGN CHANGE! The designers are probably not looking to get any more updates to the designs, but we need a field for this in the interface!
+      rentalEndDate: formatDate(rentalEndDate)
+    }
+    requestOrder(info)
+      .then((data) => {
+        if (data.error) {
+          console.log(data.error)
+        } else {
+          const insertId = data.insertId
+
+          const { history } = this.props;
+          if(history) 
+            history.push(`/confirmation/${insertId}`);
+        }
+      })
   }
   
   render() {
@@ -59,9 +85,9 @@ export default class Artworks extends React.Component {
       <Container style={styles.containerSpacing}>
         <Row>
           <Col md="6">
-            <img src={`/img/artworks/${this.state.artwork.imageUrl}`} className="img-fluid" alt="Artwork image"/>
+            <img src={`/img/artworks/${this.state.artwork.imageUrl}`} className="img-fluid" alt="Artwork"/>
           </Col>
-          {this.state.viewMode == "info" && (
+          {this.state.viewMode === "info" && (
             <ArtworkInfo 
               artwork={this.state.artwork}
               artist={this.state.artist}
@@ -71,7 +97,7 @@ export default class Artworks extends React.Component {
               onClickRent={this.rentArtwork}
           />
           )}
-          {this.state.viewMode == "summary" && (
+          {this.state.viewMode === "summary" && (
             <OrderSummary 
               artwork={this.state.artwork}
               artist={this.state.artist}

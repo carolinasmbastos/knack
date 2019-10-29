@@ -1,5 +1,5 @@
 import React from "react";
-import {searchArtworks} from '../artwork/api-artwork.js'
+import {searchArtworks} from './api-artwork.js'
 import {Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
 import { Link } from "react-router-dom";
 
