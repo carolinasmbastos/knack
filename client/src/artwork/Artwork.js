@@ -1,6 +1,8 @@
 import React from "react";
 import {findArtwork} from '../artwork/api-artwork.js'
 import {Col, Container, Row, Button} from 'reactstrap'
+import ArtworkInfo from './ArtworkInfo'
+import OrderSummary from './OrderSummary'
 
 const styles = {
   containerSpacing: {
@@ -12,6 +14,7 @@ export default class Artworks extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      viewMode: 'info',
       id: '',
       artwork: {},
       artist: {},
@@ -19,6 +22,8 @@ export default class Artworks extends React.Component {
       sellerInfo: {},
       sellerEntity: {}
     }
+    this.rentArtwork = this.rentArtwork.bind(this);
+    this.requestArtwork = this.requestArtwork.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +43,16 @@ export default class Artworks extends React.Component {
         }
       })
   }
+
+  rentArtwork() {
+    this.setState({
+      viewMode: 'summary'
+    })
+  }
+
+  requestArtwork() {
+    alert('Artwork resuqested')
+  }
   
   render() {
     return (
@@ -46,17 +61,25 @@ export default class Artworks extends React.Component {
           <Col md="6">
             <img src={`/img/artworks/${this.state.artwork.imageUrl}`} className="img-fluid" alt="Artwork image"/>
           </Col>
-          <Col md="6">
-            <h1>{this.state.artwork.title}</h1>
-            <h2>{this.state.artist.name}</h2>
-            <div>{this.state.medium.mediumType}</div>
-            <div>{this.state.artwork.height} x {this.state.artwork.width}</div>
-            <div>Owned by: {this.state.sellerEntity.name}, {this.state.sellerInfo.city}</div>
-            <div>Address: {this.state.sellerInfo.address}</div>
-            <p>{this.state.artwork.description}</p>
-            <h3>${this.state.artwork.rentPrice}</h3>
-            <Button color="info">RENT</Button>
-          </Col>
+          {this.state.viewMode == "info" && (
+            <ArtworkInfo 
+              artwork={this.state.artwork}
+              artist={this.state.artist}
+              medium={this.state.medium}
+              sellerInfo={this.state.sellerInfo}
+              sellerEntity={this.state.sellerEntity}
+              onClickRent={this.rentArtwork}
+          />
+          )}
+          {this.state.viewMode == "summary" && (
+            <OrderSummary 
+              artwork={this.state.artwork}
+              artist={this.state.artist}
+              sellerInfo={this.state.sellerInfo}
+              sellerEntity={this.state.sellerEntity}
+              onClickRequest={this.requestArtwork}
+          />
+          )}
         </Row> 
       </Container>
     );
