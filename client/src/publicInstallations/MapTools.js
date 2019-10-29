@@ -2,6 +2,7 @@
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { getPublicInstalations } from './api-publicInstallations.js'
+import './mapStyles.css'
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam9yZGFubWlsbGVyIiwiYSI6ImNqcW41bTZxZjdlc3I0MnBkcWtrc2xlYW8ifQ.SBX1hj-2nItwHZatTC72Dw';
 
@@ -60,6 +61,7 @@ class MapTools {
         .then(result => {
             result.map(item => {
 
+               
                 //Some installations do not have geoLocation returned
                 if (item.fields.geom != undefined) {
 
@@ -68,8 +70,26 @@ class MapTools {
 
                     // console.log("long: "+ x);
                     // console.log("lat: "+ y);
+
+                    // create the popup
+                    let imgSrc = 'img/vancouver-logo.png';
+                    if (item.fields.photourl !== undefined)
+                        imgSrc = `https://opendata.vancouver.ca/api/datasets/1.0/public-art/images/${item.fields.photourl.id }`;
+
+                    let linkText = 'Visit Artwork';
+                    if (item.fields.siteaddress !== undefined)
+                        linkText = item.fields.siteaddress;
+
+
+                    let popupHtml = `<a href='${item.fields.url}'><img src='${imgSrc}' class='thumbnailMap'/></a>
+                        <a href='${item.fields.url}'>${linkText}</a>`
+                    let popup = new mapboxgl.Popup({ offset: 25 })
+                    .setHTML(popupHtml);
+                
+                    
                     let marker = new this.mapboxgl.Marker() // initialize a new marker
                         .setLngLat([x, y])
+                        .setPopup(popup)
                         .addTo(this.map);
 
                     this.map.setCenter([x, y]);
