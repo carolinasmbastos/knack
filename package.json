@@ -18,9 +18,8 @@
     "concurrently": "^4.1.2",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "mapbox-gl": "^1.4.1",
-    "mysql": "^2.17.1",
-    "prop-types": "^15.7.2"
+    "mapbox-gl": "^1.4.1"
+   
   },
   "devDependencies": {
     "nodemon": "^1.19.2"

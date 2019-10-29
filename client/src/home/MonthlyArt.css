@@ -1,0 +1,33 @@
+.title-for-monthlyArt {
+    text-align: center;
+    
+}
+.display-3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.lead {
+    color:#fff;
+    text-align: center;
+
+}
+
+.jumbotron{
+    background-color:black;
+}
+
+.btn
+{
+    background-color: #fff;
+    color: black;
+    text-align: center;
+}
+.btn-primary:hover {
+    background-color:#d9b226;
+}
+
+.button-subcribe {
+    text-align: center;
+}
