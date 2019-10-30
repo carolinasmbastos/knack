@@ -1,6 +1,6 @@
 import React from "react";
 import CarouselContainer from './CarouselContainer'
-import BrowseArtworks from './BrowseArtworks'
+import BrowseArtworks from '../artwork/BrowseArtworks'
 import MonthlyArt from './MonthlyArt'
 
 export default class Home extends React.Component {
