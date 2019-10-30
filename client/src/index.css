@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Monthly Art styles START */
+/* Owner: Jagmeet */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.monthlyArtContent {
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.monthlyArtBgImg {
+  height: 200px;
+}
+
+@media only screen and (min-width: 508px) {
+  .monthlyArtBgImg {
+    height: 175px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .monthlyArtBgImg {
+    height: 150px;
+  }
+}
+/* Monthly Art styles END */
