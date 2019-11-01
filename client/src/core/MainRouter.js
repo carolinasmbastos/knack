@@ -5,9 +5,10 @@ import NavBar from './NavBar'
 import Footer from './Footer'
 
 import Artwork from '../artwork/Artwork'
+import Confirmation from '../artwork/Confirmation'
 
 import Home from '../home/Home'
-import BrowseArtworks from '../home/BrowseArtworks'
+import BrowseArtworks from '../artwork/BrowseArtworks'
 
 import Discovery from '../discovery/Discovery'
 
@@ -29,6 +30,7 @@ class MainRouter extends Component {
         <Route path="/discovery" component={Discovery} />
         <Route path="/browse/:searchString" component={BrowseArtworks} />
         <Route path="/artwork/:id" component={Artwork} />
+        <Route path="/confirmation/:orderId" component={Confirmation} />
       </Switch>
       <Footer />
     </div>)
