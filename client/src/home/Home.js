@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <CarouselContainer />
-        <BrowseArtworks />
+        <BrowseArtworks featured='true' />
         <MonthlyArt />
       </div>
     );

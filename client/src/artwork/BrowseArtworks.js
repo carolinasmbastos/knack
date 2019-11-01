@@ -23,15 +23,17 @@ export default class BrowseArtworks extends React.Component {
   }
 
   loadArtworks() {
-    if (this.props.match && this.props.match.params.searchString !== this.state.searchString) {
-      searchArtworks(this.props.match.params.searchString)
+    if ((this.props.match && this.props.match.params.searchString !== this.state.searchString) || this.props.featured == 'true' && this.state.searchString == '') {
+      const searchKeyword = this.props.match ? this.props.match.params.searchString : 'featured'
+      console.log(searchKeyword)
+      searchArtworks(searchKeyword)
         .then((data) => {
           if (data.error) {
             console.log(data.error)
           } else {
             this.setState({
               artworks: data,
-              searchString: this.props.match.params.searchString
+              searchString: searchKeyword
             })
           }
         })
