@@ -11,6 +11,19 @@ const searchArtist = (artist) => {
     })
 }
 
+const popularArtists = () => {
+    console.log("pop art api client")
+    return axios
+      .get('/popularArtists')
+      .then(res => {
+        return res.data
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
 export {
-  searchArtist
+  searchArtist,
+  popularArtists
 }
