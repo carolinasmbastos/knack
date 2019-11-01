@@ -2,7 +2,7 @@ const {cp} = require("../db/connection.js");
 const {query} = require("../db/promise-mysql.js");
 
 //api to find artists, searching by artist Name
-exports.findArtistByName = (artistName, result) => {
+exports.findArtistByName = (artistName) => {
 
     var options = {sql: `SELECT * from Artist where name like '%${artistName}%'`, nestTables: true};
 
@@ -10,7 +10,7 @@ exports.findArtistByName = (artistName, result) => {
 }
 
 // Developer: Pratt
-exports.fetchPopularArtists = (result) => {
+exports.fetchPopularArtists = () => {
     
     let sqlQuery = `SELECT 
                         artist.name as Name, 
@@ -33,7 +33,7 @@ exports.fetchPopularArtists = (result) => {
 }
 
 // Developer: Pratt
-exports.getArtistByID = (artistID, result) => {
+exports.getArtistByID = (artistID) => {
     let sqlQuery = `SELECT
                         *
                         FROM
@@ -48,7 +48,7 @@ exports.getArtistByID = (artistID, result) => {
 }
 
 // Developer: John
-exports.getAllArtists = (result) => {
+exports.getAllArtists = () => {
     let sqlQuery = `SELECT
                         *
                         FROM

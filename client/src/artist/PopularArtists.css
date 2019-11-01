@@ -3,13 +3,13 @@
     
     text-align: right;
     padding: 3px;
-    margin: 1px;
+    margin: auto;
     color: white;
 
     top:0vh;
-    left:2%;
+    left:0;
     
-    height:50vh;
+    height:40vh;
 
     display: block;
 
