@@ -1,9 +1,9 @@
 .map-container {
     position: fixed;
-    top:55vh;
+    top:60vh;
     left:2%;
     width:75%;
-    height:50vh;
+    height:40vh;
     margin: auto;
     
     display: block;

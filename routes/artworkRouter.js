@@ -10,9 +10,23 @@ router.get('/artworkByKeyword/:keyword?', (req, res) => {
 
     let keyword = (req.params.keyword == undefined ? "" : req.params.keyword);
 
-    artworkModel.findArtworkByKeyword(keyword)
-    .then(artwork=>{res.send(artwork)})
-    .catch(err=>{res.send(err)})
+    if (keyword.toLowerCase() === "featured") {
+
+        artworkModel.findFeaturedArtwork()
+        .then(artwork=>{res.send(artwork)})
+        .catch(err=>{res.send(err)})
+
+    } else {
+
+        artworkModel.findArtworkByKeyword(keyword)
+        .then(artwork=>{res.send(artwork)})
+        .catch(err=>{res.send(err)})
+
+    }
+
+
+
+
 
 });
 
