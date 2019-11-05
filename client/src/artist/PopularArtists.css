@@ -11,6 +11,27 @@
     
     height:40vh;
 
-    display: block;
 
+  }
+
+  .bubble {
+
+    display: block;
+  }
+
+  .artist-link {
+      display: block;
+  }
+  .artist-link:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .artist-link:hover, .artist-link:link, .artist-link:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  circle:hover {
+    transform: scale(1.1);
   }
