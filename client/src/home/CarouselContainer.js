@@ -10,14 +10,14 @@ import './CarouselContainer.css';
 
 const items = [
   {
-    src: './img/1.jpg',
-    altText :'(ARTW0RK, EXHIBITION, ART FAIR,ETC.)',
-    caption: 'SLIDE SHOW OF FEATURED CONTENT'
+    src: './img/3.jpg',
+    altText :'the Artworks in your space',
+    caption: `Rent and Variate`
   },
   {
-    src: './img/2.jpg',
-    altText :'(ARTW0RK, EXHIBITION, ART FAIR,ETC.)',
-    caption: 'SLIDE SHOW OF FEATURED CONTENT'
+    src: './img/artworks/default.jpg',
+    altText :'from local Art Galleries and Artists',
+    caption: 'Explore artworks'
   },
   {
     src: './img/3.jpg',
@@ -54,8 +54,8 @@ const CarouselContainer = (props) =>{
       onExited={() => setAnimating(false)}
       key={item.src}
     >
-      <img src={item.src} alt={item.altText} />
-      <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+      <img className="carousel-image" src={item.src} alt={item.altText} />
+      <CarouselCaption className="carousel-caption" captionText={item.altText} captionHeader={item.caption} />
     </CarouselItem>
     );
   });
