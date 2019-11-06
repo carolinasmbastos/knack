@@ -1,5 +1,6 @@
 import React from "react";
 import {searchArtworks} from './api-artwork.js'
+import TimelineSlider from './TimelineSlider.js'
 import {Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
 import { Link } from "react-router-dom";
 
@@ -10,6 +11,9 @@ const styles = {
   },
   rowSpacing: {
     marginBottom: "2rem"
+  },
+  resultsSpacing : {
+    marginTop: "2rem",
   }
 }
 
@@ -18,8 +22,10 @@ export default class BrowseArtworks extends React.Component {
     super(props)
     this.state = {
       searchString: '',
-      artworks: []
+      artworks: [],
+      idPeriod: 0
     }
+    this.filterByTimeline = this.filterByTimeline.bind(this);
   }
 
   loadArtworks() {
@@ -39,27 +45,49 @@ export default class BrowseArtworks extends React.Component {
         })
     }
   }
+
+  filterByTimeline = timeline => {
+    switch(timeline) {
+      case '18':
+        this.setState({idPeriod:1})
+        break;
+      case '19':
+        this.setState({idPeriod:2})
+        break;
+      case '20':
+        this.setState({idPeriod:3})
+        break;
+      case '21':
+        this.setState({idPeriod:4})
+        break;
+      default:
+        this.setState({idPeriod:0})
+    }
+  }
   
   render() {
     this.loadArtworks()
     return (
       <Container style={styles.containerSpacing}>
-        <Row>
-            {this.state.artworks.map(artwork => (
-              <Col sm="4" style={styles.rowSpacing}>
-                <Card>
-                <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
-                  <CardImg top width="100%" height="200px" src={`/img/artworks/${artwork.artwork.imageUrl ? artwork.artwork.imageUrl : 'default.jpg'}`} alt="Picsum" />
-                </Link>
-                <CardBody>
-                  <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
-                    <CardTitle>{artwork.artwork.title}</CardTitle>
-                  </Link>
-                  <CardSubtitle>By {artwork.artist.name}</CardSubtitle>
-                </CardBody>
-              </Card>
-            </Col>
-            ))}
+        <TimelineSlider onSelect={this.filterByTimeline} />
+        <Row style={styles.resultsSpacing}>
+            {this.state.artworks.map(artwork => 
+              (this.state.idPeriod == 0 || artwork.period.idPeriod == this.state.idPeriod) && (
+                <Col sm="4" style={styles.rowSpacing}>
+                  <Card>
+                    <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
+                      <CardImg top className="artwork-thumbnail" src={`/img/artworks/${artwork.artwork.imageUrl ? artwork.artwork.imageUrl : 'default.jpg'}`} alt="Picsum" />
+                    </Link>
+                    <CardBody>
+                      <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
+                        <CardTitle>{artwork.artwork.title}</CardTitle>
+                      </Link>
+                      <CardSubtitle>By {artwork.artist.name}</CardSubtitle>
+                    </CardBody>
+                  </Card>
+                </Col>
+              )
+            )}
         </Row> 
       </Container>
     );
