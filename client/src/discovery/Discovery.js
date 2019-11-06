@@ -8,16 +8,20 @@ export default class Discovery extends React.Component {
         return (
             <div className="discoverySections">
                 <div>
-                    Artists on the Rise!
+                    <PopularArtists />
                 </div>
                 <div>
-                    Popular Artists
-                    <PopularArtists />
+                    News
+
+                </div>
+                <div>
+                    Events
+
                 </div>
 
                 <div> 
                     Public publicInstallations
-                    <Map /> 
+                    <Map />
                 </div>
                 
 
