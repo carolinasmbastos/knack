@@ -15,7 +15,8 @@ exports.fetchPopularArtists = () => {
     let sqlQuery = `SELECT 
                         artist.name as Name, 
                         SUM(orders.paymentAmount) AS Count,
-                        artist.idArtist as idArtist
+                        artist.idArtist as idArtist,
+                        artwork.imageUrl as url
                         FROM 
                             Artist artist 
                             INNER JOIN Artwork artwork ON artist.idArtist = artwork.idArtist 
