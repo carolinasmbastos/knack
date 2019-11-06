@@ -20,7 +20,7 @@ export default class Discovery extends React.Component {
                 </div>
 
                 <div> 
-                    Public publicInstallations
+                    
                     <Map />
                 </div>
                 
