@@ -1,6 +1,7 @@
 import React from "react";
 import Map from '../publicInstallations/Map'
 import PopularArtists from '../artist/PopularArtists'
+import News from './News'
 import Events from '../events/Events'
 import './Discovery.css'
 
@@ -18,6 +19,11 @@ export default class Discovery extends React.Component {
                 <div>
                     <Events />
                 </div>
+                <div>
+                    News
+                    <News />
+                </div>
+
 
                 <div> 
                     
