@@ -52,16 +52,16 @@ class PopularArtists extends React.Component {
                 .attr('viewBox','0 0 '+width+' '+height)
                 .attr('preserveAspectRatio','xMinYMin')
                 .append("g")
-                .attr('transform', 'translate(0, 0)')
+                .attr('transform', 'translate('+(width/2)+', '+(height/2)+')')
 
        let r = d3.scaleSqrt()
                 .domain([minRadius, maxRadius])
-                .range([10,100])
+                .range([10,95])
 
         let simulation = d3.forceSimulation()
-                .force('x', d3.forceX(width/2).strength(0.03))
-                .force('y', d3.forceY(height/2).strength(0.25))
-                .force('collide', d3.forceCollide((data) => { return r(data.Count) + 1.5; }))
+                .force('x', d3.forceX().strength(0.03))
+                .force('y', d3.forceY().strength(0.25))
+                .force('collide', d3.forceCollide((data) => { return r(data.Count) + 5; }))
 
         var defs = svg.append("defs");
 
@@ -117,7 +117,7 @@ class PopularArtists extends React.Component {
                 .style('fill', 'white')
                 .style("text-anchor", "middle")
                 .attr('font-size', function(data){
-                    return r(data.Count)/5;
+                    return (r(data.Count)/5 > 8 ? r(data.Count)/5 : 0);
                 })
 
         let ticked = () => {
