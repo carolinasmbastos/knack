@@ -1,0 +1,2083 @@
+{
+    "pagination": {
+        "object_count": 20, 
+        "page_number": 1, 
+        "page_size": 50, 
+        "page_count": 1, 
+        "has_more_items": false
+    }, 
+    "events": [
+        {
+            "name": {
+                "text": "Japanese Calligraphy Beginner Course (Fall 2019)", 
+                "html": "Japanese Calligraphy Beginner Course (Fall 2019)"
+            }, 
+            "description": {
+                "text": "WHEN: 8 Tuesdays from October 1st to November 19th, 2019\u00a0\nTIME: 6:30pm - 8:00pm\nWHERE: 2305 West 7th Avenue V6K 1Y4, Vancouver BC\nSIGN UP: kisyuu-calligraphy.com\nThis 8-week course will be perfect for those who want to study deeper than what is provided in the Workshop and improve both your writing skills and the balance between mind and body.\nDuring eight weeks, we will go over the basics of Japanese calligraphy, including:\n\n\nAbout the four-treasures of calligraphy tools (brush, ink, paper & ink stone case)\n\n\nMeditation practice while making sumi-ink\n\n\nHow to hold the brush and control big & small brushes\n\n\nEight fundamental brush strokes for formal regular script, \"Kaisho\" style\n\n\nHow to write kanji and hiragana (Japanese alphabets)\n\n\nPractice and create your own calligraphy artwork\n\n\nExperience both traditional and modern calligraphy writing\n\n\n\n*Everybody is welcome \u2013 no prior art experience or Japanese language skills are necessary!\n*Students will be required to bring their own equipment. In the case that students do not own equipment, basic calligraphy kits can be purchased from Kisyuu at cost.\n*Maximum number of participant is 7. Register soon!\n\nPotential Schedule for the course:\nWeek 1 : Brush & Horizontal LineWeek 2 : Horizontal Line & Vertical LineWeek 3 : Long Tails \u2013 Left & RightWeek 4 : Dots & Big Brush ChallengeWeek 5 : Name Writing & Small Brush ChallengeWeek 6 : Review & Eiji HappoWeek 7 : HiraganaWeek 8 : Create Your Own Calligraphy Art", 
+                "html": "<P><STRONG>WHEN: 8 Tuesdays from October 1st to November 19th, 2019\u00a0<EM><BR><\/EM><\/STRONG><\/P>\n<P><STRONG>TIME: 6:30pm - 8:00pm<\/STRONG><\/P>\n<P><STRONG>WHERE: 2305 West 7th Avenue V6K 1Y4, Vancouver BC<\/STRONG><\/P>\n<P><STRONG>SIGN UP: <A HREF=\"http://www.kisyuu-calligraphy.com/new-products/spring2019\" TARGET=\"_blank\" REL=\"nofollow noopener noreferrer\">kisyuu-calligraphy.com<\/A><\/STRONG><\/P>\n<P>This 8-week course will be perfect for those who want to study deeper than what is provided in the Workshop and improve both your writing skills and the balance between mind and body.<\/P>\n<P>During eight weeks, we will go over the basics of Japanese calligraphy, including:<\/P>\n<UL>\n<LI>\n<P>About the four-treasures of calligraphy tools (brush, ink, paper &amp; ink stone case)<\/P>\n<\/LI>\n<LI>\n<P>Meditation practice while making sumi-ink<\/P>\n<\/LI>\n<LI>\n<P>How to hold the brush and control big &amp; small brushes<\/P>\n<\/LI>\n<LI>\n<P>Eight fundamental brush strokes for formal regular script, \"Kaisho\" style<\/P>\n<\/LI>\n<LI>\n<P>How to write kanji and hiragana (Japanese alphabets)<\/P>\n<\/LI>\n<LI>\n<P>Practice and create your own calligraphy artwork<\/P>\n<\/LI>\n<LI>\n<P>Experience both traditional and modern calligraphy writing<\/P>\n<\/LI>\n<\/UL>\n<P><BR><\/P>\n<P><SPAN>*Everybody is welcome \u2013 no prior art experience or Japanese language skills are necessary!<\/SPAN><\/P>\n<P CLASS=\"product-excerpt\"><SPAN>*Students will be required to bring their own equipment. In the case that students do not own equipment, basic calligraphy kits can be purchased from Kisyuu at cost.<\/SPAN><\/P>\n<P CLASS=\"product-excerpt\"><SPAN><\/SPAN>*Maximum number of participant is 7. Register soon!<\/P>\n<P CLASS=\"product-excerpt\"><BR><\/P>\n<P><STRONG>Potential Schedule for the course:<\/STRONG><\/P>\n<P>Week 1 : Brush &amp; Horizontal Line<BR>Week 2 : Horizontal Line &amp; Vertical Line<BR>Week 3 : Long Tails \u2013 Left &amp; Right<BR>Week 4 : Dots &amp; Big Brush Challenge<BR>Week 5 : Name Writing &amp; Small Brush Challenge<BR>Week 6 : Review &amp; Eiji Happo<BR>Week 7 : Hiragana<BR>Week 8 : Create Your Own Calligraphy Art<\/P>"
+            }, 
+            "id": "69072576937", 
+            "url": "https://www.eventbrite.com/e/japanese-calligraphy-beginner-course-fall-2019-tickets-69072576937?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-10-01T18:30:00", 
+                "utc": "2019-10-02T01:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-19T20:00:00", 
+                "utc": "2019-11-20T04:00:00Z"
+            }, 
+            "organization_id": "6917357911", 
+            "created": "2019-08-13T18:30:14Z", 
+            "changed": "2019-10-02T04:28:08Z", 
+            "published": "2019-08-13T18:34:22Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "started", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": true, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "create_2.0", 
+            "is_free": false, 
+            "version": "3.0.0", 
+            "summary": "WHEN: 8 Tuesdays from October 1st to November 19th, 2019\u00a0\nTIME: 6:30pm - 8:00pm\nWHERE: 2305 West 7th Avenue V6K 1Y4, Vancouver BC\nSIGN UP: k", 
+            "logo_id": "68511703", 
+            "organizer_id": "10837097355", 
+            "venue_id": "38671097", 
+            "category_id": "105", 
+            "subcategory_id": "5012", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/69072576937/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 191
+                    }, 
+                    "width": 1080, 
+                    "height": 540
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F68511703%2F6917357911%2F1%2Foriginal.20190611-061433?auto=compress&s=96eb4e7f0b19bd75714a15abcaaaad8f", 
+                    "width": 1080, 
+                    "height": 1080
+                }, 
+                "id": "68511703", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F68511703%2F6917357911%2F1%2Foriginal.20190611-061433?h=200&w=450&auto=compress&rect=0%2C191%2C1080%2C540&s=1a5587b154b695e93870d2163b264eac", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": null, 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6K 1Y4", 
+                    "country": "CA", 
+                    "latitude": "49.2658754", 
+                    "longitude": "-123.15887980000002", 
+                    "localized_address_display": "Vancouver, BC V6K 1Y4", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "Vancouver, BC V6K 1Y4"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/38671097/", 
+                "id": "38671097", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "2305 W 7th Ave", 
+                "latitude": "49.2658754", 
+                "longitude": "-123.15887980000002"
+            }
+        }, 
+        {
+            "name": {
+                "text": "My 2019 art-gallery showcase / Valentines day.", 
+                "html": "My 2019 art-gallery showcase / Valentines day."
+            }, 
+            "description": {
+                "text": "TAR's 2019 Art gallery showcase/Valentines day", 
+                "html": "TAR's 2019 Art gallery showcase/Valentines day"
+            }, 
+            "id": "69167677385", 
+            "url": "https://www.eventbrite.com/e/my-2019-art-gallery-showcase-valentines-day-tickets-69167677385?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2020-02-22T10:00:00", 
+                "utc": "2020-02-22T18:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2020-02-23T02:00:00", 
+                "utc": "2020-02-23T10:00:00Z"
+            }, 
+            "organization_id": "326296932117", 
+            "created": "2019-08-14T08:22:10Z", 
+            "changed": "2019-10-22T11:06:28Z", 
+            "published": "2019-08-14T08:28:31Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "TAR's 2019 Art gallery showcase/Valentines day", 
+            "logo_id": "77723653", 
+            "organizer_id": "26242616365", 
+            "venue_id": "41039583", 
+            "category_id": "105", 
+            "subcategory_id": "5012", 
+            "format_id": "11", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/69167677385/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 188
+                    }, 
+                    "width": 894, 
+                    "height": 447
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77723653%2F326296932117%2F1%2Foriginal.20191022-093631?auto=compress&s=4eb370705b66f101421b9d6aeb91ec06", 
+                    "width": 895, 
+                    "height": 637
+                }, 
+                "id": "77723653", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77723653%2F326296932117%2F1%2Foriginal.20191022-093631?h=200&w=450&auto=compress&rect=0%2C188%2C894%2C447&s=a6147652abe8e4fe2f7bcd4ba46bc188", 
+                "aspect_ratio": "2", 
+                "edge_color": "#fbfefc", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "3 West 8th Avenue ", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5Y1M8 ", 
+                    "country": "CA", 
+                    "latitude": "49.2639404", 
+                    "longitude": "-123.1050462", 
+                    "localized_address_display": "3 West 8th Avenue , Vancouver, BC V5Y1M8", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "3 West 8th Avenue", 
+                        "Vancouver, BC V5Y1M8"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41039583/", 
+                "id": "41039583", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "AnzaClub Vancouver", 
+                "latitude": "49.2639404", 
+                "longitude": "-123.1050462"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Art Talks - Hacking Success The Artists Way", 
+                "html": "Art Talks - Hacking Success The Artists Way"
+            }, 
+            "description": {
+                "text": "Are you an artist and want to make a living out of your art? Art Talks is here to provide you with motivation, advice and tools to do so!", 
+                "html": "Are you an artist and want to make a living out of your art? Art Talks is here to provide you with motivation, advice and tools to do so!"
+            }, 
+            "id": "74127572565", 
+            "url": "https://www.eventbrite.ca/e/art-talks-hacking-success-the-artists-way-tickets-74127572565?aff=ebapi", 
+            "vanity_url": "https://art-talks-2019.eventbrite.ca", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-07T18:30:00", 
+                "utc": "2019-11-08T02:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-07T21:30:00", 
+                "utc": "2019-11-08T05:30:00Z"
+            }, 
+            "organization_id": "151288684175", 
+            "created": "2019-09-25T15:14:32Z", 
+            "changed": "2019-11-06T08:58:57Z", 
+            "published": "2019-10-08T07:38:58Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 720, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Are you an artist and want to make a living out of your art? Art Talks is here to provide you with motivation, advice and tools to do so!", 
+            "logo_id": "76454319", 
+            "organizer_id": "8426611245", 
+            "venue_id": "39179339", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "2", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/74127572565/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F76454319%2F151288684175%2F1%2Foriginal.20191011-114039?auto=compress&s=2bc4ff5e1fec76819bdc5c19d7808ee0", 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "id": "76454319", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F76454319%2F151288684175%2F1%2Foriginal.20191011-114039?h=200&w=450&auto=compress&rect=0%2C0%2C2160%2C1080&s=c432cb5a236e379158415e4092a6ce34", 
+                "aspect_ratio": "2", 
+                "edge_color": "#99152f", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "181 Roundhouse Mews", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6Z 2W3", 
+                    "country": "CA", 
+                    "latitude": "49.2734444", 
+                    "longitude": "-123.12172229999999", 
+                    "localized_address_display": "181 Roundhouse Mews, Vancouver, BC V6Z 2W3", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "181 Roundhouse Mews", 
+                        "Vancouver, BC V6Z 2W3"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/39179339/", 
+                "id": "39179339", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Roundhouse Community Arts & Recreation Centre", 
+                "latitude": "49.2734444", 
+                "longitude": "-123.12172229999999"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Metta Grove ~ Multimedia Meditation with Simon Haiduk Art", 
+                "html": "Metta Grove ~ Multimedia Meditation with Simon Haiduk Art"
+            }, 
+            "description": {
+                "text": "Metta Grove is a meditative multimedia art experience and community gathering.", 
+                "html": "Metta Grove is a meditative multimedia art experience and community gathering."
+            }, 
+            "id": "75181189963", 
+            "url": "https://www.eventbrite.com/e/metta-grove-multimedia-meditation-with-simon-haiduk-art-tickets-75181189963?aff=ebapi", 
+            "vanity_url": "https://mettagrove-dec1-2019-1.eventbrite.com", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-01T15:00:00", 
+                "utc": "2019-12-01T23:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-01T18:00:00", 
+                "utc": "2019-12-02T02:00:00Z"
+            }, 
+            "organization_id": "239426125551", 
+            "created": "2019-10-03T17:55:37Z", 
+            "changed": "2019-11-07T04:59:59Z", 
+            "published": "2019-10-03T19:08:49Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 600, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Metta Grove is a meditative multimedia art experience and community gathering.", 
+            "logo_id": "79519713", 
+            "organizer_id": "18315461008", 
+            "venue_id": "39810941", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "6", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/75181189963/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 10
+                    }, 
+                    "width": 1920, 
+                    "height": 960
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79519713%2F239426125551%2F1%2Foriginal.20191105-190311?auto=compress&s=962abe8dcb4ecbb5e52f1133bbf4c625", 
+                    "width": 1920, 
+                    "height": 1080
+                }, 
+                "id": "79519713", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79519713%2F239426125551%2F1%2Foriginal.20191105-190311?h=200&w=450&auto=compress&rect=0%2C10%2C1920%2C960&s=69b52a9b8266abff29debe800ed48369", 
+                "aspect_ratio": "2", 
+                "edge_color": "#534526", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "316 West 5th Avenue", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5Y 1J0", 
+                    "country": "CA", 
+                    "latitude": "49.2664689", 
+                    "longitude": "-123.11103000000003", 
+                    "localized_address_display": "316 West 5th Avenue, Vancouver, BC V5Y 1J0", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "316 West 5th Avenue", 
+                        "Vancouver, BC V5Y 1J0"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/39810941/", 
+                "id": "39810941", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "The Beaumont Studios", 
+                "latitude": "49.2664689", 
+                "longitude": "-123.11103000000003"
+            }
+        }, 
+        {
+            "name": {
+                "text": "ECLECTIC Fest - A Vancouver artist gallery showcase and sale", 
+                "html": "ECLECTIC Fest - A Vancouver artist gallery showcase and sale"
+            }, 
+            "description": {
+                "text": "ECLECTIC Fest is a multimedia gallery sale and showcase put on by ECLECTIC47 and artists within our local community.", 
+                "html": "ECLECTIC Fest is a multimedia gallery sale and showcase put on by ECLECTIC47 and artists within our local community."
+            }, 
+            "id": "76339777329", 
+            "url": "https://www.eventbrite.ca/e/eclectic-fest-a-vancouver-artist-gallery-showcase-and-sale-tickets-76339777329?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-16T12:00:00", 
+                "utc": "2019-11-16T20:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-16T18:00:00", 
+                "utc": "2019-11-17T02:00:00Z"
+            }, 
+            "organization_id": "351459028419", 
+            "created": "2019-10-10T19:22:12Z", 
+            "changed": "2019-11-06T01:54:00Z", 
+            "published": "2019-10-21T00:10:45Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 600, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "ECLECTIC Fest is a multimedia gallery sale and showcase put on by ECLECTIC47 and artists within our local community.", 
+            "logo_id": "77305365", 
+            "organizer_id": "27582979687", 
+            "venue_id": "40323557", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "5", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/76339777329/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77305365%2F351459028419%2F1%2Foriginal.20191018-044501?auto=compress&s=85bb105837b1ad84a915f54ae08edfc1", 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "id": "77305365", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77305365%2F351459028419%2F1%2Foriginal.20191018-044501?h=200&w=450&auto=compress&rect=0%2C0%2C2160%2C1080&s=c289dfd7c6952ea28a242fdd05a5a7ce", 
+                "aspect_ratio": "2", 
+                "edge_color": "#b8452a", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "2531 Ontario Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5T 2X7", 
+                    "country": "CA", 
+                    "latitude": "49.262604", 
+                    "longitude": "-123.1050449", 
+                    "localized_address_display": "2531 Ontario Street, Vancouver, BC V5T 2X7", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "2531 Ontario Street", 
+                        "Vancouver, BC V5T 2X7"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/40323557/", 
+                "id": "40323557", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "2531 Ontario St", 
+                "latitude": "49.262604", 
+                "longitude": "-123.1050449"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Art and Craft fun!", 
+                "html": "Art and Craft fun!"
+            }, 
+            "description": {
+                "text": "Join us for some free craft making, including xmas bulbs!", 
+                "html": "Join us for some free craft making, including xmas bulbs!"
+            }, 
+            "id": "77422618135", 
+            "url": "https://www.eventbrite.ca/e/art-and-craft-fun-tickets-77422618135?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-17T13:00:00", 
+                "utc": "2019-11-17T21:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-17T17:00:00", 
+                "utc": "2019-11-18T01:00:00Z"
+            }, 
+            "organization_id": "286728858963", 
+            "created": "2019-10-18T00:38:09Z", 
+            "changed": "2019-10-18T00:39:36Z", 
+            "published": "2019-10-18T00:39:36Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": true, 
+            "version": "3.7.0", 
+            "summary": "Join us for some free craft making, including xmas bulbs!", 
+            "logo_id": "77288909", 
+            "organizer_id": "18419651270", 
+            "venue_id": "40807399", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "11", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/77422618135/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 80
+                    }, 
+                    "width": 712, 
+                    "height": 356
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77288909%2F286728858963%2F1%2Foriginal.20191018-003835?auto=compress&s=271ae405295d714b949de5cf278c9ceb", 
+                    "width": 712, 
+                    "height": 916
+                }, 
+                "id": "77288909", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77288909%2F286728858963%2F1%2Foriginal.20191018-003835?h=200&w=450&auto=compress&rect=0%2C80%2C712%2C356&s=e475d7091dfa3f793f9119fadc39e2df", 
+                "aspect_ratio": "2", 
+                "edge_color": "#912f34", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "1448 W Broadway", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6H 1H4", 
+                    "country": "CA", 
+                    "latitude": "49.26340150000001", 
+                    "longitude": "-123.1372202", 
+                    "localized_address_display": "1448 W Broadway, Vancouver, BC V6H 1H4", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "1448 W Broadway", 
+                        "Vancouver, BC V6H 1H4"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/40807399/", 
+                "id": "40807399", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Pacific Arts Market", 
+                "latitude": "49.26340150000001", 
+                "longitude": "-123.1372202"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Art Battle Vancouver - November 30, 2019", 
+                "html": "Art Battle Vancouver - November 30, 2019"
+            }, 
+            "description": {
+                "text": "Join us for an inspiring evening of creativity and community!Watch as painters battle the clock and each other transforming blank canvases into beautiful pieces of original artwork in just 20 minutes and help vote to determine the Winner of the night.Be a part of the fun as a spectator, or participate as one of the featured artists by applying online at artbattle.com/artists!*Art Battle Vancouver is 19+*Music will be spinning all night by DJ Rich Nines! Follow us on Instagram @ArtBattleVancouver!\n\n \n\n", 
+                "html": "<P><STRONG>Join us for an inspiring evening of creativity and community!<\/STRONG><BR><BR><SPAN>Watch as painters battle the clock and each other transforming blank canvases into beautiful pieces of original artwork in just 20 minutes and help vote to determine the Winner of the night.<\/SPAN><BR><BR><SPAN>Be a part of the fun as a spectator, or participate as one of the featured artists by applying online at <\/SPAN><A HREF=\"http://artbattle.com/artists?fbclid=IwAR0vyw0KhptSV8bj97UmUDM-73hFQBeG64IxYCqJ4nAKS0nPRMPz8kqwyak\" TARGET=\"_blank\" REL=\"nofollow noopener noreferrer\">artbattle.com/artists<\/A><SPAN>!<\/SPAN><BR><BR><SPAN>*Art Battle Vancouver is 19+<\/SPAN><BR><SPAN>*Music will be spinning all night by DJ <\/SPAN><A HREF=\"https://www.facebook.com/richnines/\" TARGET=\"_blank\" REL=\"nofollow noopener noreferrer\">Rich Nines<\/A><SPAN>! <\/SPAN><BR><SPAN>Follow us on Instagram @ArtBattleVancouver!<\/SPAN><\/P>\n<P><SPAN><\/SPAN><\/P>\n<P><SPAN> <\/SPAN><\/P>\n<P><SPAN><IMG SRC=\"https://cdn.evbuc.com/eventlogos/261505199/472251365148660023655681914711212424167424n.jpg\"><\/SPAN><\/P>\n<P><IMG SRC=\"https://cdn.evbuc.com/eventlogos/261505199/img4977.jpg\"><\/P>"
+            }, 
+            "id": "78135638799", 
+            "url": "https://www.eventbrite.com/e/art-battle-vancouver-november-30-2019-tickets-78135638799?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-30T18:00:00", 
+                "utc": "2019-12-01T02:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-30T22:00:00", 
+                "utc": "2019-12-01T06:00:00Z"
+            }, 
+            "organization_id": "263333410230", 
+            "created": "2019-10-23T06:32:28Z", 
+            "changed": "2019-11-04T16:38:48Z", 
+            "published": "2019-10-23T06:36:02Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": true, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "create_2.0", 
+            "is_free": false, 
+            "version": "3.0.0", 
+            "summary": "Join us for an inspiring evening of creativity and community!Watch as painters battle the clock and each other transforming blank canvases i", 
+            "logo_id": "77871343", 
+            "organizer_id": "17567631591", 
+            "venue_id": "41120713", 
+            "category_id": "105", 
+            "subcategory_id": "5012", 
+            "format_id": "6", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/78135638799/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 4500, 
+                    "height": 2250
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77871343%2F263333410230%2F1%2Foriginal.20191023-063353?auto=compress&s=2fb839639843d9274a0bfad0ca0def78", 
+                    "width": 4500, 
+                    "height": 2250
+                }, 
+                "id": "77871343", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77871343%2F263333410230%2F1%2Foriginal.20191023-063353?h=200&w=450&auto=compress&rect=0%2C0%2C4500%2C2250&s=c9dbfa5946f79888bb9f294005a35955", 
+                "aspect_ratio": "2", 
+                "edge_color": "#010101", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "398 Richards Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6B 4Y2", 
+                    "country": "CA", 
+                    "latitude": "49.2842262", 
+                    "longitude": "-123.11137680000002", 
+                    "localized_address_display": "398 Richards Street, Vancouver, BC V6B 4Y2", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "398 Richards Street", 
+                        "Vancouver, BC V6B 4Y2"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41120713/", 
+                "id": "41120713", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "The Red Room", 
+                "latitude": "49.2842262", 
+                "longitude": "-123.11137680000002"
+            }
+        }, 
+        {
+            "name": {
+                "text": "The Flower of Life: Manifesting Intentions with NeuroMandala", 
+                "html": "The Flower of Life: Manifesting Intentions with NeuroMandala"
+            }, 
+            "description": {
+                "text": "Set intentions for 2020 with the Flower of Life NeuroMandala, combining sacred\ngeometry and the power of Neurographica.", 
+                "html": "Set intentions for 2020 with the Flower of Life NeuroMandala, combining sacred\ngeometry and the power of Neurographica."
+            }, 
+            "id": "78198962201", 
+            "url": "https://www.eventbrite.com/e/the-flower-of-life-manifesting-intentions-with-neuromandala-tickets-78198962201?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-21T18:00:00", 
+                "utc": "2019-11-22T02:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-21T21:00:00", 
+                "utc": "2019-11-22T05:00:00Z"
+            }, 
+            "organization_id": "60813329165", 
+            "created": "2019-10-23T15:37:53Z", 
+            "changed": "2019-10-29T02:34:11Z", 
+            "published": "2019-10-23T16:24:21Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Set intentions for 2020 with the Flower of Life NeuroMandala, combining sacred\ngeometry and the power of Neurographica.", 
+            "logo_id": "77925485", 
+            "organizer_id": "19859732767", 
+            "venue_id": "41151471", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/78198962201/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77925485%2F60813329165%2F1%2Foriginal.20191023-154004?auto=compress&s=27b70f4bf0e8487cffca28696587c2ac", 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "id": "77925485", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F77925485%2F60813329165%2F1%2Foriginal.20191023-154004?h=200&w=450&auto=compress&rect=0%2C0%2C2160%2C1080&s=a36303d9667e87c3fa933ecd46d6a06f", 
+                "aspect_ratio": "2", 
+                "edge_color": "#ffffff", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "1448 Broadaway", 
+                    "address_2": null, 
+                    "city": "Vancouver ", 
+                    "region": "BC", 
+                    "postal_code": "V6H 1H4", 
+                    "country": "CA", 
+                    "latitude": "49.26340150000001", 
+                    "longitude": "-123.1372202", 
+                    "localized_address_display": "1448 Broadaway, Vancouver , BC V6H 1H4", 
+                    "localized_area_display": "Vancouver , BC", 
+                    "localized_multi_line_address_display": [
+                        "1448 Broadaway", 
+                        "Vancouver , BC V6H 1H4"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41151471/", 
+                "id": "41151471", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Pacific Arts Market ", 
+                "latitude": "49.26340150000001", 
+                "longitude": "-123.1372202"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Mixed Media Collage Painting Workshop", 
+                "html": "Mixed Media Collage Painting Workshop"
+            }, 
+            "description": {
+                "text": "Creating narratives through collage and mixed-media painting.", 
+                "html": "Creating narratives through collage and mixed-media painting."
+            }, 
+            "id": "78850091747", 
+            "url": "https://www.eventbrite.ca/e/mixed-media-collage-painting-workshop-tickets-78850091747?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-16T10:00:00", 
+                "utc": "2019-11-16T18:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-16T12:30:00", 
+                "utc": "2019-11-16T20:30:00Z"
+            }, 
+            "organization_id": "296750561229", 
+            "created": "2019-10-27T06:08:51Z", 
+            "changed": "2019-11-04T15:32:27Z", 
+            "published": "2019-10-27T06:19:47Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Creating narratives through collage and mixed-media painting.", 
+            "logo_id": "78349781", 
+            "organizer_id": "19709127861", 
+            "venue_id": "41364001", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/78850091747/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 591
+                    }, 
+                    "width": 2508, 
+                    "height": 1254
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78349781%2F296750561229%2F1%2Foriginal.20191027-061024?auto=compress&s=78fe965e8a99323d922a92004ceaa3f9", 
+                    "width": 2508, 
+                    "height": 2508
+                }, 
+                "id": "78349781", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78349781%2F296750561229%2F1%2Foriginal.20191027-061024?h=200&w=450&auto=compress&rect=0%2C591%2C2508%2C1254&s=ec354522fb8d6a58a21fd57b121daec3", 
+                "aspect_ratio": "2", 
+                "edge_color": "#41415f", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "8930 Oak Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6P 4B7", 
+                    "country": "CA", 
+                    "latitude": "49.2040969", 
+                    "longitude": "-123.13008330000002", 
+                    "localized_address_display": "8930 Oak Street, Vancouver, BC V6P 4B7", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "8930 Oak Street", 
+                        "Vancouver, BC V6P 4B7"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41364001/", 
+                "id": "41364001", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Present Art Studio", 
+                "latitude": "49.2040969", 
+                "longitude": "-123.13008330000002"
+            }
+        }, 
+        {
+            "name": {
+                "text": "East Side Culture Crawl at Studio 580", 
+                "html": "East Side Culture Crawl at Studio 580"
+            }, 
+            "description": {
+                "text": "Culture Crawl 2019 Open Studio Tour", 
+                "html": "Culture Crawl 2019 Open Studio Tour"
+            }, 
+            "id": "78920839355", 
+            "url": "https://www.eventbrite.com/e/east-side-culture-crawl-at-studio-580-tickets-78920839355?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-14T17:00:00", 
+                "utc": "2019-11-15T01:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-17T18:00:00", 
+                "utc": "2019-11-18T02:00:00Z"
+            }, 
+            "organization_id": "236967104055", 
+            "created": "2019-10-28T02:07:46Z", 
+            "changed": "2019-10-28T02:19:19Z", 
+            "published": "2019-10-28T02:18:27Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": true, 
+            "version": "3.7.0", 
+            "summary": "Culture Crawl 2019 Open Studio Tour", 
+            "logo_id": "78399935", 
+            "organizer_id": "18110961462", 
+            "venue_id": "41389729", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "16", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/78920839355/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 1, 
+                        "y": 1111
+                    }, 
+                    "width": 1462, 
+                    "height": 731
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78399935%2F236967104055%2F1%2Foriginal.20191028-021359?auto=compress&s=a6f8c76995d7e4d81c875dcc44a11d67", 
+                    "width": 1463, 
+                    "height": 2048
+                }, 
+                "id": "78399935", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78399935%2F236967104055%2F1%2Foriginal.20191028-021359?h=200&w=450&auto=compress&rect=1%2C1111%2C1462%2C731&s=a703f56bf1847ceea48ae149775573f9", 
+                "aspect_ratio": "2", 
+                "edge_color": "#e48416", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "580 Clark drive", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5L 3H7", 
+                    "country": "CA", 
+                    "latitude": "49.2796279", 
+                    "longitude": "-123.07699230000003", 
+                    "localized_address_display": "580 Clark drive, Vancouver, BC V5L 3H7", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "580 Clark drive", 
+                        "Vancouver, BC V5L 3H7"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41389729/", 
+                "id": "41389729", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Studio 580", 
+                "latitude": "49.2796279", 
+                "longitude": "-123.07699230000003"
+            }
+        }, 
+        {
+            "name": {
+                "text": "REN ZHONG: Twin Wings to the Glory | Opening Reception", 
+                "html": "REN ZHONG: Twin Wings to the Glory | Opening Reception"
+            }, 
+            "description": {
+                "text": "Join us for a memorable evening of arts, music and exhibition-inspired delightful bites.", 
+                "html": "Join us for a memorable evening of arts, music and exhibition-inspired delightful bites."
+            }, 
+            "id": "79269951559", 
+            "url": "https://www.eventbrite.ca/e/ren-zhong-twin-wings-to-the-glory-opening-reception-tickets-79269951559?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-21T17:30:00", 
+                "utc": "2019-11-22T01:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-21T20:30:00", 
+                "utc": "2019-11-22T04:30:00Z"
+            }, 
+            "organization_id": "363346278745", 
+            "created": "2019-10-29T21:44:43Z", 
+            "changed": "2019-10-30T21:22:45Z", 
+            "published": "2019-10-30T21:21:07Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": true, 
+            "version": "3.7.0", 
+            "summary": "Join us for a memorable evening of arts, music and exhibition-inspired delightful bites.", 
+            "logo_id": "78691395", 
+            "organizer_id": "27893949343", 
+            "venue_id": "41536577", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "11", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/79269951559/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 62
+                    }, 
+                    "width": 1920, 
+                    "height": 960
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78691395%2F363346278745%2F1%2Foriginal.20191029-222621?auto=compress&s=2e1ceb55239dfdff1540641d6ed400da", 
+                    "width": 1920, 
+                    "height": 1080
+                }, 
+                "id": "78691395", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F78691395%2F363346278745%2F1%2Foriginal.20191029-222621?h=200&w=450&auto=compress&rect=0%2C62%2C1920%2C960&s=891b39996fd35dc4b84c8cab9a8e2c55", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "420 Howe Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6C 2X1", 
+                    "country": "CA", 
+                    "latitude": "49.2856318", 
+                    "longitude": "-123.11518030000002", 
+                    "localized_address_display": "420 Howe Street, Vancouver, BC V6C 2X1", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "420 Howe Street", 
+                        "Vancouver, BC V6C 2X1"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41536577/", 
+                "id": "41536577", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Sunzen Art Gallery", 
+                "latitude": "49.2856318", 
+                "longitude": "-123.11518030000002"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Collage Fundamentals with Elizabeth Zvonar", 
+                "html": "Collage Fundamentals with Elizabeth Zvonar"
+            }, 
+            "description": {
+                "text": "Collage Collage", 
+                "html": "Collage Collage"
+            }, 
+            "id": "79473101185", 
+            "url": "https://www.eventbrite.com/e/collage-fundamentals-with-elizabeth-zvonar-tickets-79473101185?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-13T18:30:00", 
+                "utc": "2019-11-14T02:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-27T21:00:00", 
+                "utc": "2019-11-28T05:00:00Z"
+            }, 
+            "organization_id": "303280376197", 
+            "created": "2019-10-30T23:14:04Z", 
+            "changed": "2019-10-30T23:19:41Z", 
+            "published": "2019-10-30T23:15:40Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Collage Collage", 
+            "logo_id": "75301589", 
+            "organizer_id": "20222196375", 
+            "venue_id": "41618763", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/79473101185/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 664
+                    }, 
+                    "width": 1200, 
+                    "height": 600
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F75301589%2F303280376197%2F1%2Foriginal.20191003-013847?auto=compress&s=63632031730072088200809ffb2bd25d", 
+                    "width": 1200, 
+                    "height": 1600
+                }, 
+                "id": "75301589", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F75301589%2F303280376197%2F1%2Foriginal.20191003-013847?h=200&w=450&auto=compress&rect=0%2C664%2C1200%2C600&s=da41ef6dfc2d307d8b56e1ff888f22ec", 
+                "aspect_ratio": "2", 
+                "edge_color": "#74625a", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "60-268 Keefer Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6A 1X5", 
+                    "country": "CA", 
+                    "latitude": "49.279337", 
+                    "longitude": "-123.0980697", 
+                    "localized_address_display": "60-268 Keefer Street, Vancouver, BC V6A 1X5", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "60-268 Keefer Street", 
+                        "Vancouver, BC V6A 1X5"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41618763/", 
+                "id": "41618763", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Mobil Art School", 
+                "latitude": "49.279337", 
+                "longitude": "-123.0980697"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Porcelain Clay Workshop with Tanis Saxby", 
+                "html": "Porcelain Clay Workshop with Tanis Saxby"
+            }, 
+            "description": {
+                "text": "elements of working with hand built porcelain", 
+                "html": "elements of working with hand built porcelain"
+            }, 
+            "id": "79473574601", 
+            "url": "https://www.eventbrite.com/e/porcelain-clay-workshop-with-tanis-saxby-tickets-79473574601?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-21T18:30:00", 
+                "utc": "2019-11-22T02:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-28T21:30:00", 
+                "utc": "2019-11-29T05:30:00Z"
+            }, 
+            "organization_id": "303280376197", 
+            "created": "2019-10-30T23:16:45Z", 
+            "changed": "2019-11-01T19:58:17Z", 
+            "published": "2019-10-30T23:17:47Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "elements of working with hand built porcelain", 
+            "logo_id": "75302521", 
+            "organizer_id": "20222196375", 
+            "venue_id": "41618891", 
+            "category_id": "105", 
+            "subcategory_id": "5011", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/79473574601/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 329
+                    }, 
+                    "width": 700, 
+                    "height": 350
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F75302521%2F303280376197%2F1%2Foriginal.20191003-014844?auto=compress&s=90db316f03f84d5ed15757de8ac2307c", 
+                    "width": 701, 
+                    "height": 708
+                }, 
+                "id": "75302521", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F75302521%2F303280376197%2F1%2Foriginal.20191003-014844?h=200&w=450&auto=compress&rect=0%2C329%2C700%2C350&s=2e74159f4d6398cb45efe1afba066114", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "60-268 Keefer Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6A 1X5", 
+                    "country": "CA", 
+                    "latitude": "49.279337", 
+                    "longitude": "-123.0980697", 
+                    "localized_address_display": "60-268 Keefer Street, Vancouver, BC V6A 1X5", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "60-268 Keefer Street", 
+                        "Vancouver, BC V6A 1X5"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41618891/", 
+                "id": "41618891", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Mobil Art School", 
+                "latitude": "49.279337", 
+                "longitude": "-123.0980697"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Life drawing at Mobil Art School", 
+                "html": "Life drawing at Mobil Art School"
+            }, 
+            "description": {
+                "text": "Open studio figure drawing session with a live model.", 
+                "html": "Open studio figure drawing session with a live model."
+            }, 
+            "id": "79473765171", 
+            "url": "https://www.eventbrite.com/e/life-drawing-at-mobil-art-school-tickets-79473765171?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-24T14:00:00", 
+                "utc": "2019-11-24T22:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-24T16:30:00", 
+                "utc": "2019-11-25T00:30:00Z"
+            }, 
+            "organization_id": "303280376197", 
+            "created": "2019-10-30T23:18:39Z", 
+            "changed": "2019-10-30T23:20:37Z", 
+            "published": "2019-10-30T23:20:37Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Open studio figure drawing session with a live model.", 
+            "logo_id": "64780887", 
+            "organizer_id": "20222196375", 
+            "venue_id": "41618991", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/79473765171/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 8
+                    }, 
+                    "width": 414, 
+                    "height": 207
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F64780887%2F303280376197%2F1%2Foriginal.20190702-184337?auto=compress&s=663c0d38224a702295bb5c9a0f017bd4", 
+                    "width": 414, 
+                    "height": 411
+                }, 
+                "id": "64780887", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F64780887%2F303280376197%2F1%2Foriginal.20190702-184337?h=200&w=450&auto=compress&rect=0%2C8%2C414%2C207&s=6d8dc2fefb53dcbd5f9ff198c149742b", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "60-268 Keefer Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6A 1X5", 
+                    "country": "CA", 
+                    "latitude": "49.279337", 
+                    "longitude": "-123.0980697", 
+                    "localized_address_display": "60-268 Keefer Street, Vancouver, BC V6A 1X5", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "60-268 Keefer Street", 
+                        "Vancouver, BC V6A 1X5"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41618991/", 
+                "id": "41618991", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Mobil Art School", 
+                "latitude": "49.279337", 
+                "longitude": "-123.0980697"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Design and Nature: A Partnership Book Launch", 
+                "html": "Design and Nature: A Partnership Book Launch"
+            }, 
+            "description": {
+                "text": "Book Launch of Design and Nature: A Partnership", 
+                "html": "Book Launch of Design and Nature: A Partnership"
+            }, 
+            "id": "79779120497", 
+            "url": "https://www.eventbrite.ca/e/design-and-nature-a-partnership-book-launch-tickets-79779120497?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-22T12:00:00", 
+                "utc": "2019-11-22T20:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-22T13:00:00", 
+                "utc": "2019-11-22T21:00:00Z"
+            }, 
+            "organization_id": "365725173251", 
+            "created": "2019-11-01T18:51:25Z", 
+            "changed": "2019-11-01T19:24:01Z", 
+            "published": "2019-11-01T19:04:37Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": true, 
+            "version": "3.7.0", 
+            "summary": "Book Launch of Design and Nature: A Partnership", 
+            "logo_id": "79085687", 
+            "organizer_id": "27973163991", 
+            "venue_id": "41739489", 
+            "category_id": "105", 
+            "subcategory_id": "5013", 
+            "format_id": "2", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/79779120497/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 192
+                    }, 
+                    "width": 3200, 
+                    "height": 1600
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79085687%2F365725173251%2F1%2Foriginal.20191101-190201?auto=compress&s=11cf98c54977a19fdb6208c6563ef56d", 
+                    "width": 3201, 
+                    "height": 2000
+                }, 
+                "id": "79085687", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79085687%2F365725173251%2F1%2Foriginal.20191101-190201?h=200&w=450&auto=compress&rect=0%2C192%2C3200%2C1600&s=897704223b58f4c53a501e5ea6f2aafd", 
+                "aspect_ratio": "2", 
+                "edge_color": "#b5c3a0", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "520 East 1st Avenue", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5T 0H2", 
+                    "country": "CA", 
+                    "latitude": "49.267579", 
+                    "longitude": "-123.0925322", 
+                    "localized_address_display": "520 East 1st Avenue, Vancouver, BC V5T 0H2", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "520 East 1st Avenue", 
+                        "Vancouver, BC V5T 0H2"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41739489/", 
+                "id": "41739489", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Emily Carr University of Art + Design", 
+                "latitude": "49.267579", 
+                "longitude": "-123.0925322"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Intro to Watercolour", 
+                "html": "Intro to Watercolour"
+            }, 
+            "description": {
+                "text": "Learn to paint with watercolour.", 
+                "html": "Learn to paint with watercolour."
+            }, 
+            "id": "80147660811", 
+            "url": "https://www.eventbrite.ca/e/intro-to-watercolour-tickets-80147660811?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-20T17:30:00", 
+                "utc": "2019-11-21T01:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-18T19:30:00", 
+                "utc": "2019-12-19T03:30:00Z"
+            }, 
+            "organization_id": "272415490866", 
+            "created": "2019-11-04T21:33:12Z", 
+            "changed": "2019-11-05T02:33:05Z", 
+            "published": "2019-11-04T22:25:32Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Learn to paint with watercolour.", 
+            "logo_id": "79380595", 
+            "organizer_id": "17947414592", 
+            "venue_id": "41884933", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/80147660811/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 127, 
+                        "y": 0
+                    }, 
+                    "width": 7088, 
+                    "height": 3544
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79380595%2F272415490866%2F1%2Foriginal.20191104-221653?auto=compress&s=4aacdab5519ecc9c35242a701a757451", 
+                    "width": 7342, 
+                    "height": 3544
+                }, 
+                "id": "79380595", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79380595%2F272415490866%2F1%2Foriginal.20191104-221653?h=200&w=450&auto=compress&rect=127%2C0%2C7088%2C3544&s=8883cf3400cc87dd17b368192fc43728", 
+                "aspect_ratio": "2", 
+                "edge_color": "#918d90", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "554 Clark Drive", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5L 3H7", 
+                    "country": "CA", 
+                    "latitude": "49.2798367", 
+                    "longitude": "-123.07693599999999", 
+                    "localized_address_display": "554 Clark Drive, Vancouver, BC V5L 3H7", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "554 Clark Drive", 
+                        "Vancouver, BC V5L 3H7"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41884933/", 
+                "id": "41884933", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "SPACE Studio", 
+                "latitude": "49.2798367", 
+                "longitude": "-123.07693599999999"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Ship's Company Exhibition Opening", 
+                "html": "Ship&#39;s Company Exhibition Opening"
+            }, 
+            "description": {
+                "text": "Photography exhibition opening", 
+                "html": "Photography exhibition opening"
+            }, 
+            "id": "80158497223", 
+            "url": "https://www.eventbrite.ca/e/ships-company-exhibition-opening-tickets-80158497223?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-29T19:00:00", 
+                "utc": "2019-11-30T03:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-29T21:00:00", 
+                "utc": "2019-11-30T05:00:00Z"
+            }, 
+            "organization_id": "214778960713", 
+            "created": "2019-11-04T22:25:55Z", 
+            "changed": "2019-11-05T23:59:41Z", 
+            "published": "2019-11-04T22:50:10Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": true, 
+            "version": "3.7.0", 
+            "summary": "Photography exhibition opening", 
+            "logo_id": "79556205", 
+            "organizer_id": "19961524355", 
+            "venue_id": "41889519", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "8", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/80158497223/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 4266, 
+                    "height": 2133
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79556205%2F214778960713%2F1%2Foriginal.20191105-222835?auto=compress&s=178d39bb3055d7ed4cfcaa0d8fc43484", 
+                    "width": 4267, 
+                    "height": 2133
+                }, 
+                "id": "79556205", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79556205%2F214778960713%2F1%2Foriginal.20191105-222835?h=200&w=450&auto=compress&rect=0%2C0%2C4266%2C2133&s=3f65c3a4e0b53ec3da580a2192c1b9dc", 
+                "aspect_ratio": "2", 
+                "edge_color": "#cecece", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "1905 Ogden Avenue", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V6J 1A2", 
+                    "country": "CA", 
+                    "latitude": "49.2767768", 
+                    "longitude": "-123.14879180000003", 
+                    "localized_address_display": "1905 Ogden Avenue, Vancouver, BC V6J 1A2", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "1905 Ogden Avenue", 
+                        "Vancouver, BC V6J 1A2"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41889519/", 
+                "id": "41889519", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "Vancouver Maritime Museum", 
+                "latitude": "49.2767768", 
+                "longitude": "-123.14879180000003"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Drawing with Pen & Ink", 
+                "html": "Drawing with Pen &amp; Ink"
+            }, 
+            "description": {
+                "text": "Learn to draw with Pen & Ink", 
+                "html": "Learn to draw with Pen &amp; Ink"
+            }, 
+            "id": "80161436013", 
+            "url": "https://www.eventbrite.ca/e/drawing-with-pen-ink-tickets-80161436013?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-11-11T13:00:00", 
+                "utc": "2019-11-11T21:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-09T15:00:00", 
+                "utc": "2019-12-09T23:00:00Z"
+            }, 
+            "organization_id": "272415490866", 
+            "created": "2019-11-04T22:47:56Z", 
+            "changed": "2019-11-04T23:00:57Z", 
+            "published": "2019-11-04T23:00:57Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Learn to draw with Pen & Ink", 
+            "logo_id": "79385613", 
+            "organizer_id": "17947414592", 
+            "venue_id": "41891079", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "9", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/80161436013/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 357
+                    }, 
+                    "width": 3128, 
+                    "height": 1564
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79385613%2F272415490866%2F1%2Foriginal.20191104-225051?auto=compress&s=928d703daf34d898a78c4d3a65e18236", 
+                    "width": 3129, 
+                    "height": 2279
+                }, 
+                "id": "79385613", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79385613%2F272415490866%2F1%2Foriginal.20191104-225051?h=200&w=450&auto=compress&rect=0%2C357%2C3128%2C1564&s=e8a9bec7baa4a09989646723e1494364", 
+                "aspect_ratio": "2", 
+                "edge_color": "#eae9e8", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "554 Clark Drive", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5L 3H7", 
+                    "country": "CA", 
+                    "latitude": "49.2798367", 
+                    "longitude": "-123.07693599999999", 
+                    "localized_address_display": "554 Clark Drive, Vancouver, BC V5L 3H7", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "554 Clark Drive", 
+                        "Vancouver, BC V5L 3H7"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41891079/", 
+                "id": "41891079", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "SPACE Studio", 
+                "latitude": "49.2798367", 
+                "longitude": "-123.07693599999999"
+            }
+        }, 
+        {
+            "name": {
+                "text": "Metta Grove ~ Multimedia Meditation with Simon Haiduk Art - #2", 
+                "html": "Metta Grove ~ Multimedia Meditation with Simon Haiduk Art - #2"
+            }, 
+            "description": {
+                "text": "Metta Grove is a multimedia meditative art experience and community gathering.", 
+                "html": "Metta Grove is a multimedia meditative art experience and community gathering."
+            }, 
+            "id": "80310243099", 
+            "url": "https://www.eventbrite.com/e/metta-grove-multimedia-meditation-with-simon-haiduk-art-2-tickets-80310243099?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-01T19:30:00", 
+                "utc": "2019-12-02T03:30:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-01T22:00:00", 
+                "utc": "2019-12-02T06:00:00Z"
+            }, 
+            "organization_id": "239426125551", 
+            "created": "2019-11-05T18:22:03Z", 
+            "changed": "2019-11-05T20:44:49Z", 
+            "published": "2019-11-05T19:01:54Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 900, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "Metta Grove is a multimedia meditative art experience and community gathering.", 
+            "logo_id": "79519163", 
+            "organizer_id": "18315461008", 
+            "venue_id": "41956509", 
+            "category_id": "105", 
+            "subcategory_id": "5008", 
+            "format_id": "6", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/80310243099/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 9
+                    }, 
+                    "width": 1920, 
+                    "height": 960
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79519163%2F239426125551%2F1%2Foriginal.20191105-190015?auto=compress&s=2a374623fd4e62d780e79b6076442e86", 
+                    "width": 1920, 
+                    "height": 1080
+                }, 
+                "id": "79519163", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79519163%2F239426125551%2F1%2Foriginal.20191105-190015?h=200&w=450&auto=compress&rect=0%2C9%2C1920%2C960&s=2a72e65ec7ba8887a704d37278057b4c", 
+                "aspect_ratio": "2", 
+                "edge_color": "#534526", 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "316 West 5th Avenue", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5Y 1J0", 
+                    "country": "CA", 
+                    "latitude": "49.2664689", 
+                    "longitude": "-123.11103000000003", 
+                    "localized_address_display": "316 West 5th Avenue, Vancouver, BC V5Y 1J0", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "316 West 5th Avenue", 
+                        "Vancouver, BC V5Y 1J0"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/41956509/", 
+                "id": "41956509", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "The Beaumont Studios", 
+                "latitude": "49.2664689", 
+                "longitude": "-123.11103000000003"
+            }
+        }, 
+        {
+            "name": {
+                "text": "ArtSee: Gallery Edition", 
+                "html": "ArtSee: Gallery Edition"
+            }, 
+            "description": {
+                "text": "ArtSee is a Beaumont hosted event featuring Open Artist Studios that takes place on the last Friday of every month.", 
+                "html": "ArtSee is a Beaumont hosted event featuring Open Artist Studios that takes place on the last Friday of every month."
+            }, 
+            "id": "80603151195", 
+            "url": "https://www.eventbrite.ca/e/artsee-gallery-edition-tickets-80603151195?aff=ebapi", 
+            "start": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-16T19:00:00", 
+                "utc": "2019-12-17T03:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/Vancouver", 
+                "local": "2019-12-16T22:00:00", 
+                "utc": "2019-12-17T06:00:00Z"
+            }, 
+            "organization_id": "329438588843", 
+            "created": "2019-11-06T23:39:54Z", 
+            "changed": "2019-11-07T00:24:47Z", 
+            "published": "2019-11-07T00:16:00Z", 
+            "capacity": null, 
+            "capacity_is_custom": null, 
+            "status": "live", 
+            "currency": "CAD", 
+            "listed": true, 
+            "shareable": false, 
+            "online_event": false, 
+            "tx_time_limit": 480, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_CA", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": false, 
+            "is_series_parent": false, 
+            "inventory_type": "limited", 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "coyote", 
+            "is_free": false, 
+            "version": "3.7.0", 
+            "summary": "ArtSee is a Beaumont hosted event featuring Open Artist Studios that takes place on the last Friday of every month.", 
+            "logo_id": "79738067", 
+            "organizer_id": "26382436301", 
+            "venue_id": "42066847", 
+            "category_id": "105", 
+            "subcategory_id": "5012", 
+            "format_id": "11", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/80603151195/", 
+            "is_externally_ticketed": false, 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 57, 
+                        "y": 0
+                    }, 
+                    "width": 1362, 
+                    "height": 681
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79738067%2F320810941125%2F1%2Foriginal.20191107-002424?auto=compress&s=425d33097d1946f5026f53f5fc4b89bd", 
+                    "width": 1813, 
+                    "height": 681
+                }, 
+                "id": "79738067", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F79738067%2F320810941125%2F1%2Foriginal.20191107-002424?h=200&w=450&auto=compress&rect=57%2C0%2C1362%2C681&s=39b194fc82dc3329a26068919763020a", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }, 
+            "venue": {
+                "address": {
+                    "address_1": "2109 Alberta Street", 
+                    "address_2": null, 
+                    "city": "Vancouver", 
+                    "region": "BC", 
+                    "postal_code": "V5Y 3K4", 
+                    "country": "CA", 
+                    "latitude": "49.2663823", 
+                    "longitude": "-123.1109983", 
+                    "localized_address_display": "2109 Alberta Street, Vancouver, BC V5Y 3K4", 
+                    "localized_area_display": "Vancouver, BC", 
+                    "localized_multi_line_address_display": [
+                        "2109 Alberta Street", 
+                        "Vancouver, BC V5Y 3K4"
+                    ]
+                }, 
+                "resource_uri": "https://www.eventbriteapi.com/v3/venues/42066847/", 
+                "id": "42066847", 
+                "age_restriction": null, 
+                "capacity": null, 
+                "name": "The Beaumont Studios", 
+                "latitude": "49.2663823", 
+                "longitude": "-123.1109983"
+            }
+        }
+    ], 
+    "location": {
+        "latitude": "49.282729", 
+        "augmented_location": {
+            "city": "Vancouver", 
+            "region": "British Columbia", 
+            "country": "Canada"
+        }, 
+        "within": "10.0", 
+        "longitude": "-123.120738", 
+        "address": "vancouver"
+    }
+}

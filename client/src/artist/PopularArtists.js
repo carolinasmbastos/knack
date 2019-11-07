@@ -56,7 +56,7 @@ class PopularArtists extends React.Component {
 
        let r = d3.scaleSqrt()
                 .domain([minRadius, maxRadius])
-                .range([10,80])
+                .range([10,100])
 
         let simulation = d3.forceSimulation()
                 .force('x', d3.forceX(width/2).strength(0.03))
