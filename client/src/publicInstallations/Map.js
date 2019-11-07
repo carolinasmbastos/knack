@@ -21,7 +21,7 @@ class Map extends React.Component {
         return (
             <div className="map-container">
                 <div id="map"></div>
-            </div>
+            </div>        
         );
     }
 }
