@@ -2,6 +2,7 @@ const {artGalleryRouter} = require("./artGalleryRouter.js");
 const {artistRouter} = require("./artistRouter.js");
 const {artworkRouter} = require("./artworkRouter.js");
 const {orderRouter} = require("./orderRouter.js");
+const {eventRouter} = require("./eventRouter.js");
 
 const express = require("express");
 const router = express.Router();
@@ -12,5 +13,6 @@ router.use(prefix, artGalleryRouter);
 router.use(prefix, artistRouter);
 router.use(prefix, artworkRouter);
 router.use(prefix, orderRouter);
+router.use(prefix, eventRouter);
 
 exports.indexRouter = router;
