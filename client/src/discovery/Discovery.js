@@ -2,6 +2,7 @@ import React from "react";
 import Map from '../publicInstallations/Map'
 import PopularArtists from '../artist/PopularArtists'
 import News from './News'
+import Events from '../events/Events'
 import './Discovery.css'
 
 export default class Discovery extends React.Component {
@@ -9,11 +10,14 @@ export default class Discovery extends React.Component {
         return (
             <div className="discoverySections">
                 <div>
-                    Artists on the Rise!
+                    <PopularArtists /> 
                 </div>
                 <div>
-                    Popular Artists
-                    <PopularArtists />
+                    
+                    <Events />
+                </div>
+                <div>
+                    <Events />
                 </div>
                 <div>
                     News
@@ -22,7 +26,7 @@ export default class Discovery extends React.Component {
 
 
                 <div> 
-                    Public publicInstallations
+                    
                     <Map /> 
                 </div>
                 

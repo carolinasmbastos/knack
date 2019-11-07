@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Browse/Search Artworks */
+.artwork-thumbnail {
+  height: 200px;
+}
+
+/* View Artwork */
+.artwork-image {
+  height: 80vh;
+}
+
 /* Monthly Art styles START */
 /* Owner: Jagmeet */
 .buttonContainer {
@@ -40,3 +55,51 @@ code {
   }
 }
 /* Monthly Art styles END */
+
+/* Timeline Slider */
+.btn-group {
+  width: 100%;
+}
+
+.btn-group .btn {
+  border-radius: 25px;
+}
+
+.btn-group .btn:nth-of-type(1),
+.btn-group .btn:nth-of-type(2),
+.btn-group .btn:nth-of-type(3) {
+  border-right: 3px solid white;
+}
+
+.btn-group .btn.timelineButton {
+  background-color: #000;
+}
+
+.btn-group .btn.timelineButton.selected {
+  background-color: #D9B226;
+  color: #000;
+  position: relative;
+}
+
+.btn-group .btn.timelineButton.selected::after {
+  content : url(./assets/TimelineSliderArrow.png);
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -20%;
+  transition: .5s;
+}
+
+.timelineSliderArrow {
+  height: 15px;
+  width: auto;
+  position: absolute;
+  margin-top: 30px;
+  transition: .5s;
+  /* margin-left: 11%;  */
+  /* 85, 60, 36, 11 */
+  z-index: 1;
+}
+
+.timelineContainer {
+  position: relative;
+}

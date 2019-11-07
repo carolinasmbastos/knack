@@ -85,7 +85,7 @@ export default class Artwork extends React.Component {
       <Container style={styles.containerSpacing}>
         <Row>
           <Col md="6">
-            <img src={`/img/artworks/${this.state.artwork.imageUrl}`} className="img-fluid" alt="Artwork"/>
+            <img src={`/img/artworks/${this.state.artwork.imageUrl ? this.state.artwork.imageUrl : 'default.jpg'}`} className="artwork-image" alt="Artwork"/>
           </Col>
           {this.state.viewMode === "info" && (
             <ArtworkInfo 

@@ -35,81 +35,102 @@ class PopularArtists extends React.Component {
     createBubbleGraph() {
 
         //console.log(this.state.popularArtists)
-        var dataset = {
-            children : this.state.popularArtists
-        } 
+        var data = this.state.popularArtists;
 
-        var diameter = 300;
-        var color = d3.scaleOrdinal(d3.schemeCategory10);
+        let width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+        let height = width / 4;
 
-        var bubble = d3.pack(dataset)
-            .size([diameter, diameter])
-            .padding(1.5);
+        let maxRadius = d3.max(data, (data) => { return data.Count; })
+        let minRadius = d3.min(data, (data) => { return data.Count; })
 
-        var svg = d3.select(".bubbleChart")
-            .append("svg")
-            .attr("width", 2*diameter)
-            .attr("height", diameter)
-            .attr("class", "bubble");
+        let svg = d3.selectAll('.bubbleChart')
+                 .append('svg')
+                .attr("width", '100%')
+                .attr("height", '100%')
+                .attr('viewBox','0 0 '+width+' '+height)
+                .attr('preserveAspectRatio','xMinYMin')
+                .append("g")
+                .attr('transform', 'translate('+(width/2)+', '+(height/2)+')')
 
-        var nodes = d3.hierarchy(dataset)
-            .sum(function(d) { 
-                return d.Count; });
+       let r = d3.scaleSqrt()
+                .domain([minRadius, maxRadius])
+                .range([10,95])
 
-        console.log(nodes)
+        let simulation = d3.forceSimulation()
+                .force('x', d3.forceX().strength(0.03))
+                .force('y', d3.forceY().strength(0.25))
+                .force('collide', d3.forceCollide((data) => { return r(data.Count) + 5; }))
 
-        var node = svg.selectAll(".node")
-            .data(bubble(nodes).descendants())
-            .enter()
-            .filter(function(d){
-                return  !d.children
-            })
-            .append("g")
-            .attr("class", "node")
-            .attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
+        var defs = svg.append("defs");
 
-        node.append("title")
-            .text(function(d) {
-                return d.Name + ": " + d.Count;
-            });
+        defs.selectAll("circles")
+                .data(data)
+                .enter().append("pattern")
+                .attr("class", "artist-pattern")
+                .attr("id", function(data){
+                    return data.idArtist;
+                })
+                .attr("height", "100%")
+                .attr("width", "100%")
+                .attr("patternContentUnits", "objectBoundingBox")
+                .append("image")
+                .attr("height", 1)
+                .attr("width", 1)
+                .attr("preserveAspectRatio", "none")
+                .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
+                .attr("xlink:href", function(data){
+                    return (data.url != undefined ? "img/artworks/"+data.url : "img/artworks/default.jpg");
+                })
 
-        node.append("circle")
-            .attr("r", function(d) {
-                console.log(d.r)
-                return d.r;
-            })
-            .style("fill", function(d,i) {
-                return color(i);
-            });
+        let circles = svg.selectAll('circles')
+                .data(data)
+                .enter()
+                .append("a")
+                .attr("href", function(data){
+                    return "/browse/"+data.Name;
+                })
+                .attr("class", "artist-name")
+                .html(function(data){
+                    return data.Name;
+                })
+                .append('circle')
+                .attr('r', (data) => { 
+                    console.log(data.Count);
+                    return r(data.Count); 
+                })
+                .style("fill", function(data) {
+                    console.log(data.idArtist)
+                    return "url(#"+data.idArtist+")"
+                })
 
-        node.append("text")
-            .attr("dy", ".2em")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-                return d.data.Name.substring(0, d.r / 3);
-            })
-            .attr("font-family", "sans-serif")
-            .attr("font-size", function(d){
-                return d.r/5;
-            })
-            .attr("fill", "white");
 
-        node.append("text")
-            .attr("dy", "1.3em")
-            .style("text-anchor", "middle")
-            .text(function(d) {
-                return d.data.Count;
-            })
-            .attr("font-family",  "Gill Sans", "Gill Sans MT")
-            .attr("font-size", function(d){
-                return d.r/5;
-            })
-            .attr("fill", "white");
+        
+        let texts = svg.selectAll(null)
+                .data(data)
+                .enter()
+                .append('text')
+                .text(function(data){
+                    return data.Name;
+                })
+                .style('fill', 'white')
+                .style("text-anchor", "middle")
+                .attr('font-size', function(data){
+                    return (r(data.Count)/5 > 8 ? r(data.Count)/5 : 0);
+                })
 
-        d3.select(this.frameElement)
-            .style("height", diameter + "px");
+        let ticked = () => {
+            circles
+            .attr('cx', (data) => { return data.x })
+            .attr('cy', (data) => { return data.y })
+            texts
+            .attr('x', (data) => { return data.x })
+            .attr('y', (data) => { return data.y })
+        }
+
+        simulation.nodes(data)
+        .on('tick', ticked)
 
     }
 

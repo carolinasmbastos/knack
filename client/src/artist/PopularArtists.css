@@ -1,16 +1,23 @@
-.bubbleChart  {
-    font: 10px sans-serif;
-    
-    text-align: right;
-    padding: 3px;
+.bubbleChart svg {
     margin: auto;
-    color: white;
+    background:#58595B;
+  }
 
-    top:0vh;
-    left:0;
-    
-    height:40vh;
+  .bubble {
 
     display: block;
-
   }
+
+  .artist-link {
+      display: block;
+  }
+
+  .artist-link:hover, .artist-link:link, .artist-link:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  circle:hover {
+    transform: scale(1.05, 1.05) ;
+  }
+
