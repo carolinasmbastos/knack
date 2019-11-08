@@ -32,7 +32,7 @@ class News extends React.Component {
         getNews()
         .then(result=>{
             this.setState({
-                newsapi: result.slice(0, 3)
+                newsapi: result.slice(5, 8)
             },()=>{
                 console.log('Hel',this.state.newsapi)
             })
