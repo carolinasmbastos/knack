@@ -8,3 +8,8 @@ Knack will help you find the perfect artwork for your place without spending a h
 * Jagmeet
 * John
 * Pratt
+
+## UI Designers:
+* Anurag
+* Balwinder
+* Manpreet
