@@ -1,6 +1,6 @@
 .bubbleChart svg {
     margin: auto;
-    background:#58595B;
+    /* background:#58595B; */
   }
 
   .bubble {
@@ -21,3 +21,6 @@
     transform: scale(1.05, 1.05) ;
   }
 
+.discoverySections h2 {
+  text-align: center;
+}

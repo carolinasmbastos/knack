@@ -10,19 +10,19 @@ import './CarouselContainer.css';
 
 const items = [
   {
-    src: './img/3.jpg',
-    altText :'the Artworks in your space',
-    caption: `Rent and Variate`
+    src: './img/carousel/3.jpg',
+    altText :'',
+    caption: `Rent and Variate the Artworks in your Collection`
   },
   {
-    src: './img/artworks/default.jpg',
-    altText :'from local Art Galleries and Artists',
-    caption: 'Explore artworks'
+    src: './img/carousel/pawel-czerwinski-yn97LNy0bao-unsplash.jpg',
+    altText :'',
+    caption: 'Explore artworks from local Art Galleries and Artists'
   },
   {
-    src: './img/3.jpg',
-    altText :'(ARTW0RK, EXHIBITION, ART FAIR,ETC.)',
-    caption: 'SLIDE SHOW OF FEATURED CONTENT'
+    src: './img/carousel/adrien-converse-FWhTeWRCeis-unsplash.jpg',
+    altText :'',
+    caption: 'Subscribe to Monthly Art and keep a new Artwork every month'
   }
 ];
 

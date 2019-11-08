@@ -139,8 +139,7 @@ class PopularArtists extends React.Component {
     render() {
         
         return (
-            
-            <div className="bubbleChart"></div>
+              <div className="bubbleChart"></div>
         )
     }
 }

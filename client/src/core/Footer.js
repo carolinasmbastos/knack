@@ -3,8 +3,8 @@ import React from "react";
 export default class Footer extends React.Component {
   render() {
     return (
-      <div>
-        Footer content goes here.
+      <div className='footer'>
+        Footer Under Construction.
       </div>
     );
   }

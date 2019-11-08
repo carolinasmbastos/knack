@@ -5,16 +5,25 @@ import PropTypes from 'prop-types'
 export default class ArtworkInfo extends React.Component {
   render() {
     return (
-        <Col md="6">
+        <Col>
             <h1>{this.props.artwork.title}</h1>
             <h2>{this.props.artist.name}</h2>
+            <br />
             <div>{this.props.medium.mediumType}</div>
             <div>{this.props.artwork.height} x {this.props.artwork.width}</div>
+            <br />
             <div>Owned by: {this.props.sellerEntity.name}, {this.props.sellerInfo.city}</div>
-            <div>Address: {this.props.sellerInfo.address}</div>
+            <div>Address: {this.props.sellerInfo.address}, {this.props.sellerInfo.city}</div>
+            <br />
             <p>{this.props.artwork.description}</p>
-            <h3>${this.props.artwork.rentPrice}</h3>
-            <Button color="info" onClick={this.props.onClickRent}>RENT</Button>
+            <br />
+            <div className='artworkActions'>
+              <h3>${this.props.artwork.rentPrice}</h3>
+              <div>
+                <Button color="info" onClick={this.props.onClickRent} className='rentBtn'>RENT</Button>
+                <Button color="secondary" disabled>BUY</Button>
+              </div>
+            </div>
         </Col>
     );
   }
