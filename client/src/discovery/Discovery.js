@@ -13,18 +13,14 @@ export default class Discovery extends React.Component {
                     <PopularArtists /> 
                 </div>
                 <div>
-                    
+                    Events
                     <Events />
                 </div>
-                <div>
-                    <Events />
-                </div>
+
                 <div>
                     News
                     <News />
                 </div>
-
-
                 <div> 
                     
                     <Map /> 
