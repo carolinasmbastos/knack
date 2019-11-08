@@ -52,9 +52,9 @@ class Events extends React.Component {
         return (
 
             <Container style={styles.containerSpacing}>
-            <Row style={styles.resultsSpacing}>
+            <Row style={styles.resultsSpacing} className='eventsContainer'>
                 {this.state.events.map(item => 
-                    <Col sm="4" style={styles.rowSpacing}>
+                    <Col sm="6" lg="4" style={styles.rowSpacing}>
                     <Card>
                         <a href={item.url} target="_blank">
                         <CardImg top className="" src={item.logo.url} alt="Event" />

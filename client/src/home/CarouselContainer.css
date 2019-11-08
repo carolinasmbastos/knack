@@ -9,3 +9,8 @@
 .carousel-caption {
    bottom: 150px;
 }
+
+.carousel-caption h3 {
+  width: 450px;  
+  margin: auto;
+}

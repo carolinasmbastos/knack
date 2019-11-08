@@ -82,7 +82,7 @@ class MapTools {
 
 
                     let popupHtml = `<a href='${item.fields.url}'><img src='${imgSrc}' class='thumbnailMap'/></a>
-                        <a href='${item.fields.url}'>${linkText}</a>`
+                        <a href='${item.fields.url}' target='_blank'>${linkText}</a>`
                     let popup = new mapboxgl.Popup({ offset: 25 })
                     .setHTML(popupHtml);
                 

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const styles = {
   containerSpacing : {
-    marginTop: "1rem",
+    marginTop: "5rem",
     marginBottom: "1rem"
   },
   rowSpacing: {
@@ -47,33 +47,24 @@ export default class BrowseArtworks extends React.Component {
   }
 
   filterByTimeline = timeline => {
-    switch(timeline) {
-      case '18':
-        this.setState({idPeriod:1})
-        break;
-      case '19':
-        this.setState({idPeriod:2})
-        break;
-      case '20':
-        this.setState({idPeriod:3})
-        break;
-      case '21':
-        this.setState({idPeriod:4})
-        break;
-      default:
-        this.setState({idPeriod:0})
-    }
+    this.setState({idPeriod: timeline == '' ? 0 : parseInt(timeline)})
   }
   
   render() {
     this.loadArtworks()
     return (
       <Container style={styles.containerSpacing}>
+        {this.props.featured == "true" && (
+          <React.Fragment>
+            <hr />
+            <h2 className="browseArtworksHeading">BROWSE ARTWORKS FOR RENT</h2>
+          </React.Fragment>
+        )}
         <TimelineSlider onSelect={this.filterByTimeline} />
         <Row style={styles.resultsSpacing}>
             {this.state.artworks.map(artwork => 
               (this.state.idPeriod == 0 || artwork.period.idPeriod == this.state.idPeriod) && (
-                <Col sm="4" style={styles.rowSpacing}>
+                <Col sm="6" lg="4" style={styles.rowSpacing}>
                   <Card>
                     <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
                       <CardImg top className="artwork-thumbnail" src={`/img/artworks/${artwork.artwork.imageUrl ? artwork.artwork.imageUrl : 'default.jpg'}`} alt="Picsum" />

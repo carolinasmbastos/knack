@@ -87,25 +87,27 @@ export default class Artwork extends React.Component {
           <Col md="6">
             <img src={`/img/artworks/${this.state.artwork.imageUrl ? this.state.artwork.imageUrl : 'default.jpg'}`} className="artwork-image" alt="Artwork"/>
           </Col>
-          {this.state.viewMode === "info" && (
-            <ArtworkInfo 
-              artwork={this.state.artwork}
-              artist={this.state.artist}
-              medium={this.state.medium}
-              sellerInfo={this.state.sellerInfo}
-              sellerEntity={this.state.sellerEntity}
-              onClickRent={this.rentArtwork}
-          />
-          )}
-          {this.state.viewMode === "summary" && (
-            <OrderSummary 
-              artwork={this.state.artwork}
-              artist={this.state.artist}
-              sellerInfo={this.state.sellerInfo}
-              sellerEntity={this.state.sellerEntity}
-              onClickRequest={this.requestArtwork}
-          />
-          )}
+          <Col md='6' className='artworkDetails'>
+            {this.state.viewMode === "info" && (
+              <ArtworkInfo 
+                artwork={this.state.artwork}
+                artist={this.state.artist}
+                medium={this.state.medium}
+                sellerInfo={this.state.sellerInfo}
+                sellerEntity={this.state.sellerEntity}
+                onClickRent={this.rentArtwork}
+              />
+            )}
+            {this.state.viewMode === "summary" && (
+              <OrderSummary 
+                artwork={this.state.artwork}
+                artist={this.state.artist}
+                sellerInfo={this.state.sellerInfo}
+                sellerEntity={this.state.sellerEntity}
+                onClickRequest={this.requestArtwork}
+              />
+            )}
+          </Col>
         </Row> 
       </Container>
     );

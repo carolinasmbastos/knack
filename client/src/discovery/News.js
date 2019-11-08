@@ -52,10 +52,10 @@ class News extends React.Component {
 
     render() {
         return (
-            <Container style={styles.containerSpacing}>
+            <Container style={styles.containerSpacing} className='newsContainer'>
             <Row style={styles.resultsSpacing}>
                 {this.state.newsapi.map(item =>
-                    <Col sm="4" style={styles.rowSpacing}>
+                    <Col sm="6" lg="4" style={styles.rowSpacing}>
                     <Card>
                         <a href={item.url} target="_blank">
                         <CardImg top className="" src={item.urlToImage} alt="Event" />

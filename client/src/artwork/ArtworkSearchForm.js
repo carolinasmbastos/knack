@@ -39,7 +39,7 @@ class ArtworkSearchForm extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                   <FormGroup row style={styles.formGroup}>
                     <Col >
-                      <Input type="text" name="search" id="artist" placeholder="Search Artworks"
+                      <Input type="text" name="search" id="artist" placeholder="Search"
                       value={this.state.search}
                       onChange={this.handleChange} />
                     </Col>

@@ -1,8 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700&display=swap');
+
+/* Fonts */
+body, 
+nav, 
+.carousel-caption h3,
+.monthlyArtContainer h3 {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poiret One', cursive;
+}
+
+
+
+/* Core */
+body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,15 +33,74 @@ img {
   width: 100%;
 }
 
+.logoImg {
+  height: 40px;
+  width: auto;
+}
+
+a.nav-link {
+  margin: 0 25px;
+}
+
+.footer {
+  background-color: #000;
+  margin-top: 2rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+
 /* Browse/Search Artworks */
 .artwork-thumbnail {
   height: 200px;
 }
 
+.browseArtworksHeading,
+.monthlyArtContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+
+
 /* View Artwork */
 .artwork-image {
-  height: 80vh;
+  height: 70vh;
+  margin: 5rem 0;
 }
+
+.artworkDetails.col-md-6 {
+  margin: 5rem 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.artworkActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rentBtn {
+  margin-right: 1rem;
+}
+
+.confirmationBox {
+  margin-top: 2rem;
+}
+
+.homeLink {
+  text-align: center;
+}
+
+.confirmationHeading {
+  text-align: center;
+}
+
 
 /* Monthly Art styles START */
 /* Owner: Jagmeet */
@@ -40,21 +115,36 @@ img {
 }
 
 .monthlyArtBgImg {
-  height: 200px;
+  height: 275px;
 }
 
 @media only screen and (min-width: 508px) {
   .monthlyArtBgImg {
-    height: 175px;
+    height: 250px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .monthlyArtBgImg {
-    height: 150px;
+    height: 225px;
   }
 }
+
+.monthlyArtCard {
+  margin-top: 2rem;
+}
+
+.monthlyArtContainer h2 {
+  margin-top: 5rem;
+}
+
+.bgtext {
+  width: 300px;
+  margin: 2rem auto;
+}
 /* Monthly Art styles END */
+
+
 
 /* Timeline Slider */
 .btn-group {
@@ -102,4 +192,5 @@ img {
 
 .timelineContainer {
   position: relative;
+  margin-top: 2rem;
 }

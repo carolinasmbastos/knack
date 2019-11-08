@@ -1,0 +1,13 @@
+.discoverySections hr {
+  margin: 3rem 0;
+}
+
+.eventsContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+.eventsContainer .card,
+.newsContainer .card {
+  height: 100%;
+}

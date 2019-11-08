@@ -32,10 +32,10 @@ export default class TimelineSlider extends React.Component {
       <Container className='timelineContainer'>
         {/* <img src='./img/assets/TimelineSliderArrow.png' className='timelineSliderArrow' style={{marginLeft: `${() => this.sliderArrowMargin(this.state.timeline)}%`}} alt="Timeline Slider Selector" /> */}
         <ButtonGroup>
-          <Button className={`timelineButton ${this.state.timeline == '18' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('18')}>18th Century</Button>
-          <Button className={`timelineButton ${this.state.timeline == '19' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('19')}>19th Century</Button>
-          <Button className={`timelineButton ${this.state.timeline == '20' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('20')}>20th Century</Button>
-          <Button className={`timelineButton ${this.state.timeline == '21' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('21')}>21st Century</Button>
+          <Button className={`timelineButton ${this.state.timeline == '1' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('1')}>18th Century</Button>
+          <Button className={`timelineButton ${this.state.timeline == '2' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('2')}>19th Century</Button>
+          <Button className={`timelineButton ${this.state.timeline == '3' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('3')}>20th Century</Button>
+          <Button className={`timelineButton ${this.state.timeline == '4' ? 'selected' : ''}`} onClick={() => this.loadArtworksFromTimeline('4')}>21st Century</Button>
       </ButtonGroup>
       </Container>
     );
