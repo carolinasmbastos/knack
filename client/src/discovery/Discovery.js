@@ -11,8 +11,8 @@ export default class Discovery extends React.Component {
         return (
             <Container className="discoverySections">
                 <div>
+                  <h2 className='popularArtistsHeading'>ARTISTS ON THE RISE</h2>
                     <PopularArtists /> 
-                    <h2>ARTISTS ON THE RISE</h2>
                 </div>
                 <hr />
                 <div>
