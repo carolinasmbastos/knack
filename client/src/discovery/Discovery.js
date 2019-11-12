@@ -1,7 +1,6 @@
 import React from "react";
-import Map from '../publicInstallations/Map'
 import PopularArtists from '../artist/PopularArtists'
-import News from './News'
+import News from '../news/News'
 import Events from '../events/Events'
 import './Discovery.css'
 import {Container} from 'reactstrap'
@@ -24,13 +23,7 @@ export default class Discovery extends React.Component {
                     <h2>CURRENT AFFAIRS & ARTICLES</h2>
                     <News />
                 </div>
-                <hr />
-                <div> 
-                    <h2>EXPLORE PUBLIC ARTWORKS IN YOUR CITY</h2>
-                    <Map /> 
-                </div>
                 
-
             </Container>
         );
     }

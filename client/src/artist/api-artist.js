@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const searchArtist = (artist) => {
   return axios
-    .post('/artistSearch', artist)
+    .get('/artists/search/', artist)
     .then(res => {
       return res.data
     })

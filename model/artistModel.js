@@ -1,8 +1,8 @@
 const {cp} = require("../db/connection.js"); 
 const {query} = require("../db/promise-mysql.js");
 
-//api to find artists, searching by artist Name
-exports.findArtistByName = (artistName) => {
+//api to get artists, searching by artist Name
+exports.getArtistByName = (artistName) => {
 
     var options = {sql: `SELECT * from Artist where name like '%${artistName}%'`, nestTables: true};
 

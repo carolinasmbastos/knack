@@ -1,58 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-let artworkModel = require("../model/artworkModel.js");
+let artworkController = require('../controllers/artworkController')
 
 //Developer: Carol
 // EndPoint to fetch all the artwork 
 // by keywords: Artwork Description, Artist (Creator) name, Seller (Gallery or Artist) name, Period, Medium, 
-router.get('/artworkByKeyword/:keyword?', (req, res) => {
-
-    let keyword = (req.params.keyword == undefined ? "" : req.params.keyword);
-
-    if (keyword.toLowerCase() === "featured") {
-
-        artworkModel.findFeaturedArtwork()
-        .then(artwork=>{res.send(artwork)})
-        .catch(err=>{res.send(err)})
-
-    } else {
-
-        artworkModel.findArtworkByKeyword(keyword)
-        .then(artwork=>{res.send(artwork)})
-        .catch(err=>{res.send(err)})
-
-    }
-
-
-
-
-
-});
-
-
-//Developer: Carol
-// EndPoint to fetch all the artwork by artist name
-router.get('/artworkByArtist/:artistName', (req, res) => {
-
-    let artistName = req.params.artistName;
-
-    artworkModel.findArtworkByArtistName(artistName)
-    .then(artwork=>{res.send(artwork)})
-    .catch(err=>{res.send(err)})
-
-});
+// When keyword === 'featured', returns featured artwork
+router.get('/artworks/search/:keyword?', artworkController.getArtworkByKeyword);
 
 //Developer: Carol
 // EndPoint to fetch all the artwork by id
-router.get('/artworkById/:id', (req, res) => {
-
-    let id = req.params.id;
-
-    artworkModel.findArtworkByArtworkId(id)
-    .then(artwork=>{res.send(artwork)})
-    .catch(err=>{res.send(err)})
-
-});
+router.get('/artworks/:id', artworkController.getArtworkByArtworkId);
 
 exports.artworkRouter = router;

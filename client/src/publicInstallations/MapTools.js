@@ -17,6 +17,9 @@ class MapTools {
         //markers for installations
         this.markers = [];
 
+        this.cx = 0;
+        this.cy = 0;
+
         this.geocodingClient = mbxGeocoding({ accessToken: 'pk.eyJ1Ijoiam9yZGFubWlsbGVyIiwiYSI6ImNqcW41bTZxZjdlc3I0MnBkcWtrc2xlYW8ifQ.SBX1hj-2nItwHZatTC72Dw' });
 
     }
@@ -29,7 +32,7 @@ class MapTools {
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v10',
             center: [0, 0],
-            zoom: 12,
+            zoom: 11,
             maxZoom: 15
         });
 
@@ -42,12 +45,12 @@ class MapTools {
             .send()
             .then(response => {
 
-                let x = response.body.features[0].center[0];
-                let y = response.body.features[0].center[1];
+                this.cx = response.body.features[0].center[0];
+                this.cy = response.body.features[0].center[1];
 
-                this.map.setCenter([x, y]);
+                this.map.setCenter([this.cx, this.cy]);
 
-                console.log("center: " + x + " " + y)
+                console.log("center: " + this.cx + " " + this.cy)
 
             });
 
@@ -99,6 +102,7 @@ class MapTools {
                 }
 
             })
+            this.map.setCenter([this.cx, this.cy]);
         })
         .catch(error => {
             console.log(error);
