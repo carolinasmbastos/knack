@@ -31,6 +31,9 @@ const NavBar = withRouter(({ history }) => {
               <Link to="/discovery" className="nav-link">Discovery</Link>
             </NavItem>
             <NavItem>
+                <Link to="/explore" className="nav-link">Explore</Link>
+            </NavItem>
+            <NavItem>
               <Link to="/login" className="nav-link">Login</Link>
             </NavItem>
           </Nav>

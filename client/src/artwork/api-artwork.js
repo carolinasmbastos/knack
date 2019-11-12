@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const searchArtworks = (keyword) => {
   return axios
-    .get(`/artworkByKeyword/${keyword}`)
+    .get(`/artworks/search/${keyword}`)
     .then(res => {
       return res.data
     })
@@ -13,7 +13,7 @@ const searchArtworks = (keyword) => {
 
 const findArtwork = (id) => {
   return axios
-    .get(`/artworkById/${id}`)
+    .get(`/artworks/${id}`)
     .then(res => {
       return res.data
     })
@@ -24,7 +24,7 @@ const findArtwork = (id) => {
 
 const requestOrder = (info) => {
   return axios
-    .post(`/placeOrder`, {
+    .post(`/orders`, {
         idCustomer: info.idCustomer,
         idArtwork: info.idArtwork,
         orderType: info.orderType,
