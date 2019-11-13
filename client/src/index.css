@@ -194,3 +194,16 @@ a.nav-link {
   position: relative;
   margin-top: 2rem;
 }
+
+/* Artist */
+.artistImage {
+    height: 70vh;
+    margin: 5rem 0;
+  }
+  
+.artistDetails.col-md-6 {
+    margin: 5rem 0;
+    padding: 0 3rem;
+    
+    align-items: center;
+  }
