@@ -38,7 +38,7 @@ exports.getArtistByID = (artistID) => {
     let sqlQuery = `SELECT
                         *
                         FROM
-                        Artist
+                        Artist artist
                         WHERE
                         idArtist  = ${artistID}`
 

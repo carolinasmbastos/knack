@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const searchArtist = (artist) => {
+const findArtist = (artistId) => {
   return axios
-    .get('/artists/search/', artist)
+    .get(`/artists/${artistId}`)
     .then(res => {
       return res.data
     })
@@ -24,6 +24,6 @@ const popularArtists = () => {
   }
 
 export {
-  searchArtist,
-  popularArtists
+    findArtist,
+    popularArtists
 }

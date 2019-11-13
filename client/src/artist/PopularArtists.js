@@ -89,7 +89,7 @@ class PopularArtists extends React.Component {
                 .enter()
                 .append("a")
                 .attr("href", function(data){
-                    return "/browse/"+data.Name;
+                    return "/artist/"+data.idArtist;
                 })
                 .attr("class", "artist-name")
                 .html(function(data){
