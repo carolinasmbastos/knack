@@ -5,6 +5,8 @@ export default class Footer extends React.Component {
     return (
       <div className='footer'>
         Footer Under Construction.
+
+        
       </div>
     );
   }
