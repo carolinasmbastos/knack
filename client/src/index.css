@@ -1,8 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700&display=swap');
+
+/* Fonts */
+body, 
+nav, 
+.carousel-caption h3,
+.monthlyArtContainer h3 {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poiret One', cursive;
+}
+
+
+
+/* Core */
+body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,6 +27,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+}
+
+a.nav-link {
+  margin: 0 25px;
+}
+
+.footer {
+  background-color: #000;
+  margin-top: 2rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+
+/* Browse/Search Artworks */
+.artwork-thumbnail {
+  height: 200px;
+}
+
+.browseArtworksHeading,
+.monthlyArtContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+
+
+/* View Artwork */
+.artwork-image {
+  height: 70vh;
+  margin: 5rem 0;
+}
+
+.artworkDetails.col-md-6 {
+  margin: 5rem 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.artworkActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rentBtn {
+  margin-right: 1rem;
+}
+
+.confirmationBox {
+  margin-top: 2rem;
+}
+
+.homeLink {
+  text-align: center;
+}
+
+.confirmationHeading {
+  text-align: center;
+}
+
 
 /* Monthly Art styles START */
 /* Owner: Jagmeet */
@@ -25,82 +115,159 @@ code {
 }
 
 .monthlyArtBgImg {
-  height: 200px;
+  height: 275px;
 }
 
 @media only screen and (min-width: 508px) {
   .monthlyArtBgImg {
-    height: 175px;
+    height: 250px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .monthlyArtBgImg {
-    height: 150px;
+    height: 225px;
   }
+}
+
+.monthlyArtCard {
+  margin-top: 2rem;
+}
+
+.monthlyArtContainer h2 {
+  margin-top: 5rem;
+}
+
+.bgtext {
+  width: 300px;
+  margin: 2rem auto;
 }
 /* Monthly Art styles END */
 
 
 .footer-main-dev{
-display: grid;
-grid-template-columns: 1fr 5fr;
-  width:100%;
-  height: 50px;
-  margin: auto;
-  margin-top: 20px;
-  background:black;
-  padding: 20px 0px;
-}
-
-
-
-
-
-.links a{
-  display: inline-block;
-  color: white;
-  text-align: center;
-  margin-right: 0px;
-}
-.links ul{
-  margin-left: 160px;
-  
-}
-
-.links ul li {
-  display: inline-block;
-  margin-left: 40px;
- 
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+    width:100%;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    background:black;
+    padding: 20px 0px;
   }
-  .links ul li a{
-    margin-left: 20px;
-    margin-bottom: -20px;
-    margin-right: 10px;
-    
+  
+  
+  
+  
+  
+  .links a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    margin-right: 0px;
   }
   .links ul{
-    margin-top: -10px;
-  }
-
- .logo{
-  display: grid;
-  grid-template-columns: .5fr .5fr;
-   height: 40px;
-   width:70px;
-   margin-left: 20px;
-  
-   margin-top:-8px ;
- }
- 
- 
-@media screen and (min-width: 400px) {
-
-  .footer-main-dev {
-  
-  overflow: auto;
-  
- 
+    margin-left: 160px;
+    
   }
   
+  .links ul li {
+    display: inline-block;
+    margin-left: 40px;
+   
+    }
+    .links ul li a{
+      margin-left: 20px;
+      margin-bottom: -20px;
+      margin-right: 10px;
+      
+    }
+    .links ul{
+      margin-top: -10px;
+    }
+  
+   .logo{
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+     height: 40px;
+     width:70px;
+     margin-left: 20px;
+    
+     margin-top:-8px ;
+   }
+   
+   
+  @media screen and (min-width: 400px) {
+  
+    .footer-main-dev {
+    
+    overflow: auto;
+    
+   
+    }
+    
+  }
+
+
+
+/* Timeline Slider */
+.btn-group {
+  width: 100%;
 }
+
+.btn-group .btn {
+  border-radius: 25px;
+}
+
+.btn-group .btn:nth-of-type(1),
+.btn-group .btn:nth-of-type(2),
+.btn-group .btn:nth-of-type(3) {
+  border-right: 3px solid white;
+}
+
+.btn-group .btn.timelineButton {
+  background-color: #000;
+}
+
+.btn-group .btn.timelineButton.selected {
+  background-color: #D9B226;
+  color: #000;
+  position: relative;
+}
+
+.btn-group .btn.timelineButton.selected::after {
+  content : url(./assets/TimelineSliderArrow.png);
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -20%;
+  transition: .5s;
+}
+
+.timelineSliderArrow {
+  height: 15px;
+  width: auto;
+  position: absolute;
+  margin-top: 30px;
+  transition: .5s;
+  /* margin-left: 11%;  */
+  /* 85, 60, 36, 11 */
+  z-index: 1;
+}
+
+.timelineContainer {
+  position: relative;
+  margin-top: 2rem;
+}
+
+/* Artist */
+.artistImage {
+    height: 70vh;
+    margin: 5rem 0;
+  }
+  
+.artistDetails.col-md-6 {
+    margin: 5rem 0;
+    padding: 0 3rem;
+    
+    align-items: center;
+  }

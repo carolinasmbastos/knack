@@ -16,10 +16,12 @@ const NavBar = withRouter(({ history }) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <Link to="/" className="navbar-brand">Knack</Link>
+        <Link to="/" className="navbar-brand">
+          <img src='/img/assets/logo.svg' alt='Knack Logo' className='logoImg' />
+        </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mx-auto col-sm-4" navbar>
+          <Nav className="mx-auto col-sm-6" navbar>
             <NavItem className="col-sm-12">
               <ArtworkSearchForm />
             </NavItem>
@@ -27,6 +29,9 @@ const NavBar = withRouter(({ history }) => {
           <Nav navbar>
             <NavItem>
               <Link to="/discovery" className="nav-link">Discovery</Link>
+            </NavItem>
+            <NavItem>
+                <Link to="/explore" className="nav-link">Explore</Link>
             </NavItem>
             <NavItem>
               <Link to="/login" className="nav-link">Login</Link>

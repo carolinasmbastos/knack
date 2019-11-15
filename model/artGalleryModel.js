@@ -2,7 +2,7 @@ const {cp} = require("../db/connection.js");
 const {query} = require("../db/promise-mysql.js");
 
 // Developer: Pratt
-exports.getArtGalleryByID = (artGalleryID, result) => {
+exports.getArtGalleryByID = (artGalleryID) => {
     let sqlQuery = `SELECT  
                         *
                     FROM 
@@ -18,7 +18,7 @@ exports.getArtGalleryByID = (artGalleryID, result) => {
 
 // Developer: John
 
-exports.getArtGalleries = (result) => {
+exports.getArtGalleries = () => {
     let sqlQuery = `SELECT  
                         *
                     FROM 

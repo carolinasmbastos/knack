@@ -1,0 +1,26 @@
+.bubbleChart svg {
+    margin: auto;
+    /* background:#58595B; */
+  }
+
+  .bubble {
+
+    display: block;
+  }
+
+  .artist-link {
+      display: block;
+  }
+
+  .artist-link:hover, .artist-link:link, .artist-link:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  circle:hover {
+    transform: scale(1.05, 1.05) ;
+  }
+
+.discoverySections h2 {
+  text-align: center;
+}

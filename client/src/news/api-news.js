@@ -1,0 +1,19 @@
+import axios from 'axios';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
+
+const getNews = () => {
+        
+    return axios.get('/news')
+        .then(res => {
+            console.log("got news")
+            console.log(res.data)
+            return res.data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+}
+
+export {getNews}
