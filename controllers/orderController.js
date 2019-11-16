@@ -14,3 +14,11 @@ exports.createOrder = (req, res) => {
     .then(result=>{res.send(result)})
     .catch(err=>{res.send(err)})
 }
+
+exports.getPaymentMethods = (req, res) => {
+  let userID = req.params.userID
+
+  orderModel.getPaymentMethds(userID)
+    .then(paymentMethods=>{res.send(paymentMethods)})
+    .catch(err=>{res.send(err)})
+}

@@ -1,0 +1,65 @@
+.monthlyArtPage {
+  text-align: center;
+}
+
+.monthlyArtPage h1 {
+  margin-top: 3rem;
+}
+
+.monthlyArtPage h2 {
+  font-size: 1rem;
+}
+
+.monthlyArtPage>p {
+  margin-top: 2rem;
+}
+
+.monthlyArtPage .row {
+  margin-top: 2rem;
+}
+
+.monthlyArtPage .card-title {
+  margin-bottom: 0;
+}
+
+.monthlyArtPage .card hr {
+  margin-top: 0;
+}
+
+.subscriptionPlanBox {
+  margin-bottom: 2rem;
+}
+
+.subscriptionPlanBox p {
+  font-size: 0.6rem;
+}
+
+.monthlyArtPage small {
+  font-size: 0.5rem;
+}
+
+.monthlyArtPage .selected,
+.monthlyArtPage .selected:hover {
+  background-color: #D9B226;
+}
+
+.paymentCard {
+  margin-bottom: 1rem;
+}
+
+.paymentInputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.monthlyArtPage label {
+  margin-right: 10px;
+}
+
+.tncContainer {
+  margin-bottom: 2rem;
+}
+
+.planDetailsContainer {
+  margin: 3rem 0;
+}

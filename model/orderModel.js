@@ -30,8 +30,8 @@ exports.createOrder = (purchaseInfo) => {
                         ${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} * 0.12 AS taxes,
                         ${mysql.escape(purchaseInfo.idPaymentMethod)} AS idPaymentMethod,
                         NOW() AS paymentDate,
-                        ${purchaseInfo.rentalStartDate.length > 0 ? mysql.escape(purchaseInfo.rentalStartDate) + ',' : ''}
-                        ${purchaseInfo.rentalEndDate.length > 0 ? mysql.escape(purchaseInfo.rentalEndDate) + ',' : ''}
+                        ${purchaseInfo.rentalStartDate.length > 0 ? mysql.escape(new Date(purchaseInfo.rentalStartDate)) + ',' : ''}
+                        ${purchaseInfo.rentalEndDate.length > 0 ? mysql.escape(new Date(purchaseInfo.rentalEndDate)) + ',' : ''}
                         ${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} + (${purchaseInfo.orderType == 'sale' ? 'listPrice' : 'rentPrice'} * 0.15) + 15 AS paymentAmount
                     FROM
                         Artwork
@@ -40,4 +40,12 @@ exports.createOrder = (purchaseInfo) => {
                     // Hardcoding for the shipping cost needs to be avoided
 
     return query(cp, sqlQuery);
+}
+
+exports.getPaymentMethds = (userID) => {
+  let sqlQuery = `select idPaymentMethod, substring(cardNumber, 13, 4) as last_4_digits
+  from PaymentMethod
+  where idCustomer=2`
+
+return query(cp, sqlQuery);
 }

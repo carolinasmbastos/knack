@@ -1,7 +1,8 @@
 import React from "react";
 import { Col, Container, Card, CardTitle, CardText, CardImg, CardImgOverlay,Button } from 'reactstrap';
+import { Link } from "react-router-dom";
 
-const MonthlyArt = (props) => {
+const MonthlyArtBanner = (props) => {
   return (
     <div>
       <Container row className='monthlyArtContainer'>
@@ -15,7 +16,7 @@ const MonthlyArt = (props) => {
             Switch to a new Artwork every month and revive the vibe of your place.
           </CardText>
           <Col className="buttonContainer">
-            <Button color="success">Subscribe</Button>
+            <Link to="/monthlyArt" className="nav-link btn-secondary">SUBSCRIBE</Link>
           </Col>
         </CardImgOverlay>
       </Card>
@@ -25,4 +26,4 @@ const MonthlyArt = (props) => {
 };
 
 
-export default MonthlyArt;
+export default MonthlyArtBanner;

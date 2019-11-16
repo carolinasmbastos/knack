@@ -8,4 +8,6 @@ let orderController = require('../controllers/orderController')
 // Handle the rent or purchase of an Artwork
 router.post('/orders', orderController.createOrder);
 
+router.get('/paymentMethods/:userID', orderController.getPaymentMethods)
+
 exports.orderRouter = router;
