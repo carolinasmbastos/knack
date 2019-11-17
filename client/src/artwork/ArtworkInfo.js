@@ -32,8 +32,8 @@ export default class ArtworkInfo extends React.Component {
           <h3>${this.props.artwork.rentPrice}</h3>
           {this.props.monthlyArtSubscription && (
             <small>
-              (This artwork is eligible for Monthly Art and you can rent it with
-              your subscription)
+              (Rent this Artwork for no cost with your Monthly Artwork
+              subsription!)
             </small>
           )}
           <div>
