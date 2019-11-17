@@ -25,6 +25,12 @@ export default class ArtworkInfo extends React.Component {
         <br />
         <div className="artworkActions">
           <h3>${this.props.artwork.rentPrice}</h3>
+          {this.props.monthlyArtSubscription && (
+            <small>
+              (This artwork is eligible for Monthly Art and you can rent it with
+              your subscription)
+            </small>
+          )}
           <div>
             <Button
               color="info"
@@ -47,5 +53,6 @@ ArtworkInfo.propTypes = {
   medium: PropTypes.object.isRequired,
   sellerInfo: PropTypes.object.isRequired,
   sellerEntity: PropTypes.object.isRequired,
+  monthlyArtSubscription: PropTypes.bool.isRequired,
   onClickRent: PropTypes.func.isRequired
 };

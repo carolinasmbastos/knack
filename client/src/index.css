@@ -85,6 +85,11 @@ a.nav-link {
   align-items: center;
 }
 
+.artworkActions small {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 /* .rentBtn {
   margin-right: 1rem;
 } */

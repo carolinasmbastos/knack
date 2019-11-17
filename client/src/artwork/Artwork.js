@@ -4,6 +4,7 @@ import { Col, Container, Row } from "reactstrap";
 import ArtworkInfo from "./ArtworkInfo";
 import OrderSummary from "./OrderSummary";
 import { formatDate } from "../helpers/dateOps";
+import { getMonthlyArtSubscriptionStatus } from "../monthlyArt/api-monthly-art";
 
 const styles = {
   containerSpacing: {
@@ -21,7 +22,8 @@ export default class Artwork extends React.Component {
       artist: {},
       medium: {},
       sellerInfo: {},
-      sellerEntity: {}
+      sellerEntity: {},
+      subscriptionDetails: {}
     };
     this.rentArtwork = this.rentArtwork.bind(this);
     this.requestArtwork = this.requestArtwork.bind(this);
@@ -46,6 +48,19 @@ export default class Artwork extends React.Component {
         });
       }
     });
+
+    // Replace the hardcoded User ID with an actual value
+    getMonthlyArtSubscriptionStatus(2)
+      .then(data => {
+        if (data.length == 1) {
+          this.setState({
+            subscriptionDetails: data[0]
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   rentArtwork() {
@@ -82,6 +97,16 @@ export default class Artwork extends React.Component {
   }
 
   render() {
+    let monthlyArtAvailability = false;
+    if (
+      this.state.artwork.monthlyArtAvailability == 1 && // Check if the Artwork is AVAILABLE for Monthly Art
+      Date(this.state.subscriptionDetails.endDate) >= Date() && // Check if the user has an active subscription
+      this.state.subscriptionDetails.artworkBalance > 0 && // Check if the user has any more arworks for redeeming through Monthly Art
+      this.state.artwork.year >= this.state.subscriptionDetails.planYearStart && // Artwork's year is greater than the Beginning Year of the Subscription Plan
+      this.state.artwork.year <= this.state.subscriptionDetails.planYearEnd //// Artwork's year is less than the Ending Year of the Subscription Plan
+    )
+      monthlyArtAvailability = true;
+
     return (
       <Container style={styles.containerSpacing}>
         <Row>
@@ -104,6 +129,7 @@ export default class Artwork extends React.Component {
                 medium={this.state.medium}
                 sellerInfo={this.state.sellerInfo}
                 sellerEntity={this.state.sellerEntity}
+                monthlyArtSubscription={monthlyArtAvailability}
                 onClickRent={this.rentArtwork}
               />
             )}
@@ -113,6 +139,7 @@ export default class Artwork extends React.Component {
                 artist={this.state.artist}
                 sellerInfo={this.state.sellerInfo}
                 sellerEntity={this.state.sellerEntity}
+                monthlyArtSubscription={monthlyArtAvailability}
                 onClickRequest={this.requestArtwork}
               />
             )}
