@@ -30,10 +30,8 @@ export default class Artwork extends React.Component {
   }
 
   componentDidMount() {
-    findArtwork(this.props.match.params.id).then(data => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
+    findArtwork(this.props.match.params.id)
+      .then(data => {
         console.log(data[0].artwork);
         this.setState({
           artwork: data[0].artwork,
@@ -46,8 +44,10 @@ export default class Artwork extends React.Component {
               : data[0].artGallery, // Can be either Art Gallery or Artist
           id: this.props.match.params.id
         });
-      }
-    });
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
     // Replace the hardcoded User ID with an actual value
     getMonthlyArtSubscriptionStatus(2)
@@ -84,16 +84,16 @@ export default class Artwork extends React.Component {
       // rentalStartDate: formatDate(rentalStartDate), // DESIGN CHANGE! The designers are probably not looking to get any more updates to the designs, but we need a field for this in the interface!
       // rentalEndDate: formatDate(rentalEndDate)
     };
-    requestOrder(info).then(data => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
+    requestOrder(info)
+      .then(data => {
         const insertId = data.insertId;
 
         const { history } = this.props;
         if (history) history.push(`/confirmation/${insertId}`);
-      }
-    });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {

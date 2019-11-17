@@ -12,21 +12,6 @@ exports.createOrder = purchaseInfo => {
                         dateCreation,
                         price,
                         taxes
-                        -- idPaymentMethod,
-                        -- paymentDate,
-                        -- ${
-                          ""
-                          // purchaseInfo.rentalStartDate.length > 0
-                          //   ? "rentalStartDate,"
-                          //   : ""
-                        }
-                        -- ${
-                          ""
-                          // purchaseInfo.rentalEndDate.length > 0
-                          //   ? "rentalEndDate,"
-                          //   : ""
-                        }
-                        -- paymentAmount
                     )
                     SELECT
                         ${mysql.escape(purchaseInfo.idCustomer)} AS idCustomer,
@@ -44,36 +29,6 @@ exports.createOrder = purchaseInfo => {
                             ? "listPrice"
                             : "rentPrice"
                         } * 0.12 AS taxes
-                        -- ${
-                          "" // mysql.escape(
-                          //   purchaseInfo.idPaymentMethod
-                          // )
-                        } AS idPaymentMethod,
-                        -- NOW() AS paymentDate,
-                        -- ${
-                          ""
-                          // purchaseInfo.rentalStartDate.length > 0
-                          //   ? mysql.escape(
-                          //       new Date(purchaseInfo.rentalStartDate)
-                          //     ) + ","
-                          //   : ""
-                        }
-                        -- ${
-                          ""
-                          // purchaseInfo.rentalEndDate.length > 0
-                          //   ? mysql.escape(
-                          //       new Date(purchaseInfo.rentalEndDate)
-                          //     ) + ","
-                          //   : ""
-                        }
-                        -- ${
-                          ""
-                          // purchaseInfo.orderType == "sale"
-                          //   ? "listPrice"
-                          //   : "rentPrice"
-                        } + (${
-    purchaseInfo.orderType == "sale" ? "listPrice" : "rentPrice"
-  } * 0.15) + 15 AS paymentAmount
                     FROM
                         Artwork
                     WHERE
