@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Button } from "reactstrap";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default class ArtworkInfo extends React.Component {
@@ -7,7 +8,11 @@ export default class ArtworkInfo extends React.Component {
     return (
       <Col>
         <h1>{this.props.artwork.title}</h1>
-        <h2>{this.props.artist.name}</h2>
+        <h2>
+          <Link to={`/artist/${this.props.artwork.idArtist}`}>
+            {this.props.artist.name}
+          </Link>
+        </h2>
         <br />
         <div>{this.props.medium.mediumType}</div>
         <div>

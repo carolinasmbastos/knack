@@ -1,16 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Footer extends React.Component {
   render() {
     return (
       <div class="footer-main-div">
-        <div class="footer-item logo">
-          <img
-            width="100%"
-            src="knack-logo-footer.svg"
-            alt="Knack Footer Logo"
-          />
-        </div>
+        <Link to="/">
+          <div class="footer-item logo">
+            <img
+              width="100%"
+              src="/knack-logo-footer.svg"
+              alt="Knack Footer Logo"
+            />
+          </div>
+        </Link>
         {/* <div className="footer-item copyright">&copy; 2019 Knack</div> */}
         <div class="footer-item footer-links">
           <ul>

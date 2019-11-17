@@ -21,7 +21,43 @@ h6 {
   font-family: "Poiret One", cursive;
 }
 
+/* Bootstrap Overrides */
+.navbar.navbar-light.bg-light {
+  background-color: #fff !important;
+  box-shadow: 0px 3px 2px lightgrey;
+}
+
+input#artist.form-control {
+  border-radius: 0px;
+  border: 0.1rem solid #000;
+  color: #000;
+  font-size: 0.8rem;
+  transition: 0.8s;
+}
+
+input#artist.form-control:focus {
+  box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5);
+  border: none;
+  transition: 0.8s;
+}
+
+input#artist.form-control::placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+  text-transform: uppercase;
+  border: 0.1rem solid black;
+  color: black;
+  font-size: 0.8rem;
+}
+
 /* Core */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -68,10 +104,50 @@ a.nav-link {
   text-align: center;
 }
 
+.artworksGrid .card {
+  border: none;
+}
+
+.artworksGrid .card-body {
+  padding: 1.25rem 0.25rem;
+}
+
+.artworksGrid .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artworksGrid .card-body .cardInfo {
+  font-size: 0.8rem;
+}
+
+.artworksGrid .card-body .card-title {
+  margin-bottom: 0.1rem;
+}
+
+.artworksGrid .card-body .cardActions a {
+  border: 0.05rem solid black;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.artworksGrid .card a,
+.artworksGrid .card a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 /* View Artwork */
 .artwork-image {
   height: 70vh;
   margin: 5rem 0;
+}
+
+.artworkDetails a,
+.artworkDetails a:hover {
+  text-decoration: none;
+  color: #212529;
 }
 
 .artworkDetails.col-md-6 {
@@ -196,8 +272,10 @@ a.nav-link {
 }
 
 .footer-links a,
+.footer-links a:hover,
 .footer-main-div .copyright {
   color: white;
+  text-decoration: none;
 }
 
 .footer-main-div .logo img {
@@ -262,13 +340,13 @@ a.nav-link {
   position: relative;
 }
 
-.btn-group .btn.timelineButton.selected::after {
+/* .btn-group .btn.timelineButton.selected::after {
   content: url(./assets/TimelineSliderArrow.png);
   position: absolute;
   margin-top: 20px;
   margin-left: -20%;
   transition: 0.5s;
-}
+} */
 
 .timelineSliderArrow {
   height: 15px;
