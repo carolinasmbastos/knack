@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 const { indexRouter } = require("./routes/index.js");
-app.use("/api", indexRouter);
+app.use("/", indexRouter);
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
