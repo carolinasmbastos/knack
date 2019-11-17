@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 bodyParser = require("body-parser");
 const path = require("path");
+var cors = require("cors");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 

@@ -1,6 +1,7 @@
 const eventsCache = require("./events.json");
 const axios = require("axios");
 const utils = require("./Utils");
+require("dotenv").config();
 
 exports.getEvents = (req, res) => {
   // EventBride API doen't allow subsequent calls within minutes, so to prevent error on the FE,
@@ -13,8 +14,7 @@ exports.getEvents = (req, res) => {
   // 5012 -> 'Painting'
   // 5013 -> 'Design'
 
-  let url =
-    "https://www.eventbriteapi.com/v3/events/search/?location.address=vancouver&location.within=10km&expand=venue&subcategories=5008%2C5011%2C5012%2C5013&token=DPEHG42NN6YYGTZP6CXZ";
+  let url = `https://www.eventbriteapi.com/v3/events/search/?location.address=vancouver&location.within=10km&expand=venue&subcategories=5008%2C5011%2C5012%2C5013&token=${process.env.EVENTBRITE_TOKEN}`;
 
   console.log(url);
   axios
