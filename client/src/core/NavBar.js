@@ -42,7 +42,9 @@ const NavBar = withRouter(({ history }) => {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/contact" className="nav-link">Contact us</Link>
+              <Link to="/contact" className="nav-link">
+                Contact us
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
