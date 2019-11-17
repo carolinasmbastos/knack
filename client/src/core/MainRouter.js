@@ -16,6 +16,8 @@ import Explore from '../explore/Explore'
 import Artist from '../artist/Artist'
 import ContactUs from '../contact/ContactUs'
 
+import MonthlyArt from '../monthlyArt/MonthlyArt'
+
 class MainRouter extends Component {
   // Removes the server-side injected CSS when React component mounts
   componentDidMount() {
@@ -33,6 +35,7 @@ class MainRouter extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/discovery" component={Discovery} />
         <Route path="/explore" component={Explore} />
+        <Route path="/monthlyArt" component={MonthlyArt} />
         <Route path="/browse/:searchString" component={BrowseArtworks} />
         <Route path="/artwork/:id" component={Artwork} />
         <Route path="/confirmation/:orderId" component={Confirmation} />

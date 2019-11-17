@@ -1,47 +1,54 @@
-import axios from 'axios'
+import axios from "axios";
 
-const searchArtworks = (keyword) => {
+const searchArtworks = keyword => {
   return axios
     .get(`/artworks/search/${keyword}`)
     .then(res => {
-      return res.data
+      return res.data;
     })
     .catch(err => {
-      console.log(err)
-    })
-}
+      console.log(err);
+    });
+};
 
-const findArtwork = (id) => {
+const findArtwork = id => {
   return axios
     .get(`/artworks/${id}`)
     .then(res => {
-      return res.data
+      return res.data;
     })
     .catch(err => {
-      console.log(err)
-    })
-}
+      console.log(err);
+    });
+};
 
-const requestOrder = (info) => {
+const requestOrder = info => {
   return axios
     .post(`/orders`, {
-        idCustomer: info.idCustomer,
-        idArtwork: info.idArtwork,
-        orderType: info.orderType,
-        idPaymentMethod: info.idPaymentMethod,
-        rentalStartDate: info.rentalStartDate,
-        rentalEndDate: info.rentalEndDate
+      idCustomer: info.idCustomer,
+      idArtwork: info.idArtwork,
+      orderType: info.orderType,
+      idPaymentMethod: info.idPaymentMethod,
+      rentalStartDate: info.rentalStartDate,
+      rentalEndDate: info.rentalEndDate
     })
     .then(res => {
-      return res.data
+      return res.data;
     })
     .catch(err => {
-      console.log(err)
-    })
-}
+      console.log(err);
+    });
+};
 
-export {
-  searchArtworks,
-  findArtwork,
-  requestOrder
-}
+const getTimelines = () => {
+  return axios
+    .get(`/periods`)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
+
+export { searchArtworks, findArtwork, requestOrder, getTimelines };
