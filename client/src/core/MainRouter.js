@@ -14,6 +14,7 @@ import Discovery from '../discovery/Discovery'
 import Explore from '../explore/Explore'
 
 import Artist from '../artist/Artist'
+import ContactUs from '../contact/ContactUs'
 
 import MonthlyArt from '../monthlyArt/MonthlyArt'
 
@@ -39,6 +40,7 @@ class MainRouter extends Component {
         <Route path="/artwork/:id" component={Artwork} />
         <Route path="/confirmation/:orderId" component={Confirmation} />
         <Route path="/artist/:id" component={Artist} />
+        <Route path="/contact" component={ContactUs} />
       </Switch>
       <Footer />
     </div>)

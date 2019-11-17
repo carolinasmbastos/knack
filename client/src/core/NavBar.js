@@ -41,6 +41,9 @@ const NavBar = withRouter(({ history }) => {
                 Monthly Art
               </Link>
             </NavItem>
+            <NavItem>
+              <Link to="/contact" className="nav-link">Contact us</Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
