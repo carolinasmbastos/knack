@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "client-install": "cd client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js",
-    "client": "cd client && npm start",
+    "client": "cd client && npm run start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build",
-    "start": "node app.js"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
