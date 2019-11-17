@@ -75,6 +75,10 @@ export default class MonthlyArt extends React.Component {
           this.setState({
             subscriptionDetails: data[0]
           });
+        } else {
+          this.setState({
+            subscriptionDetails: null
+          });
         }
       })
       .catch(error => {
@@ -128,7 +132,7 @@ export default class MonthlyArt extends React.Component {
           artworks. Ww will help you find your KNACK for art!
         </p>
 
-        {!this.state.subscriptionDetails.planDescription && (
+        {this.state.subscriptionDetails == null && (
           <React.Fragment>
             <Row>
               {this.state.plans.map((subscriptionPlan, key) => (
@@ -226,30 +230,35 @@ export default class MonthlyArt extends React.Component {
           </React.Fragment>
         )}
 
-        {this.state.subscriptionDetails.planDescription && (
-          <Row>
-            <Col md={{ size: 6, offset: 3 }}>
-              <div className="planDetailsContainer">
-                <Card body>
-                  <CardTitle>
-                    <h3>
-                      Your Monthly Art Subscription worth $
-                      {this.state.subscriptionDetails.planCost} is valid until{" "}
-                      {formatDate(
-                        new Date(this.state.subscriptionDetails.endDate)
-                      )}
-                      .
-                    </h3>
-                  </CardTitle>
-                  <hr />
-                  <CardText>
-                    <p>{this.state.subscriptionDetails.planDescription}</p>
-                  </CardText>
-                </Card>
-              </div>
-            </Col>
-          </Row>
-        )}
+        {this.state.subscriptionDetails &&
+          this.state.subscriptionDetails.planDescription && (
+            <Row>
+              <Col md={{ size: 6, offset: 3 }}>
+                <div className="planDetailsContainer">
+                  <Card body>
+                    <CardTitle>
+                      <h3>
+                        Your Monthly Art Subscription worth $
+                        {this.state.subscriptionDetails.planCost} is valid until{" "}
+                        {formatDate(
+                          new Date(this.state.subscriptionDetails.endDate)
+                        )}
+                        .
+                      </h3>
+                    </CardTitle>
+                    <hr />
+                    <CardText>
+                      <p>{this.state.subscriptionDetails.planDescription}</p>
+                      <h4>
+                        Artwork Balance for the Current Month:{" "}
+                        {this.state.subscriptionDetails.artworkBalance}
+                      </h4>
+                    </CardText>
+                  </Card>
+                </div>
+              </Col>
+            </Row>
+          )}
       </Container>
     );
   }
