@@ -184,6 +184,29 @@ a.nav-link {
   text-align: center;
 }
 
+.confirmationSvg {
+  height: 3rem;
+  width: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.confirmationBox .card-text {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.confirmationBox .homeLink,
+.confirmationBox .homeLink a {
+  font-size: 0.7rem;
+  color: black;
+}
+
+.confirmationBox .homeLink a {
+  text-decoration: underline;
+}
+
 /* Monthly Art styles START */
 /* Owner: Jagmeet */
 .buttonContainer {
