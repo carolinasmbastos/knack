@@ -1,22 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700&display=swap");
 
 /* Fonts */
-body, 
-nav, 
+body,
+nav,
 .carousel-caption h3,
-.monthlyArtContainer h3 {
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+.monthlyArtContainer h3,
+a,
+div {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poiret One', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poiret One", cursive;
 }
 
+/* Bootstrap Overrides */
+.navbar.navbar-light.bg-light {
+  background-color: #fff !important;
+  box-shadow: 0px 3px 2px lightgrey;
+}
 
+input#artist.form-control {
+  border-radius: 0px;
+  border: 0.1rem solid #000;
+  color: #000;
+  font-size: 0.8rem;
+  transition: 0.8s;
+}
+
+input#artist.form-control:focus {
+  box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5);
+  border: none;
+  transition: 0.8s;
+}
+
+input#artist.form-control::placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+  text-transform: uppercase;
+  border: 0.1rem solid black;
+  color: black;
+  font-size: 0.8rem;
+}
 
 /* Core */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -49,9 +90,8 @@ a.nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 /* Browse/Search Artworks */
 .artwork-thumbnail {
@@ -64,12 +104,50 @@ a.nav-link {
   text-align: center;
 }
 
+.artworksGrid .card {
+  border: none;
+}
 
+.artworksGrid .card-body {
+  padding: 1.25rem 0.25rem;
+}
+
+.artworksGrid .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artworksGrid .card-body .cardInfo {
+  font-size: 0.8rem;
+}
+
+.artworksGrid .card-body .card-title {
+  margin-bottom: 0.1rem;
+}
+
+.artworksGrid .card-body .cardActions a {
+  border: 0.05rem solid black;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.artworksGrid .card a,
+.artworksGrid .card a:hover {
+  text-decoration: none;
+  color: #000;
+}
 
 /* View Artwork */
 .artwork-image {
   height: 70vh;
   margin: 5rem 0;
+}
+
+.artworkDetails a,
+.artworkDetails a:hover {
+  text-decoration: none;
+  color: #212529;
 }
 
 .artworkDetails.col-md-6 {
@@ -85,9 +163,14 @@ a.nav-link {
   align-items: center;
 }
 
-.rentBtn {
-  margin-right: 1rem;
+.artworkActions small {
+  text-align: center;
+  margin-bottom: 1rem;
 }
+
+/* .rentBtn {
+  margin-right: 1rem;
+} */
 
 .confirmationBox {
   margin-top: 2rem;
@@ -101,6 +184,28 @@ a.nav-link {
   text-align: center;
 }
 
+.confirmationSvg {
+  height: 3rem;
+  width: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.confirmationBox .card-text {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.confirmationBox .homeLink,
+.confirmationBox .homeLink a {
+  font-size: 0.7rem;
+  color: black;
+}
+
+.confirmationBox .homeLink a {
+  text-decoration: underline;
+}
 
 /* Monthly Art styles START */
 /* Owner: Jagmeet */
@@ -111,7 +216,7 @@ a.nav-link {
 
 .monthlyArtContent {
   text-align: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .monthlyArtBgImg {
@@ -144,71 +249,94 @@ a.nav-link {
 }
 /* Monthly Art styles END */
 
+/* Foooooter */
+/* Default behaviour */
+.footer-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background: black;
+  margin-top: 2rem;
+}
 
-.footer-main-dev{
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-    width:100%;
-    height: 50px;
-    margin: auto;
-    margin-top: 20px;
-    background:black;
-    padding: 20px 0px;
-  }
-  
-  
-  
-  
-  
-  .links a{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    margin-right: 0px;
-  }
-  .links ul{
-    margin-left: 160px;
-    
-  }
-  
-  .links ul li {
-    display: inline-block;
-    margin-left: 40px;
-   
-    }
-    .links ul li a{
-      margin-left: 20px;
-      margin-bottom: -20px;
-      margin-right: 10px;
-      
-    }
-    .links ul{
-      margin-top: -10px;
-    }
-  
-   .logo{
-    display: grid;
-    grid-template-columns: .5fr .5fr;
-     height: 40px;
-     width:70px;
-     margin-left: 20px;
-    
-     margin-top:-8px ;
-   }
-   
-   
-  @media screen and (min-width: 400px) {
-  
-    .footer-main-dev {
-    
-    overflow: auto;
-    
-   
-    }
-    
+.footer-links ul {
+  display: flex;
+}
+
+.footer-item {
+  text-transform: uppercase;
+}
+
+.footer-item:nth-of-type(1),
+/* .footer-item:nth-of-type(2), */
+.footer-item .copyright {
+  border-right: 1px solid white;
+}
+
+.footer-main-div .desktop-footer-links {
+  display: none;
+  padding: 0;
+}
+
+.footer-links ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.logo {
+  padding: 0 0.5rem;
+}
+
+.footer-links li {
+  padding: 0 0.5rem;
+  list-style: none;
+}
+
+.footer-links a,
+.footer-links a:hover,
+.footer-main-div .copyright {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-main-div .logo img {
+  height: 1rem;
+  width: auto;
+  margin-top: -0.2rem;
+}
+
+/* Desktop behaviour */
+@media only screen and (min-width: 700px) {
+  .footer-main-div .desktop-footer-links {
+    display: block;
+    padding: 0 1rem;
   }
 
+  .footer-links li {
+    padding: 0 1rem;
+  }
 
+  .footer-item:nth-of-type(1),
+  .footer-item:nth-of-type(2),
+  .footer-item .copyright {
+    border-right: none;
+  }
+
+  .footer-main-div {
+    justify-content: space-between;
+  }
+
+  .footer-item {
+    text-transform: none;
+  }
+
+  .footer-main-div .logo img {
+    height: 1.5rem;
+  }
+}
+/* Foooooter FINIS. */
 
 /* Timeline Slider */
 .btn-group {
@@ -230,25 +358,25 @@ a.nav-link {
 }
 
 .btn-group .btn.timelineButton.selected {
-  background-color: #D9B226;
+  background-color: #d9b226;
   color: #000;
   position: relative;
 }
 
-.btn-group .btn.timelineButton.selected::after {
-  content : url(./assets/TimelineSliderArrow.png);
+/* .btn-group .btn.timelineButton.selected::after {
+  content: url(./assets/TimelineSliderArrow.png);
   position: absolute;
   margin-top: 20px;
   margin-left: -20%;
-  transition: .5s;
-}
+  transition: 0.5s;
+} */
 
 .timelineSliderArrow {
   height: 15px;
   width: auto;
   position: absolute;
   margin-top: 30px;
-  transition: .5s;
+  transition: 0.5s;
   /* margin-left: 11%;  */
   /* 85, 60, 36, 11 */
   z-index: 1;
@@ -261,13 +389,13 @@ a.nav-link {
 
 /* Artist */
 .artistImage {
-    height: 70vh;
-    margin: 5rem 0;
-  }
-  
+  height: 70vh;
+  margin: 5rem 0;
+}
+
 .artistDetails.col-md-6 {
-    margin: 5rem 0;
-    padding: 0 3rem;
-    
-    align-items: center;
-  }
+  margin: 5rem 0;
+  padding: 0 3rem;
+
+  align-items: center;
+}
