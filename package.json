@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
+    "client-install": "cd client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js",
-    "client": "npm start --prefix client",
+    "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
   },
