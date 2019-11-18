@@ -17,6 +17,7 @@ export default class Artwork extends React.Component {
     super(props);
     this.state = {
       viewMode: "info",
+      viewinSpace: false,
       id: "",
       artwork: {},
       artist: {},
@@ -96,6 +97,12 @@ export default class Artwork extends React.Component {
       });
   }
 
+  viewInSpace = () => {
+    this.setState({
+      viewinSpace: !this.state.viewinSpace
+    });
+  };
+
   render() {
     let monthlyArtAvailability = false;
     if (
@@ -109,17 +116,64 @@ export default class Artwork extends React.Component {
 
     return (
       <Container style={styles.containerSpacing}>
+        <img
+          src="/img/assets/88591.jpg"
+          alt="Room Background. Source: https://www.freepik.com/free-photo/pink-chair-white-room_4100643.htm"
+          className={`backgroundImages ${
+            this.state.viewinSpace ? "visible" : "hidden"
+          }`}
+        />
+        <img
+          id="cancelViewInSpace"
+          className={this.state.viewinSpace ? "visible" : "hidden"}
+          onClick={this.viewInSpace}
+          alt="Cancel"
+          src="/img/assets/close.svg"
+        />
         <Row>
           <Col md="6">
-            <img
-              src={`/img/artworks/${
-                this.state.artwork.imageUrl
-                  ? this.state.artwork.imageUrl
-                  : "default.jpg"
-              }`}
-              className="artwork-image"
-              alt="Artwork"
-            />
+            <Col md="12">
+              <img
+                src={`/img/artworks/${
+                  this.state.artwork.imageUrl
+                    ? this.state.artwork.imageUrl
+                    : "default.jpg"
+                }`}
+                className={`artwork-image ${
+                  this.state.viewinSpace ? "in-focus" : "default"
+                }`}
+                alt="Artwork"
+              />
+              <img
+                src={`/img/artworks/${
+                  this.state.artwork.imageUrl
+                    ? this.state.artwork.imageUrl
+                    : "default.jpg"
+                }`}
+                className={`artwork-image view-in-space ${
+                  this.state.viewinSpace ? "in-focus" : "default"
+                }`}
+                alt="Artwork View in Space"
+              />
+            </Col>
+            <Row className="auxiliaryActions">
+              <div id="favoriteArtwork">
+                <img
+                  src="/img/assets/favourite.svg"
+                  alt="Favourite Artwork"
+                  className="favouriteArtwork"
+                />
+                FAVORITE
+              </div>
+              <div id="viewInSpace" onClick={this.viewInSpace}>
+                <img
+                  src="/img/assets/viewInSpace.svg"
+                  alt="View Artwork in Space"
+                  className="viewInSpaceIcon"
+                />
+                VIEW IN SPACE
+              </div>
+            </Row>
           </Col>
           <Col md="6" className="artworkDetails">
             {this.state.viewMode === "info" && (
