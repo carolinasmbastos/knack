@@ -54,9 +54,9 @@ input#artist.form-control::placeholder {
 }
 
 /* Core */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   margin: 0;
