@@ -1,6 +1,7 @@
 import React from "react"
 import {Col, Container, Row} from 'reactstrap'
 import {findArtist} from './api-artist'
+import ArtworkGallery from '../artwork/ArtworkGallery'
 
 const styles = {
     containerSpacing: {
@@ -46,6 +47,11 @@ export default class Artist extends React.Component {
                     </label>
                 </Col>
                 </Row> 
+                <hr />
+                <Row>
+                    <h2>MORE FROM THIS ARTIST</h2>
+                    <ArtworkGallery artist={this.state.artist.idArtist}/>
+                </Row>
             </Container>
         );
       }
