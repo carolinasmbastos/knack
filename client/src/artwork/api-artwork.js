@@ -22,6 +22,17 @@ const findArtwork = id => {
     });
 };
 
+const findArtworkByArtistId = artistId => {
+    return axios
+      .get(`/artworks/artists/${artistId}`)
+      .then(res => {
+        return res.data;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
 const requestOrder = info => {
   return axios
     .post(`/orders`, {
@@ -51,4 +62,4 @@ const getTimelines = () => {
     });
 };
 
-export { searchArtworks, findArtwork, requestOrder, getTimelines };
+export { searchArtworks, findArtwork, findArtworkByArtistId, requestOrder, getTimelines };
