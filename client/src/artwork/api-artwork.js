@@ -2,7 +2,7 @@ import axios from "axios";
 
 const searchArtworks = keyword => {
   return axios
-    .get(`/artworks/search/${keyword}`)
+    .get(`/api/artworks/search/${keyword}`)
     .then(res => {
       return res.data;
     })
@@ -13,7 +13,7 @@ const searchArtworks = keyword => {
 
 const findArtwork = id => {
   return axios
-    .get(`/artworks/${id}`)
+    .get(`/api/artworks/${id}`)
     .then(res => {
       return res.data;
     })
@@ -23,19 +23,19 @@ const findArtwork = id => {
 };
 
 const findArtworkByArtistId = artistId => {
-    return axios
-      .get(`/artworks/artists/${artistId}`)
-      .then(res => {
-        return res.data;
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+  return axios
+    .get(`/api/artworks/artists/${artistId}`)
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 
 const requestOrder = info => {
   return axios
-    .post(`/orders`, {
+    .post(`/api/orders`, {
       idCustomer: info.idCustomer,
       idArtwork: info.idArtwork,
       orderType: info.orderType,
@@ -53,7 +53,7 @@ const requestOrder = info => {
 
 const getTimelines = () => {
   return axios
-    .get(`/periods`)
+    .get(`/api/periods`)
     .then(res => {
       return res.data;
     })
@@ -62,4 +62,10 @@ const getTimelines = () => {
     });
 };
 
-export { searchArtworks, findArtwork, findArtworkByArtistId, requestOrder, getTimelines };
+export {
+  searchArtworks,
+  findArtwork,
+  findArtworkByArtistId,
+  requestOrder,
+  getTimelines
+};
