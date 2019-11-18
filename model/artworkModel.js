@@ -63,6 +63,23 @@ exports.findFeaturedArtwork = () => {
   return query(cp, options);
 };
 
+exports.findArtworkByArtistId = artistId => {
+
+    artistId = cp.escape(artistId);
+    var options = {
+      sql: `select * from Artwork artwork
+                              inner join Seller seller on artwork.idSeller = seller.idSeller
+                              left join Artist artistSeller on artwork.idSeller = artistSeller.idSeller
+                              left join ArtGallery artGallery on artwork.idSeller = artGallery.idSeller
+                              inner join Artist artist on artwork.idArtist = artist.idArtist
+                              inner join Period period on artwork.idPeriod = period.idPeriod
+                              where artist.idArtist = ${artistId}`,
+      nestTables: true
+    };
+  
+    return query(cp, options);
+  };
+
 exports.getTimelinePeriods = () => {
   let sqlQuery = `SELECT idPeriod, periodDescription FROM Period
   UNION 

@@ -37,6 +37,19 @@ exports.getArtworkByArtistName = (req, res) => {
     });
 };
 
+exports.getArtworkByArtistId = (req, res) => {
+    let artistId = req.params.artistId;
+  
+    artworkModel
+      .findArtworkByArtistId(artistId)
+      .then(artwork => {
+        res.send(artwork);
+      })
+      .catch(err => {
+        res.send(err);
+      });
+  };
+
 exports.getArtworkByArtworkId = (req, res) => {
   let id = req.params.id;
 
