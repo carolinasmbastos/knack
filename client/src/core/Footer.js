@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
           <ul>
             <li className="copyright">&copy; 2019 Knack</li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="desktop-footer-links">
               <a href="#">Team</a>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getMonthlyArtSubscriptionStatus = userID => {
   return axios
-    .get(`/users/${userID}/monthlyArt`)
+    .get(`/api/users/${userID}/monthlyArt`)
     .then(res => {
       return res.data;
     })
@@ -13,7 +13,7 @@ const getMonthlyArtSubscriptionStatus = userID => {
 
 const getPlans = () => {
   return axios
-    .get(`/plans`)
+    .get(`/api/plans`)
     .then(res => {
       return res.data;
     })
@@ -24,7 +24,7 @@ const getPlans = () => {
 
 const getPaymentMethods = userID => {
   return axios
-    .get(`/paymentMethods/${userID}`)
+    .get(`/api/paymentMethods/${userID}`)
     .then(res => {
       return res.data;
     })
@@ -35,7 +35,7 @@ const getPaymentMethods = userID => {
 
 const subscribeToMonthlyArt = subscriptionInfo => {
   return axios
-    .post(`/subscriptions`, subscriptionInfo)
+    .post(`/api/subscriptions`, subscriptionInfo)
     .then(res => {
       return res.data;
     })

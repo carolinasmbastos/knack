@@ -54,9 +54,9 @@ input#artist.form-control::placeholder {
 }
 
 /* Core */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   margin: 0;
@@ -141,7 +141,65 @@ a.nav-link {
 /* View Artwork */
 .artwork-image {
   height: 70vh;
-  margin: 5rem 0;
+  margin: 5rem 0 1rem 0;
+  visibility: visible;
+}
+
+.artwork-image.in-focus {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.artwork-image.view-in-space.default {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+}
+
+.artwork-image.view-in-space.in-focus {
+  position: fixed;
+  z-index: 2;
+
+  bottom: 15vh;
+  margin: 0;
+
+  height: auto;
+  max-height: 67.5vh;
+  visibility: visible;
+  /* transition: 0.5s ease-out; */
+}
+
+@media only screen and (min-width: 0px) and (max-width: 499px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 20vh;
+    width: 80vw;
+    left: 10vw;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 20vh;
+    width: 60vw;
+    left: 20vw;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 7.5vh;
+    width: 45vw;
+    left: 27.5vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 7.5vh;
+    width: 35vw;
+    left: 32.5vw;
+  }
 }
 
 .artworkDetails a,
@@ -166,6 +224,84 @@ a.nav-link {
 .artworkActions small {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.auxiliaryActions {
+  display: flex;
+  justify-content: center;
+}
+
+.auxiliaryActions div {
+  padding: 0 1rem;
+}
+
+#viewInSpace,
+#cancelViewInSpace,
+#favoriteArtwork {
+  cursor: pointer;
+}
+
+#viewInSpace:hover .viewInSpaceIcon {
+  background: url(./assets/hoverViewInSpace.svg) no-repeat;
+  height: 16px;
+  width: 25px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+#cancelViewInSpace {
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+}
+
+.viewInSpaceIcon,
+.favouriteArtwork {
+  height: 16px;
+
+  margin-right: 0.5rem;
+}
+
+.viewInSpaceIcon {
+  width: 25px;
+}
+
+.favouriteArtwork {
+  width: 18px;
+}
+
+#cancelViewInSpace,
+.backgroundImages {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.backgroundImages {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  z-index: 1;
+}
+
+.artwork-image.view-in-space.in-focus {
+  transition: opacity 1s;
+}
+
+.backgroundImages.visible,
+#cancelViewInSpace.visible,
+.artwork-image.in-focus {
+  visibility: visible;
+  opacity: 1;
+}
+
+.backgroundImages.hidden,
+#cancelViewInSpace.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
 }
 
 /* .rentBtn {
@@ -269,8 +405,7 @@ a.nav-link {
   text-transform: uppercase;
 }
 
-.footer-item:nth-of-type(1),
-/* .footer-item:nth-of-type(2), */
+.footer-main-div .logo,
 .footer-item .copyright {
   border-right: 1px solid white;
 }
