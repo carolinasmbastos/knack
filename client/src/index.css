@@ -1,8 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700&display=swap");
+
+/* Fonts */
+body,
+nav,
+.carousel-caption h3,
+.monthlyArtContainer h3,
+a,
+div {
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poiret One", cursive;
+}
+
+/* Bootstrap Overrides */
+.navbar.navbar-light.bg-light {
+  background-color: #fff !important;
+  box-shadow: 0px 3px 2px lightgrey;
+}
+
+input#artist.form-control {
+  border-radius: 0px;
+  border: 0.1rem solid #000;
+  color: #000;
+  font-size: 0.8rem;
+  transition: 0.8s;
+}
+
+input#artist.form-control:focus {
+  box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5);
+  border: none;
+  transition: 0.8s;
+}
+
+input#artist.form-control::placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav a.nav-link {
+  text-transform: uppercase;
+  border: 0.1rem solid black;
+  color: black;
+  font-size: 0.8rem;
+}
+
+/* Core */
+/* html {
+  scroll-behavior: smooth;
+} */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +67,470 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.logoImg {
+  height: 40px;
+  width: auto;
+}
+
+a.nav-link {
+  margin: 0 25px;
+}
+
+.footer {
+  background-color: #000;
+  margin-top: 2rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Browse/Search Artworks */
+.artwork-thumbnail {
+  height: 200px;
+}
+
+.browseArtworksHeading,
+.monthlyArtContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.artworksGrid .card {
+  border: none;
+}
+
+.artworksGrid .card-body {
+  padding: 1.25rem 0.25rem;
+}
+
+.artworksGrid .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artworksGrid .card-body .cardInfo {
+  font-size: 0.8rem;
+}
+
+.artworksGrid .card-body .card-title {
+  margin-bottom: 0.1rem;
+}
+
+.artworksGrid .card-body .cardActions a {
+  border: 0.05rem solid black;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.artworksGrid .card a,
+.artworksGrid .card a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* View Artwork */
+.artwork-image {
+  height: 70vh;
+  margin: 5rem 0 1rem 0;
+  visibility: visible;
+}
+
+.artwork-image.in-focus {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.artwork-image.view-in-space.default {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+}
+
+.artwork-image.view-in-space.in-focus {
+  position: fixed;
+  z-index: 2;
+
+  bottom: 15vh;
+  margin: 0;
+
+  height: auto;
+  max-height: 67.5vh;
+  visibility: visible;
+  /* transition: 0.5s ease-out; */
+}
+
+@media only screen and (min-width: 0px) and (max-width: 499px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 20vh;
+    width: 80vw;
+    left: 10vw;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 20vh;
+    width: 60vw;
+    left: 20vw;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 7.5vh;
+    width: 45vw;
+    left: 27.5vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .artwork-image.view-in-space.in-focus {
+    top: 7.5vh;
+    width: 35vw;
+    left: 32.5vw;
+  }
+}
+
+.artworkDetails a,
+.artworkDetails a:hover {
+  text-decoration: none;
+  color: #212529;
+}
+
+.artworkDetails.col-md-6 {
+  margin: 5rem 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.artworkActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artworkActions small {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.auxiliaryActions {
+  display: flex;
+  justify-content: center;
+}
+
+.auxiliaryActions div {
+  padding: 0 1rem;
+}
+
+#viewInSpace,
+#cancelViewInSpace,
+#favoriteArtwork {
+  cursor: pointer;
+}
+
+#viewInSpace:hover .viewInSpaceIcon {
+  background: url(./assets/hoverViewInSpace.svg) no-repeat;
+  height: 16px;
+  width: 25px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+#cancelViewInSpace {
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+}
+
+.viewInSpaceIcon,
+.favouriteArtwork {
+  height: 16px;
+
+  margin-right: 0.5rem;
+}
+
+.viewInSpaceIcon {
+  width: 25px;
+}
+
+.favouriteArtwork {
+  width: 18px;
+}
+
+#cancelViewInSpace,
+.backgroundImages {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.backgroundImages {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  z-index: 1;
+}
+
+.artwork-image.view-in-space.in-focus {
+  transition: opacity 1s;
+}
+
+.backgroundImages.visible,
+#cancelViewInSpace.visible,
+.artwork-image.in-focus {
+  visibility: visible;
+  opacity: 1;
+}
+
+.backgroundImages.hidden,
+#cancelViewInSpace.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+
+/* .rentBtn {
+  margin-right: 1rem;
+} */
+
+.confirmationBox {
+  margin-top: 2rem;
+}
+
+.homeLink {
+  text-align: center;
+}
+
+.confirmationHeading {
+  text-align: center;
+}
+
+.confirmationSvg {
+  height: 3rem;
+  width: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+.confirmationBox .card-text {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.confirmationBox .homeLink,
+.confirmationBox .homeLink a {
+  font-size: 0.7rem;
+  color: black;
+}
+
+.confirmationBox .homeLink a {
+  text-decoration: underline;
+}
+
+/* Monthly Art styles START */
+/* Owner: Jagmeet */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.monthlyArtContent {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.monthlyArtBgImg {
+  height: 275px;
+}
+
+@media only screen and (min-width: 508px) {
+  .monthlyArtBgImg {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .monthlyArtBgImg {
+    height: 225px;
+  }
+}
+
+.monthlyArtCard {
+  margin-top: 2rem;
+}
+
+.monthlyArtContainer h2 {
+  margin-top: 5rem;
+}
+
+.bgtext {
+  width: 300px;
+  margin: 2rem auto;
+}
+/* Monthly Art styles END */
+
+/* Foooooter */
+/* Default behaviour */
+.footer-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background: black;
+  margin-top: 2rem;
+}
+
+.footer-links ul {
+  display: flex;
+}
+
+.footer-item {
+  text-transform: uppercase;
+}
+
+.footer-main-div .logo,
+.footer-item .copyright {
+  border-right: 1px solid white;
+}
+
+.footer-main-div .desktop-footer-links {
+  display: none;
+  padding: 0;
+}
+
+.footer-links ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.logo {
+  padding: 0 0.5rem;
+}
+
+.footer-links li {
+  padding: 0 0.5rem;
+  list-style: none;
+}
+
+.footer-links a,
+.footer-links a:hover,
+.footer-main-div .copyright {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-main-div .logo img {
+  height: 1rem;
+  width: auto;
+  margin-top: -0.2rem;
+}
+
+/* Desktop behaviour */
+@media only screen and (min-width: 700px) {
+  .footer-main-div .desktop-footer-links {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .footer-links li {
+    padding: 0 1rem;
+  }
+
+  .footer-item:nth-of-type(1),
+  .footer-item:nth-of-type(2),
+  .footer-item .copyright {
+    border-right: none;
+  }
+
+  .footer-main-div {
+    justify-content: space-between;
+  }
+
+  .footer-item {
+    text-transform: none;
+  }
+
+  .footer-main-div .logo img {
+    height: 1.5rem;
+  }
+}
+/* Foooooter FINIS. */
+
+/* Timeline Slider */
+.btn-group {
+  width: 100%;
+}
+
+.btn-group .btn {
+  border-radius: 25px;
+}
+
+.btn-group .btn:nth-of-type(1),
+.btn-group .btn:nth-of-type(2),
+.btn-group .btn:nth-of-type(3) {
+  border-right: 3px solid white;
+}
+
+.btn-group .btn.timelineButton {
+  background-color: #000;
+}
+
+.btn-group .btn.timelineButton.selected {
+  background-color: #d9b226;
+  color: #000;
+  position: relative;
+}
+
+/* .btn-group .btn.timelineButton.selected::after {
+  content: url(./assets/TimelineSliderArrow.png);
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -20%;
+  transition: 0.5s;
+} */
+
+.timelineSliderArrow {
+  height: 15px;
+  width: auto;
+  position: absolute;
+  margin-top: 30px;
+  transition: 0.5s;
+  /* margin-left: 11%;  */
+  /* 85, 60, 36, 11 */
+  z-index: 1;
+}
+
+.timelineContainer {
+  position: relative;
+  margin-top: 2rem;
+}
+
+/* Artist */
+.artistImage {
+  height: 70vh;
+  margin: 5rem 0;
+}
+
+.artistDetails.col-md-6 {
+  margin: 5rem 0;
+  padding: 0 3rem;
+
+  align-items: center;
 }

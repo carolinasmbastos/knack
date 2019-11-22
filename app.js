@@ -1,32 +1,29 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-bodyParser = require('body-parser');
+bodyParser = require("body-parser");
+const path = require("path");
+var cors = require("cors");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
 app.use(express.urlencoded({ extended: false }));
 
-let artistModel = require(__dirname + "/model/artistModel.js");
+const { indexRouter } = require("./routes/index.js");
+app.use("/api", indexRouter);
 
-app.post('/artistSearch', (req, res) => {
-    
+// Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
 
-    let artistSearch = req.body.artist;
-    console.log("artist param: " + artistSearch);
+  app.get("/*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
-    artistModel.findArtistByName(artistSearch, (err, artists)=>{
+app.set("port", process.env.PORT || 8080);
 
-        console.log('listing artists');
-        if (err)
-            res.send(err);
-        console.log('artists', artists);
-        res.send(artists);
-    });
-
-});
-
-app.set('port', process.env.PORT || 8080);
-
-const server = app.listen(app.get('port'), ()=>{
-    console.log("Listening on port: "+ app.get('port'));
+const server = app.listen(app.get("port"), () => {
+  console.log("Listening on port: " + app.get("port"));
 });

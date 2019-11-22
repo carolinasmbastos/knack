@@ -1,0 +1,21 @@
+.discoverySections hr {
+  margin: 3rem 0;
+}
+
+.eventsContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+.eventsContainer .card,
+.newsContainer .card {
+  height: 100%;
+}
+
+.popularArtistsHeading {
+  margin-top: 2rem;
+}
+
+.btn btn-secondary{
+  text-align: center;
+}
