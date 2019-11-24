@@ -63,6 +63,37 @@ input#artist.form-control::placeholder {
   scroll-behavior: smooth;
 } */
 
+/* Dock footer the the bottom */
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+#app > div {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  padding-top: 10vh;
+}
+
+.footer-main-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
