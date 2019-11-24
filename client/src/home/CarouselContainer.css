@@ -1,3 +1,7 @@
+.carousel {
+  margin-top: 70px;
+}
+
 .carousel img {
   width: 100%;
   max-width: 100;
@@ -17,6 +21,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.35);
   padding-top: 150px;
+  z-index: 1;
 }
 
 .carousel-item:nth-of-type(1) .carousel-caption {
@@ -32,4 +37,9 @@
   width: 100px;
   height: auto;
   padding-bottom: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 2;
 }
