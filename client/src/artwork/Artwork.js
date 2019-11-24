@@ -33,7 +33,6 @@ export default class Artwork extends React.Component {
   componentDidMount() {
     findArtwork(this.props.match.params.id)
       .then(data => {
-        console.log(data[0].artwork);
         this.setState({
           artwork: data[0].artwork,
           artist: data[0].artist,

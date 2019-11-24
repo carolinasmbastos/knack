@@ -45,17 +45,16 @@ export default class BrowseArtworks extends React.Component {
       const searchKeyword = this.props.match
         ? this.props.match.params.searchString
         : "featured";
-      // console.log(searchKeyword);
-      searchArtworks(searchKeyword).then(data => {
-        if (data.error) {
-          console.log(data.error);
-        } else {
+      searchArtworks(searchKeyword)
+        .then(data => {
           this.setState({
             artworks: data,
             searchString: searchKeyword
           });
-        }
-      });
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   }
 
