@@ -379,7 +379,7 @@ a.nav-link {
   text-decoration: underline;
 }
 
-/* Monthly Art styles START */
+/* Monthly Art Banner styles START */
 /* Owner: Jagmeet */
 .buttonContainer {
   display: flex;
@@ -388,7 +388,7 @@ a.nav-link {
 
 .monthlyArtContent {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .monthlyArtBgImg {
