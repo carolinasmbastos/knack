@@ -144,10 +144,32 @@ a.nav-link {
   margin-left: -35px;
 }
 
+.artworksGrid .searchBoxWrapper {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  nav .searchBoxWrapper {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .artworksGrid .searchBoxWrapper {
+    display: none;
+  }
+}
+
 /* Navbar */
 @media only screen and (max-width: 767px) {
   .navbar-light .navbar-nav .nav-item a.nav-link {
     border: none;
+  }
+}
+
+@media only screen and (max-width: 1049px) {
+  .nav-item a.nav-link {
+    margin: 0 0.5rem;
   }
 }
 
