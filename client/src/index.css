@@ -144,6 +144,13 @@ a.nav-link {
   margin-left: -35px;
 }
 
+/* Navbar */
+@media only screen and (max-width: 767px) {
+  .navbar-light .navbar-nav .nav-item a.nav-link {
+    border: none;
+  }
+}
+
 /* Browse/Search Artworks */
 .artwork-thumbnail {
   height: 200px;
