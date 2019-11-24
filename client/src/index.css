@@ -485,11 +485,10 @@ a.nav-link {
 
 .btn-group .btn {
   border-radius: 25px;
+  border: none;
 }
 
-.btn-group .btn:nth-of-type(1),
-.btn-group .btn:nth-of-type(2),
-.btn-group .btn:nth-of-type(3) {
+.btn-group .btn:not(:last-of-type) {
   border-right: 3px solid white;
 }
 
