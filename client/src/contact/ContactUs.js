@@ -7,42 +7,42 @@ import './Contact.css'
 
 const ContactUs = (props) => {
     return (
-    
-      <Form>
-         
-          <div className="contact-page">
-          <div className="info-contact">
-          <h1>CONTACT US</h1>
-          <h3>Address:</h3>
-          <p>lorem</p>
-          <h3>Mobile</h3>
-          <p>XXXXXXXXXXXXXX</p>
-          </div>
-        <div className="form">
+      <div className="contact-page">
+      <div className="info-contact">
+      <h1>CONTACT US</h1>
+      <div className="info-contact1">
+      <h3>Address:</h3>
+      <p>lorem</p>
+      <h3>Mobile</h3>
+      <p>XXXXXXXXXXXXXX</p>
+      </div>
+      </div>
+      <Form action="https://formspree.io/knack4arts@gmail.com" method="POST" class="contact_form">
+         <div className="form">
           <h3 className="title-name-form">GET IN TOUCH</h3>
         <FormGroup row>
-          <Label for="name" sm={2}></Label>
+          <Label for="name" sm={2}>Name</Label>
           <Col sm={10}>
-            <Input type="text" name="name" id="name" placeholder="Enter your name" />
+            <Input type="text" name="name" id="name" placeholder="" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="email" sm={2}></Label>
+          <Label for="email" sm={2}>Email</Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="email" placeholder="Enter your email" />
+            <Input type="email" name="email" id="email" placeholder="" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="number" sm={2}></Label>
+          <Label for="number" sm={2}>Phone Number</Label>
           <Col sm={10}>
-            <Input type="number" name="number" id="number" placeholder="Enter your mobile number"/>
+            <Input type="number" name="number" id="number" placeholder=""/>
           </Col>
         </FormGroup>
         
         <FormGroup row>
-          <Label for="text" sm={2}></Label>
+          <Label for="text" sm={2}>Message</Label>
           <Col sm={10}>
-            <Input type="textarea" name="text" id="text" placeholder="Share your any message" />
+            <Input type="textarea" name="text" id="text" placeholder="" />
           </Col>
           </FormGroup>
           <FormGroup row>
@@ -58,13 +58,13 @@ const ContactUs = (props) => {
       </FormGroup>       
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button>Submit</Button>
+            <Button className="knack-btn knack-btn-dark">Submit</Button>
           </Col>
         </FormGroup>
         
         </div>
-        </div>
-      </Form>
+       </Form>
+      </div>
 
     );
   }
