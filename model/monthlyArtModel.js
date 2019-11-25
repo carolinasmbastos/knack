@@ -43,7 +43,7 @@ exports.getSubscriptionStatus = userID => {
       INNER JOIN Plan P ON S.idPlan = P.idPlan
   WHERE
     idCustomer = ${mysql.escape(userID)}
-    AND CURRENT_TIMESTAMP() BETWEEN startDate AND endDate`;
+    AND ${mysql.escape(new Date())} BETWEEN startDate AND endDate`;
 
   return query(cp, sqlQuery);
 };
