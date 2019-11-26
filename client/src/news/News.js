@@ -33,8 +33,6 @@ class News extends React.Component {
         .then(result=>{
             this.setState({
                 newsapi: result
-            },()=>{
-               // console.log('Hel',this.state.newsapi)
             })
         })
         .catch(error=>{
@@ -61,10 +59,18 @@ class News extends React.Component {
                         <CardImg top className="" src={item.urlToImage} alt="Event" />
                         </a>
                         <CardBody>
-                        <a href={item.url} target="_blank">
-                            <CardTitle>{item.title}</CardTitle>
-                        </a>
-                        <CardSubtitle>{item.author}</CardSubtitle>
+                        <div className="cardInfo">
+                            <a href={item.url} target="_blank">
+                                <CardTitle>{item.title}</CardTitle>
+                            </a>
+                        
+                            <CardSubtitle>By {item.author}</CardSubtitle>
+                        </div>
+                        <div className="cardActions">
+                            <a href={item.url} target="_blank">
+                            Read
+                            </a>
+                         </div>
                         </CardBody>
                     </Card>
                     </Col>

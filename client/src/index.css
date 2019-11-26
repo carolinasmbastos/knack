@@ -184,36 +184,39 @@ a.nav-link {
   text-align: center;
 }
 
-.artworksGrid .card {
+/* Cards components */
+
+.card {
   border: none;
 }
 
-.artworksGrid .card-body {
+.card-body {
   padding: 1.25rem 0.25rem;
 }
 
-.artworksGrid .card-body {
+.card-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.artworksGrid .card-body .cardInfo {
+.card-body .cardInfo {
   font-size: 0.8rem;
 }
 
-.artworksGrid .card-body .card-title {
+.card-body .card-title {
   margin-bottom: 0.1rem;
 }
 
-.artworksGrid .card-body .cardActions a {
+
+.card-body .cardActions a {
   border: 0.05rem solid black;
   padding: 0.5rem;
   text-transform: uppercase;
 }
 
-.artworksGrid .card a,
-.artworksGrid .card a:hover {
+.card a,
+.card a:hover {
   text-decoration: none;
   color: #000;
 }
@@ -615,3 +618,9 @@ a.nav-link {
 
   align-items: center;
 }
+
+/* Events */
+.eventsContainer .card-body .card-subtitle, .newsContainer .card-body .card-subtitle {
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+  }

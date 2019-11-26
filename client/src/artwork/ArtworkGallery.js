@@ -8,7 +8,7 @@ import { findArtworkByArtistId } from "./api-artwork.js";
 export default class ArtworkGallery extends React.Component {
     constructor(props) {
         super(props);
-        console.log("====>" + props);
+        
         this.state = {
             galleryItems: []
         };
@@ -18,7 +18,7 @@ export default class ArtworkGallery extends React.Component {
         if (this.state.galleryItems.length === 0) {
             findArtworkByArtistId(this.props.artist)
                 .then(result => {
-                    console.log("result:" + result);
+                    //console.log("result:" + result);
                     this.setState({
                         galleryItems: result.map(artwork => (
                             <div>
@@ -48,7 +48,7 @@ export default class ArtworkGallery extends React.Component {
                     });
                 })
                 .catch(error => {
-                    console.log("error");
+                    
                     console.log(error);
                 });
         }
@@ -70,7 +70,7 @@ export default class ArtworkGallery extends React.Component {
     }
 
     render() {
-        console.log("===>" + this.props.artist);
+        
         this.loadArtwork();
         return (
             <AliceCarousel

@@ -50,7 +50,7 @@ class MapTools {
 
                 this.map.setCenter([this.cx, this.cy]);
 
-                console.log("center: " + this.cx + " " + this.cy)
+                //console.log("center: " + this.cx + " " + this.cy)
 
             });
 
