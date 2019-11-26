@@ -16,18 +16,18 @@ exports.getEvents = (req, res) => {
 
   let url = `https://www.eventbriteapi.com/v3/events/search/?location.address=vancouver&location.within=10km&expand=venue&subcategories=5008%2C5011%2C5012%2C5013&token=${process.env.EVENTBRITE_TOKEN}`;
 
-  console.log(url);
+  //console.log(url);
   axios
     .get(url)
     .then(result => {
-      console.log("success");
-      console.log(result);
+      //console.log("success");
+      //console.log(result);
       let pos = utils.randomPos(result.data.events.length);
       res.send(result.data.events.slice(pos, pos + 3));
     })
     .catch(err => {
-      console.log("error " + err);
-      //console.log("error "+ (err.response !==undefined ? err.response.status : " no response code"))
+      //console.log("error " + err);
+      console.log("error "+ (err.response !==undefined ? err.response.status : " no response code"))
       console.log("Using cached copy");
       let pos = utils.randomPos(events.events.length);
       res.send(events.events.slice(pos, pos + 3));

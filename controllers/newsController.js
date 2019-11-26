@@ -9,7 +9,7 @@ exports.getNews = (req, res) => {
     .get(urlNews)
     .then(result => {
       // console.log("parameters: " + res.data.parameters.rows)
-      console.log(result.data);
+      //console.log(result.data);
       let pos = utils.randomPos(result.data.articles.length);
       res.send(result.data.articles.slice(pos, pos + 3));
     })
