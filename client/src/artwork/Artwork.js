@@ -8,7 +8,7 @@ import { getMonthlyArtSubscriptionStatus } from "../monthlyArt/api-monthly-art";
 
 const styles = {
   containerSpacing: {
-    marginTop: "1rem"
+    marginTop: "3rem"
   }
 };
 
@@ -33,7 +33,6 @@ export default class Artwork extends React.Component {
   componentDidMount() {
     findArtwork(this.props.match.params.id)
       .then(data => {
-        console.log(data[0].artwork);
         this.setState({
           artwork: data[0].artwork,
           artist: data[0].artist,
@@ -131,7 +130,7 @@ export default class Artwork extends React.Component {
           src="/img/assets/close.svg"
         />
         <Row>
-          <Col md="6">
+          <Col md="6" className="my-auto">
             <Col md="12">
               <img
                 src={`/img/artworks/${
@@ -175,7 +174,7 @@ export default class Artwork extends React.Component {
               </div>
             </Row>
           </Col>
-          <Col md="6" className="artworkDetails">
+          <Col md="6" className="artworkDetails my-auto">
             {this.state.viewMode === "info" && (
               <ArtworkInfo
                 artwork={this.state.artwork}

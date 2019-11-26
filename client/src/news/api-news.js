@@ -6,8 +6,8 @@ const getNews = () => {
   return axios
     .get("/api/news")
     .then(res => {
-      console.log("got news");
-      console.log(res.data);
+      
+      //console.log(res.data);
       return res.data;
     })
     .catch(err => {

@@ -97,11 +97,11 @@ class PopularArtists extends React.Component {
                 })
                 .append('circle')
                 .attr('r', (data) => { 
-                    console.log(data.Count);
+                    //console.log(data.Count);
                     return r(data.Count); 
                 })
                 .style("fill", function(data) {
-                    console.log(data.idArtist)
+                    //console.log(data.idArtist)
                     return "url(#"+data.idArtist+")"
                 })
 

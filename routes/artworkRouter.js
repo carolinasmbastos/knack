@@ -15,8 +15,9 @@ router.get("/artworks/:id", artworkController.getArtworkByArtworkId);
 
 //Developer: Carol
 // EndPoint to fetch all the artwork by the artistid
-router.get("/artworks/artists/:artistId", artworkController.getArtworkByArtistId);
-
-router.get("/periods", artworkController.getTimelinePeriods);
+router.get(
+  "/artworks/artists/:artistId",
+  artworkController.getArtworkByArtistId
+);
 
 exports.artworkRouter = router;

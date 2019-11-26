@@ -1,16 +1,40 @@
 .carousel img {
-    width: 100% ;
-    max-width: 100;
-    height: 450px;
-    text-align: center;
-    margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 100;
+  height: 450px;
+  text-align: center;
+}
+
+.carousel-item:nth-of-type(2) .carousel-image {
+  object-position: bottom;
 }
 
 .carousel-caption {
-   bottom: 150px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding-top: 150px;
+  z-index: 1;
+}
+
+.carousel-item:nth-of-type(1) .carousel-caption {
+  padding-top: 200px;
 }
 
 .carousel-caption h3 {
-  width: 450px;  
+  width: 450px;
   margin: auto;
+}
+
+.carousel-caption h3 img.carousel-icons {
+  width: 100px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 2;
 }
