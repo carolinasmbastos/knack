@@ -186,7 +186,7 @@ a.nav-link {
 
 /* Cards components */
 
-.card {
+.artworksGrid .card, .eventsContainer .card, .newsContainer .card, .artworkGallery .card {
   border: none;
 }
 
@@ -624,3 +624,22 @@ a.nav-link {
     margin-top: 0.5rem;
     font-size: 0.65rem;
   }
+
+  /* Artist */
+.artistDetails h2 {
+    font-weight: bold;
+}
+.artistDetails h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.artistDetails span {
+    font-weight: bold;
+}
+.artworkGallery .card {
+    margin-left: 5%;
+}
+.galleryHeader {
+    padding-bottom: 1.5rem;
+    margin: auto;
+}
