@@ -186,7 +186,7 @@ a.nav-link {
 
 /* Cards components */
 
-.card {
+.artworksGrid .card, .eventsContainer .card, .newsContainer .card {
   border: none;
 }
 
