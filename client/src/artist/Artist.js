@@ -40,16 +40,16 @@ export default class Artist extends React.Component {
                 </Col>
                 <Col md='6' className='artistDetails'>
                     <h2>{this.state.artist.name}</h2>
-                    <h3>{this.state.artist.nationality}</h3>
-                    <label>
-                        About:
-                        <p>{this.state.artist.bio}</p>
-                    </label>
+                    <h3>Nationality: {this.state.artist.nationality}</h3>
+                
+                    <span>About:</span>
+                    <p>{this.state.artist.bio}</p>
+                
                 </Col>
                 </Row> 
                 <hr />
                 <Row>
-                    <h2>MORE FROM THIS ARTIST</h2>
+                    <h2 className="galleryHeader">MORE FROM THIS ARTIST</h2>
                     <ArtworkGallery artist={this.state.artist.idArtist}/>
                 </Row>
             </Container>
