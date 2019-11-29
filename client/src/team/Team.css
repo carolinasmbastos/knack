@@ -9,7 +9,7 @@
     border: 5px solid #d9b227;
 }
 
-.card-body {
+.card-team {
     display: flex;
     flex-direction: column;
 }
