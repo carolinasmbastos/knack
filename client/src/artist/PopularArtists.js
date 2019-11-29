@@ -40,7 +40,35 @@ class PopularArtists extends React.Component {
         let width = window.innerWidth
         || document.documentElement.clientWidth
         || document.body.clientWidth;
-        let height = width / 4;
+
+        let factor = 3;
+        let min = 10;
+        let max = 150;
+        let forceX = 0.03;
+        let forceY = 0.25;
+
+        //breakpoints for responsive chart
+        if (width <= 500) {
+            factor = 1.5;
+            min = 8;
+            max = 70;
+            forceY = 0.2;
+        
+        } else if (width > 500 && width <= 1000) {
+            factor = 2;
+            min = 10;
+            max = 100;
+            forceY = 0.225;
+
+        } else if (width > 1000) {
+            factor = 3;
+            min = 10;
+            max = 150;
+            forceY = 0.25;
+        }
+            
+
+        let height = width / factor;
 
         let maxRadius = d3.max(data, (data) => { return data.Count; })
         let minRadius = d3.min(data, (data) => { return data.Count; })
@@ -56,11 +84,11 @@ class PopularArtists extends React.Component {
 
        let r = d3.scaleSqrt()
                 .domain([minRadius, maxRadius])
-                .range([10,150])
+                .range([min,max])
 
         let simulation = d3.forceSimulation()
-                .force('x', d3.forceX().strength(0.03))
-                .force('y', d3.forceY().strength(0.25))
+                .force('x', d3.forceX().strength(forceX))
+                .force('y', d3.forceY().strength(forceY))
                 .force('collide', d3.forceCollide((data) => { return r(data.Count) + 5; }))
 
         var defs = svg.append("defs");
