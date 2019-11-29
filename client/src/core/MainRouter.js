@@ -18,6 +18,7 @@ import Artist from "../artist/Artist";
 import ContactUs from "../contact/ContactUs";
 
 import MonthlyArt from "../monthlyArt/MonthlyArt";
+import Team from "../team/Team";
 
 class MainRouter extends Component {
   // Removes the server-side injected CSS when React component mounts
@@ -43,6 +44,7 @@ class MainRouter extends Component {
             <Route path="/confirmation/:orderId" component={Confirmation} />
             <Route path="/artist/:id" component={Artist} />
             <Route path="/contact" component={ContactUs} />
+            <Route path="/team" component={Team} />
           </Switch>
         </ScrollToTop>
         <Footer />
