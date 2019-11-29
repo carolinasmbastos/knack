@@ -8,7 +8,7 @@ const getPublicInstalations = () => {
 
     return axios.get(url)
     .then(res => {
-        console.log("parameters: " + res.data.parameters.rows)
+        //console.log("parameters: " + res.data.parameters.rows)
       return res.data.records;
     })
     .catch(err => {

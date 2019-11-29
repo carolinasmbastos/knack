@@ -12,6 +12,7 @@ import {
   CardSubtitle
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import ArtworkSearchForm from "./ArtworkSearchForm";
 
 const styles = {
   containerSpacing: {
@@ -45,17 +46,16 @@ export default class BrowseArtworks extends React.Component {
       const searchKeyword = this.props.match
         ? this.props.match.params.searchString
         : "featured";
-      // console.log(searchKeyword);
-      searchArtworks(searchKeyword).then(data => {
-        if (data.error) {
-          console.log(data.error);
-        } else {
+      searchArtworks(searchKeyword)
+        .then(data => {
           this.setState({
             artworks: data,
             searchString: searchKeyword
           });
-        }
-      });
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   }
 
@@ -69,6 +69,7 @@ export default class BrowseArtworks extends React.Component {
       <Container style={styles.containerSpacing} className="artworksGrid">
         {this.props.featured == "true" && (
           <React.Fragment>
+            <ArtworkSearchForm />
             <h2 className="browseArtworksHeading">BROWSE ARTWORKS FOR RENT</h2>
           </React.Fragment>
         )}

@@ -25,6 +25,11 @@ h6 {
 .navbar.navbar-light.bg-light {
   background-color: #fff !important;
   box-shadow: 0px 3px 2px lightgrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }
 
 input#artist.form-control {
@@ -36,8 +41,10 @@ input#artist.form-control {
 }
 
 input#artist.form-control:focus {
-  box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5);
-  border: none;
+  /* box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5); */
+  box-shadow: 0 0 0 0.2rem rgba(217, 178, 38, 0.25);
+  /* border: none; */
+  border-color: #d9b226;
   transition: 0.8s;
 }
 
@@ -57,6 +64,37 @@ input#artist.form-control::placeholder {
 /* html {
   scroll-behavior: smooth;
 } */
+
+/* Dock footer the the bottom */
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+#app > div {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  padding-top: 10vh;
+}
+
+.footer-main-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 body {
   margin: 0;
@@ -93,6 +131,48 @@ a.nav-link {
   color: #ffffff;
 }
 
+/* Search Artworks */
+.searchBoxWrapper {
+  display: flex;
+}
+
+.searchBoxWrapper button {
+  background: #000;
+  color: white;
+  border: none;
+  margin: 4px;
+  margin-left: -35px;
+}
+
+.artworksGrid .searchBoxWrapper {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  nav .searchBoxWrapper {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .artworksGrid .searchBoxWrapper {
+    display: none;
+  }
+}
+
+/* Navbar */
+@media only screen and (max-width: 767px) {
+  .navbar-light .navbar-nav .nav-item a.nav-link {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 1049px) {
+  .nav-item a.nav-link {
+    margin: 0 0.5rem;
+  }
+}
+
 /* Browse/Search Artworks */
 .artwork-thumbnail {
   height: 200px;
@@ -104,44 +184,49 @@ a.nav-link {
   text-align: center;
 }
 
-.artworksGrid .card {
+/* Cards components */
+
+.artworksGrid .card, .eventsContainer .card, .newsContainer .card, .artworkGallery .card {
   border: none;
 }
 
-.artworksGrid .card-body {
+.card-body {
   padding: 1.25rem 0.25rem;
 }
 
-.artworksGrid .card-body {
+.card-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.artworksGrid .card-body .cardInfo {
+.card-body .cardInfo {
   font-size: 0.8rem;
 }
 
-.artworksGrid .card-body .card-title {
+.card-body .card-title {
   margin-bottom: 0.1rem;
 }
 
-.artworksGrid .card-body .cardActions a {
+
+.card-body .cardActions a {
   border: 0.05rem solid black;
   padding: 0.5rem;
   text-transform: uppercase;
 }
 
-.artworksGrid .card a,
-.artworksGrid .card a:hover {
+.card a,
+.card a:hover {
   text-decoration: none;
   color: #000;
 }
 
 /* View Artwork */
+
 .artwork-image {
-  height: 70vh;
-  margin: 5rem 0 1rem 0;
+  height: auto;
+  width: 100%;
+  margin: 1rem 0;
   visibility: visible;
 }
 
@@ -159,7 +244,7 @@ a.nav-link {
 
 .artwork-image.view-in-space.in-focus {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
 
   bottom: 15vh;
   margin: 0;
@@ -209,7 +294,7 @@ a.nav-link {
 }
 
 .artworkDetails.col-md-6 {
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
   padding: 0 3rem;
   display: flex;
   align-items: center;
@@ -253,7 +338,7 @@ a.nav-link {
   padding: 1rem;
   height: 100px;
   width: 100px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .viewInSpaceIcon,
@@ -283,7 +368,7 @@ a.nav-link {
   width: 100vw;
   height: 100vh;
   bottom: 0;
-  z-index: 1;
+  z-index: 4;
 }
 
 .artwork-image.view-in-space.in-focus {
@@ -343,7 +428,7 @@ a.nav-link {
   text-decoration: underline;
 }
 
-/* Monthly Art styles START */
+/* Monthly Art Banner styles START */
 /* Owner: Jagmeet */
 .buttonContainer {
   display: flex;
@@ -352,7 +437,7 @@ a.nav-link {
 
 .monthlyArtContent {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .monthlyArtBgImg {
@@ -480,11 +565,10 @@ a.nav-link {
 
 .btn-group .btn {
   border-radius: 25px;
+  border: none;
 }
 
-.btn-group .btn:nth-of-type(1),
-.btn-group .btn:nth-of-type(2),
-.btn-group .btn:nth-of-type(3) {
+.btn-group .btn:not(:last-of-type) {
   border-right: 3px solid white;
 }
 
@@ -533,4 +617,29 @@ a.nav-link {
   padding: 0 3rem;
 
   align-items: center;
+}
+
+/* Events */
+.eventsContainer .card-body .card-subtitle, .newsContainer .card-body .card-subtitle {
+    margin-top: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  /* Artist */
+.artistDetails h2 {
+    font-weight: bold;
+}
+.artistDetails h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.artistDetails span {
+    font-weight: bold;
+}
+.artworkGallery .card {
+    margin-left: 5%;
+}
+.galleryHeader {
+    padding-bottom: 1.5rem;
+    margin: auto;
 }

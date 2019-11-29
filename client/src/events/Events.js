@@ -30,13 +30,13 @@ class Events extends React.Component {
     loadEvents() {
         getEvents()
         .then(result=>{
-            console.log("result:"+result)
+            //console.log("result:"+result)
             this.setState({
                 events: result
             })
         })
         .catch(error=>{
-            console.log("error")
+           
             console.log(error);
         });
     }
@@ -60,10 +60,18 @@ class Events extends React.Component {
                         <CardImg top className="" src={item.logo.url} alt="Event" />
                         </a>
                         <CardBody>
-                        <a href={item.url} target="_blank">
-                            <CardTitle>{item.name.text}</CardTitle>
-                        </a>
-                        <CardSubtitle>{item.venue.address.localized_address_display}</CardSubtitle>
+                        <div className="cardInfo">
+                            <a href={item.url} target="_blank">
+                                <CardTitle >{item.name.text}</CardTitle>
+                            </a>
+                        
+                          <CardSubtitle>{item.venue.address.city}</CardSubtitle>
+                        </div>
+                        <div className="cardActions">
+                            <a href={item.url} target="_blank">
+                            Read
+                            </a>
+                      </div>
                         </CardBody>
                     </Card>
                     </Col>

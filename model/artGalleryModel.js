@@ -10,7 +10,7 @@ exports.getArtGalleryByID = (artGalleryID) => {
                     WHERE 
                         idArtGallery  = ${artGalleryID}`
 
-    console.log(sqlQuery)
+   // console.log(sqlQuery)
     let options = {sql: sqlQuery, nestTables: true};
 
     return query(cp, options);
@@ -25,7 +25,7 @@ exports.getArtGalleries = () => {
                         ArtGallery `
                        
                     
-    console.log(sqlQuery)
+    //console.log(sqlQuery)
     let options = {sql: sqlQuery, nestTables: true};
 
     return query(cp, options);

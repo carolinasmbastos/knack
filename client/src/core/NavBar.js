@@ -27,17 +27,17 @@ const NavBar = withRouter(({ history }) => {
           </Nav>
           <Nav navbar>
             <NavItem>
-              <Link to="/discovery" className="nav-link">
+              <Link to="/discovery" className="nav-link" onClick={toggle}>
                 Discovery
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/explore" className="nav-link">
+              <Link to="/explore" className="nav-link" onClick={toggle}>
                 Explore
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/monthlyArt" className="nav-link">
+              <Link to="/monthlyArt" className="nav-link" onClick={toggle}>
                 Monthly Art
               </Link>
             </NavItem>

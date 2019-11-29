@@ -38,23 +38,10 @@ exports.getArtworkByArtistName = (req, res) => {
 };
 
 exports.getArtworkByArtistId = (req, res) => {
-    let artistId = req.params.artistId;
-  
-    artworkModel
-      .findArtworkByArtistId(artistId)
-      .then(artwork => {
-        res.send(artwork);
-      })
-      .catch(err => {
-        res.send(err);
-      });
-  };
-
-exports.getArtworkByArtworkId = (req, res) => {
-  let id = req.params.id;
+  let artistId = req.params.artistId;
 
   artworkModel
-    .findArtworkByArtworkId(id)
+    .findArtworkByArtistId(artistId)
     .then(artwork => {
       res.send(artwork);
     })
@@ -63,11 +50,13 @@ exports.getArtworkByArtworkId = (req, res) => {
     });
 };
 
-exports.getTimelinePeriods = (req, res) => {
+exports.getArtworkByArtworkId = (req, res) => {
+  let id = req.params.id;
+
   artworkModel
-    .getTimelinePeriods()
-    .then(timelines => {
-      res.send(timelines);
+    .findArtworkByArtworkId(id)
+    .then(artwork => {
+      res.send(artwork);
     })
     .catch(err => {
       res.send(err);

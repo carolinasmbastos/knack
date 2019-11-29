@@ -42,7 +42,7 @@ exports.getArtistByID = (artistID) => {
                         WHERE
                         idArtist  = ${artistID}`
 
-    console.log(sqlQuery)
+    //console.log(sqlQuery)
     let options = {sql: sqlQuery, nestTables: true};
 
     return query(cp, options);
@@ -55,7 +55,7 @@ exports.getAllArtists = () => {
                         FROM
                         Artist`
 
-    console.log(sqlQuery)
+    //console.log(sqlQuery)
     let options = {sql: sqlQuery, nestTables: true};
 
     return query(cp, options);

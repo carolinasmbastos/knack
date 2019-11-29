@@ -8,7 +8,7 @@ import { findArtworkByArtistId } from "./api-artwork.js";
 export default class ArtworkGallery extends React.Component {
     constructor(props) {
         super(props);
-        console.log("====>" + props);
+        
         this.state = {
             galleryItems: []
         };
@@ -18,11 +18,11 @@ export default class ArtworkGallery extends React.Component {
         if (this.state.galleryItems.length === 0) {
             findArtworkByArtistId(this.props.artist)
                 .then(result => {
-                    console.log("result:" + result);
+                    //console.log("result:" + result);
                     this.setState({
                         galleryItems: result.map(artwork => (
-                            <div>
-                                <Card>
+                            <div className="artworkGallery">
+                                <Card className="cardGallery">
                                     <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
                                         <CardImg
                                             top
@@ -38,7 +38,18 @@ export default class ArtworkGallery extends React.Component {
                                     <CardBody>
                                         <div className="cardInfo">
                                             <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
-                                                <CardTitle>{artwork.artwork.title}</CardTitle>
+                                            <CardTitle>{artwork.artwork.title}</CardTitle>
+                                            </Link>
+                                            <CardSubtitle>
+                                            By{" "}
+                                            <Link to={`/artist/${artwork.artist.idArtist}`}>
+                                                {artwork.artist.name}
+                                            </Link>
+                                            </CardSubtitle>
+                                        </div>
+                                        <div className="cardActions">
+                                            <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
+                                            View
                                             </Link>
                                         </div>
                                     </CardBody>
@@ -48,7 +59,7 @@ export default class ArtworkGallery extends React.Component {
                     });
                 })
                 .catch(error => {
-                    console.log("error");
+                    
                     console.log(error);
                 });
         }
@@ -56,7 +67,9 @@ export default class ArtworkGallery extends React.Component {
 
     responsive = {
         0: { items: 1 },
-        1024: { items: 4 }
+        500: { items: 1 },
+        700: { items: 2 },
+        1000: { items: 4 }
     };
 
     onSlideChange(e) {
@@ -70,7 +83,7 @@ export default class ArtworkGallery extends React.Component {
     }
 
     render() {
-        console.log("===>" + this.props.artist);
+        
         this.loadArtwork();
         return (
             <AliceCarousel

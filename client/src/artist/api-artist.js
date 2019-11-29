@@ -12,7 +12,7 @@ const findArtist = artistId => {
 };
 
 const popularArtists = () => {
-  console.log("pop art api client");
+  // console.log("pop art api client");
   return axios
     .get("/api/popularArtists")
     .then(res => {

@@ -22,7 +22,6 @@ export default class ArtistSearchForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log("1")
         this.props.onSubmit({
             artist: this.state.artist
         });
