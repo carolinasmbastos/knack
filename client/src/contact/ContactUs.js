@@ -18,31 +18,31 @@ const ContactUs = (props) => {
       </div>
       </div>
       <Form action="https://formspree.io/knack4arts@gmail.com" method="POST" class="contact_form">
-         <div className="form">
+         <div className="form-contact">
           <h3 className="title-name-form">GET IN TOUCH</h3>
         <FormGroup row>
-          <Label for="name" sm={2}>Name</Label>
+          <Label className="label-name" for="name" sm={2}>Name</Label>
           <Col sm={10}>
-            <Input type="text" name="name" id="name" placeholder="" />
+            <Input type="text" name="name" id="name" placeholder="" className="form-position" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="email" sm={2}>Email</Label>
+          <Label className="label-name" for="email" sm={2}>Email</Label>
           <Col sm={10}>
-            <Input type="email" name="email" id="email" placeholder="" />
+            <Input className="form-position" type="email" name="email" id="email" placeholder="" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="number" sm={2}>Phone Number</Label>
+          <Label  className="label-name" for="number" sm={2}>Phone Number</Label>
           <Col sm={10}>
-            <Input type="number" name="number" id="number" placeholder=""/>
+            <Input className="form-position" type="number" name="number" id="number" placeholder=""/>
           </Col>
         </FormGroup>
         
         <FormGroup row>
-          <Label for="text" sm={2}>Message</Label>
+          <Label className="label-name" for="text" sm={2}>Message</Label>
           <Col sm={10}>
-            <Input type="textarea" name="text" id="text" placeholder="" />
+            <Input type="textarea" name="text" id="text" className="form-position message-box" />
           </Col>
           </FormGroup>
           <FormGroup row>
@@ -50,7 +50,7 @@ const ContactUs = (props) => {
         <Col sm={{ size: 10 }}>
           <FormGroup check>
             <Label check>
-              <Input type="checkbox" id="checkbox2" />{' '}
+              <Input className="checkbox-form" type="checkbox" id="checkbox2" />{' '}
               I agree to Knack's Terms of Use and Privacy Policy and to receive emails from Knack
             </Label>
           </FormGroup>

@@ -13,7 +13,7 @@ import './Team.css'
         <div className="designer-team">
         <Card className="block-card-team">
          
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Anurag.jpg" />
             <CardTitle>ANURAG SHARMA</CardTitle>
             <CardSubtitle>UI/UX DESIGNER</CardSubtitle>
@@ -21,7 +21,7 @@ import './Team.css'
         </Card>
         <Card className="block-card-team">
           
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Balvinder.jpg"  />
             <CardTitle>BALVINDER SIDHU</CardTitle>
             <CardSubtitle>UI DESIGNER</CardSubtitle>
@@ -30,7 +30,7 @@ import './Team.css'
         </Card>
         <Card className="block-card-team">
           
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Manpreet.jpg"  />
             <CardTitle>MANPREET KAUR</CardTitle>
             <CardSubtitle>UI DESIGNER</CardSubtitle>
@@ -41,7 +41,7 @@ import './Team.css'
         <div className="developer-team">
         <Card className="block-card-team">
           
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Carol.jpg"  />
             <CardTitle>CAROLINA DE SOUZA</CardTitle>
             <CardSubtitle>FULL-STACK DEVELOPER</CardSubtitle>
@@ -50,7 +50,7 @@ import './Team.css'
         </Card>
         <Card className="block-card-team">
           
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/john.jpg"  />
             <CardTitle>HONG AN NGUYEN</CardTitle>
             <CardSubtitle>FULL-STACK DEVELOPER</CardSubtitle>
@@ -59,7 +59,7 @@ import './Team.css'
         </Card>
         <Card className="block-card-team">
          
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Jagmeet.jpg"  />
             <CardTitle>JAGMEET KAUR BRAR</CardTitle>
             <CardSubtitle>FRONT-END DEVELOPER</CardSubtitle>
@@ -68,7 +68,7 @@ import './Team.css'
         </Card>
         <Card className="block-card-team">
           
-          <CardBody>
+          <CardBody className="card-team">
           <CardImg className="img-team" top width="100%" src=" ./img/owls/Pratt.jpg"  />
             <CardTitle>PRATHAMESH VAIDYA</CardTitle>
             <CardSubtitle>FULL-STACK DEVELOPER</CardSubtitle>
