@@ -29,9 +29,12 @@ export default class OrderSummary extends React.Component {
         </h3>
         <br />
         <div className="artworkActions">
-          <Button color="info" onClick={this.props.onClickRequest}>
+          <button
+            className="knack-btn knack-btn-dark"
+            onClick={this.props.onClickRequest}
+          >
             REQUEST
-          </Button>
+          </button>
         </div>
       </Col>
     );

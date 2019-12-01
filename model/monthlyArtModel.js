@@ -20,8 +20,8 @@ exports.subscribe = info => {
     idPlan,
     ${mysql.escape(info.idPaymentMethod)},
     artworksCount,
-    ${mysql.escape(new Date(info.startDate))},
-    ${mysql.escape(new Date(info.endDate))}
+    ${mysql.escape(info.startDate)},
+    ${mysql.escape(info.endDate)}
   FROM
     Plan
   WHERE
@@ -43,7 +43,7 @@ exports.getSubscriptionStatus = userID => {
       INNER JOIN Plan P ON S.idPlan = P.idPlan
   WHERE
     idCustomer = ${mysql.escape(userID)}
-    AND ${mysql.escape(new Date())} BETWEEN startDate AND endDate`;
+    AND CURRENT_TIMESTAMP() BETWEEN startDate AND endDate`;
 
   return query(cp, sqlQuery);
 };

@@ -12,39 +12,51 @@ const items = [
   {
     src: "./img/carousel/AboutKnack.jpg",
     altText: "",
-    caption: `Rent and Variate the Artworks in your Collection`
+    caption: `Find your Knack for Art!`
   },
   {
     src: "./img/carousel/Discovery.jpg",
-    altText: "Explore artworks from local Art Galleries and Artists",
+    altText: "",
     caption: (
-      <img
-        src="/img/carousel/icons/DiscoveryIcon.png"
-        alt=""
-        className="carousel-icons"
-      />
+      <React.Fragment>
+        <img
+          src="/img/carousel/icons/DiscoveryIcon.svg"
+          alt=""
+          className="carousel-icons"
+        />
+        <br />
+        Explore Public Art Installations and artworks from local Artists
+      </React.Fragment>
     )
   },
   {
     src: "./img/carousel/MonthlyArt.jpg",
-    altText: "Subscribe to Monthly Art and keep a new Artwork every month",
+    altText: "",
     caption: (
-      <img
-        src="/img/carousel/icons/MonthlyArtIcon.png"
-        alt=""
-        className="carousel-icons"
-      />
+      <React.Fragment>
+        <img
+          src="/img/carousel/icons/MonthlyArtIcon.svg"
+          alt=""
+          className="carousel-icons"
+        />
+        <br />
+        Subscribe to Monthly Art and take home a new Artwork every month
+      </React.Fragment>
     )
   },
   {
     src: "./img/carousel/PreviewArt.jpg",
-    altText: "Subscribe to Monthly Art and keep a new Artwork every month",
+    altText: "",
     caption: (
-      <img
-        src="/img/carousel/icons/PreviewIcon.png"
-        alt=""
-        className="carousel-icons"
-      />
+      <React.Fragment>
+        <img
+          src="/img/carousel/icons/PreviewIcon.svg"
+          alt=""
+          className="carousel-icons"
+        />
+        <br />
+        Preview artworks and find the right match to your tastes
+      </React.Fragment>
     )
   }
 ];
@@ -79,7 +91,7 @@ const CarouselContainer = props => {
       >
         <img className="carousel-image" src={item.src} alt={item.altText} />
         <CarouselCaption
-          className="carousel-caption"
+          className="carousel-caption d-block"
           captionText={item.altText}
           captionHeader={item.caption}
         />

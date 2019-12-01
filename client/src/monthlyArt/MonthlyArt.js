@@ -17,7 +17,7 @@ import {
   getPlans,
   subscribeToMonthlyArt
 } from "./api-monthly-art.js";
-import { formatDate } from "../helpers/dateOps";
+import { formatDate, formatDateTime } from "../helpers/dateOps";
 
 export default class MonthlyArt extends React.Component {
   constructor(props) {
@@ -98,8 +98,8 @@ export default class MonthlyArt extends React.Component {
           idCustomer: 2, // We gotta remove hardcoding the User ID FFS!
           idPlan: this.state.plan,
           idPaymentMethod: this.state.payment,
-          startDate: startDate,
-          endDate: endDate
+          startDate: formatDateTime(startDate),
+          endDate: formatDateTime(endDate)
         };
 
         subscribeToMonthlyArt(subscriptionInfo)
@@ -122,7 +122,9 @@ export default class MonthlyArt extends React.Component {
   render() {
     return (
       <Container className="monthlyArtPage">
-        <h1>Monthly Subscription Plans</h1>
+        <h1>
+          <b>Monthly Subscription Plans</b>
+        </h1>
         <p>
           Knack gives an amazing opportunity to all its members to subscribe for
           a monthly art rental plan. Each plan allows members to choose from a
@@ -155,8 +157,8 @@ export default class MonthlyArt extends React.Component {
                         {subscriptionPlan.description}
                       </Col>
                     </CardText>
-                    <Button
-                      className={`subscriptionButton col-md-8 offset-md-2 ${
+                    <button
+                      className={`subscriptionButton col-md-12 knack-btn knack-btn-dark ${
                         this.state.plan == subscriptionPlan.idPlan
                           ? "selected"
                           : ""
@@ -169,7 +171,7 @@ export default class MonthlyArt extends React.Component {
                       {this.state.plan == subscriptionPlan.idPlan
                         ? "REMOVE"
                         : "SELECT"}
-                    </Button>
+                    </button>
                     <small>Terms and Conditions apply</small>
                   </Card>
                 </Col>
@@ -196,8 +198,8 @@ export default class MonthlyArt extends React.Component {
                         <input type="text" name="cvv" size="3" />
                       </div>
                     </CardText> */}
-                    <Button
-                      className={`paymentButton col-md-8 offset-md-2 ${
+                    <button
+                      className={`paymentButton col-md-12 knack-btn knack-btn-dark ${
                         this.state.payment == paymentMethod.idPaymentMethod
                           ? "selected"
                           : ""
@@ -210,7 +212,7 @@ export default class MonthlyArt extends React.Component {
                       {this.state.payment == paymentMethod.idPaymentMethod
                         ? "REMOVE"
                         : "SELECT"}
-                    </Button>
+                    </button>
                   </Card>
                 </Col>
               ))}
@@ -224,9 +226,12 @@ export default class MonthlyArt extends React.Component {
               I agree to Knack’s <a href="#">Terms of Use</a> and{" "}
               <a href="#">Privacy Policy</a>, and to receive emails from Knack.
             </div>
-            <Button color="info" onClick={this.subscribeToMonthlyArt}>
+            <button
+              className="knack-btn knack-btn-light"
+              onClick={this.subscribeToMonthlyArt}
+            >
               Proceed
-            </Button>
+            </button>
           </React.Fragment>
         )}
 

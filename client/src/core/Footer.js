@@ -21,7 +21,7 @@ export default class Footer extends React.Component {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
+            <li className="desktop-footer-links">
               <Link to="/team">Team</Link>
             </li>
             <li className="desktop-footer-links">
