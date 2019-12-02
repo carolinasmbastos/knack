@@ -41,30 +41,33 @@ class PopularArtists extends React.Component {
         || document.documentElement.clientWidth
         || document.body.clientWidth;
 
-        let factor = 3;
-        let min = 10;
-        let max = 150;
-        let forceX = 0.03;
-        let forceY = 0.25;
+        let factor;
+        let min;
+        let max;
+        let forceX;
+        let forceY;
 
         //breakpoints for responsive chart
         if (width <= 500) {
             factor = 1.5;
             min = 8;
             max = 70;
+            forceX = 0.03;
             forceY = 0.2;
         
         } else if (width > 500 && width <= 1000) {
             factor = 2;
             min = 10;
             max = 100;
+            forceX = 0.03;
             forceY = 0.225;
 
         } else if (width > 1000) {
-            factor = 3;
+            factor = 2;
             min = 10;
-            max = 150;
-            forceY = 0.25;
+            max = 200;
+            forceX = 0.03;
+            forceY = 0.125;
         }
             
 
