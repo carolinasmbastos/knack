@@ -131,48 +131,52 @@ export default class Artwork extends React.Component {
         />
         <Row>
           <Col md="6" className="my-auto">
-            <Col md="12">
-              <img
-                src={`/img/artworks/${
-                  this.state.artwork.imageUrl
-                    ? this.state.artwork.imageUrl
-                    : "default.jpg"
-                }`}
-                className={`artwork-image ${
-                  this.state.viewinSpace ? "in-focus" : "default"
-                }`}
-                alt="Artwork"
-              />
-              <img
-                src={`/img/artworks/${
-                  this.state.artwork.imageUrl
-                    ? this.state.artwork.imageUrl
-                    : "default.jpg"
-                }`}
-                className={`artwork-image view-in-space ${
-                  this.state.viewinSpace ? "in-focus" : "default"
-                }`}
-                alt="Artwork View in Space"
-              />
-            </Col>
-            <Row className="auxiliaryActions">
-              <div id="favoriteArtwork">
-                <img
-                  src="/img/assets/favourite.svg"
-                  alt="Favourite Artwork"
-                  className="favouriteArtwork"
-                />
-                FAVORITE
-              </div>
-              <div id="viewInSpace" onClick={this.viewInSpace}>
-                <img
-                  src="/img/assets/viewInSpace.svg"
-                  alt="View Artwork in Space"
-                  className="viewInSpaceIcon"
-                />
-                VIEW IN SPACE
-              </div>
-            </Row>
+            {this.state.artwork.title && (
+              <React.Fragment>
+                <Col md="12">
+                  <img
+                    src={`/img/artworks/${
+                      this.state.artwork.imageUrl
+                        ? this.state.artwork.imageUrl
+                        : "default.jpg"
+                    }`}
+                    className={`artwork-image ${
+                      this.state.viewinSpace ? "in-focus" : "default"
+                    }`}
+                    alt="Artwork"
+                  />
+                  <img
+                    src={`/img/artworks/${
+                      this.state.artwork.imageUrl
+                        ? this.state.artwork.imageUrl
+                        : "default.jpg"
+                    }`}
+                    className={`artwork-image view-in-space ${
+                      this.state.viewinSpace ? "in-focus" : "default"
+                    }`}
+                    alt="Artwork View in Space"
+                  />
+                </Col>
+                <Row className="auxiliaryActions">
+                  <div id="favoriteArtwork">
+                    <img
+                      src="/img/assets/favourite.svg"
+                      alt="Favourite Artwork"
+                      className="favouriteArtwork"
+                    />
+                    FAVORITE
+                  </div>
+                  <div id="viewInSpace" onClick={this.viewInSpace}>
+                    <img
+                      src="/img/assets/viewInSpace.svg"
+                      alt="View Artwork in Space"
+                      className="viewInSpaceIcon"
+                    />
+                    VIEW IN SPACE
+                  </div>
+                </Row>
+              </React.Fragment>
+            )}
           </Col>
           <Col md="6" className="artworkDetails my-auto">
             {this.state.viewMode === "info" && (
