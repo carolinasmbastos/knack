@@ -106,7 +106,10 @@ export default class BrowseArtworks extends React.Component {
                         </CardSubtitle>
                       </div>
                       <div className="cardActions">
-                        <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
+                        <Link
+                          to={`/artwork/${artwork.artwork.idArtwork}`}
+                          className="knack-btn knack-btn-light"
+                        >
                           View
                         </Link>
                       </div>
