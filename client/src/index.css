@@ -34,7 +34,8 @@ h6 {
 
 input#artist.form-control {
   border-radius: 0px;
-  border: 0.1rem solid #000;
+  border: none;
+  border-bottom: 0.1rem solid #000;
   border-right: none;
   color: #000;
   font-size: 0.8rem;
@@ -43,9 +44,9 @@ input#artist.form-control {
 
 input#artist.form-control:focus {
   /* box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5); */
-  box-shadow: 0 0 0 0.2rem rgba(217, 178, 38, 0.25);
+  box-shadow: 0 0 0 rgba(217, 178, 38, 0.25);
   /* border: none; */
-  border-color: #d9b226;
+  border-bottom-color: #d9b226;
   transition: 0.8s;
 }
 
@@ -119,13 +120,9 @@ img {
 }
 
 a.nav-link {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   border-width: 1px;
-  font-size: 0.8rem;
-}
-
-a.nav-link:hover {
-  border-width: 1px;
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -136,6 +133,11 @@ a.nav-link:hover {
   align-items: center;
   justify-content: center;
   color: #ffffff;
+}
+
+/* Shrink font size of VIEW/READ links used in Browse Artworks, News and Events */
+a.knack-btn {
+  font-size: 0.8rem;
 }
 
 .knack-btn {
@@ -161,17 +163,29 @@ a.nav-link:hover {
   color: white;
 }
 
+a.knack-link {
+  color: black !important;
+}
+
+a.knack-link:hover {
+  color: #d9b226 !important;
+  text-decoration: none;
+}
+
+a.knack-link:active {
+  color: #ae8d0b !important;
+}
+
 /* Search Artworks */
 .searchBoxWrapper {
   display: flex;
 }
 
 .searchBoxWrapper button {
-  background: #000;
-  color: white;
+  background: white;
   border: none;
-  /* margin: 4px; */
-  /* margin-left: -35px; */
+  margin: 0.25rem;
+  margin-left: -2rem;
 }
 
 .artworksGrid .searchBoxWrapper {
@@ -288,6 +302,20 @@ a.nav-link:hover {
   /* transition: 0.5s ease-out; */
 }
 
+.cost-breakdown {
+  margin: 2rem 0;
+  font-size: 1.25rem;
+}
+
+.artwork-price {
+  font-weight: bold;
+}
+
+.artworkActions .cost-breakdown {
+  text-align: center;
+  font-size: 1rem;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 499px) {
   .artwork-image.view-in-space.in-focus {
     top: 20vh;
@@ -367,6 +395,31 @@ a.nav-link:hover {
   box-sizing: border-box;
 }
 
+#favoriteArtwork:hover .favouriteArtworkIcon,
+.favouriteArtworkIcon.selected {
+  background: url(./assets/favouriteSelcted.svg) no-repeat;
+  height: 16px;
+  width: 18px;
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+
+#favoriteArtwork.selected a {
+  color: #d9b226 !important;
+}
+
+#favoriteArtwork.selected:hover a {
+  color: black !important;
+}
+
+#favoriteArtwork.selected:hover .favouriteArtworkIcon {
+  background: url(./assets/favourite.svg) no-repeat;
+  height: 16px;
+  width: 18px;
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+
 #cancelViewInSpace {
   padding: 1rem;
   height: 100px;
@@ -375,7 +428,7 @@ a.nav-link:hover {
 }
 
 .viewInSpaceIcon,
-.favouriteArtwork {
+.favouriteArtworkIcon {
   height: 16px;
 
   margin-right: 0.5rem;
@@ -385,7 +438,7 @@ a.nav-link:hover {
   width: 25px;
 }
 
-.favouriteArtwork {
+.favouriteArtworkIcon {
   width: 18px;
 }
 
@@ -422,9 +475,9 @@ a.nav-link:hover {
   transition: 1s;
 }
 
-/* .rentBtn {
+.rentBtn {
   margin-right: 1rem;
-} */
+}
 
 .confirmationBox {
   margin-top: 2rem;

@@ -131,7 +131,7 @@ export default class MonthlyArt extends React.Component {
           variety of artworks, carefully curated according to their interests.
           This way the members can update their interiors with new artworks
           every month without worrying about paying a hefty price for original
-          artworks. Ww will help you find your KNACK for art!
+          artworks. We will help you find your KNACK for art!
         </p>
 
         {this.state.subscriptionDetails == null && (
@@ -151,7 +151,7 @@ export default class MonthlyArt extends React.Component {
                     <hr />
                     <CardText>
                       <h3>
-                        <b>${subscriptionPlan.price} / Month</b>
+                        <b>${subscriptionPlan.price}/month</b>
                       </h3>
                       <Col md={{ size: 8, offset: 2 }}>
                         {subscriptionPlan.description}
@@ -180,7 +180,9 @@ export default class MonthlyArt extends React.Component {
 
             <hr />
 
-            <h1>Choose Payment Method</h1>
+            <h3>
+              <b>Choose Payment Method</b>
+            </h3>
             <Row>
               {this.state.paymentMethods.map((paymentMethod, key) => (
                 <Col md={{ size: 4, offset: key % 2 == 0 ? 2 : 0 }}>
@@ -223,8 +225,15 @@ export default class MonthlyArt extends React.Component {
                 name="tnc"
                 onChange={e => this.handleSelect(e, 1)}
               />{" "}
-              I agree to Knack’s <a href="#">Terms of Use</a> and{" "}
-              <a href="#">Privacy Policy</a>, and to receive emails from Knack.
+              I agree to Knack’s{" "}
+              <a href="#" className="knack-link">
+                Terms of Use
+              </a>{" "}
+              and{" "}
+              <a href="#" className="knack-link">
+                Privacy Policy
+              </a>
+              , and to receive emails from Knack.
             </div>
             <button
               className="knack-btn knack-btn-light"

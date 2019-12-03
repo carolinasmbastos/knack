@@ -11,7 +11,10 @@ export default class ArtworkInfo extends React.Component {
           <React.Fragment>
             <h1>{this.props.artwork.title}</h1>
             <h2>
-              <Link to={`/artist/${this.props.artwork.idArtist}`}>
+              <Link
+                to={`/artist/${this.props.artwork.idArtist}`}
+                className="knack-link"
+              >
                 {this.props.artist.name}
               </Link>
             </h2>
@@ -33,7 +36,13 @@ export default class ArtworkInfo extends React.Component {
             <p>{this.props.artwork.description}</p>
             <br />
             <div className="artworkActions">
-              <h3>${this.props.artwork.rentPrice}/Month</h3>
+              <div class="cost-breakdown">
+                <h3 className="artwork-price">
+                  ${this.props.artwork.listPrice}
+                </h3>
+                Experience this artwork at{" "}
+                <b>${this.props.artwork.rentPrice}/month</b>
+              </div>
               {this.props.monthlyArtSubscription && (
                 <small>
                   (Rent this Artwork for no cost with your Monthly Artwork
@@ -47,7 +56,9 @@ export default class ArtworkInfo extends React.Component {
                 >
                   RENT
                 </button>
-                {/* <Button color="secondary" disabled>BUY</Button> */}
+                <button className="buyBtn knack-btn knack-btn-light">
+                  BUY
+                </button>
               </div>
             </div>
           </React.Fragment>
