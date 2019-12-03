@@ -71,3 +71,11 @@
 .planDetailsContainer {
   margin: 3rem 0;
 }
+
+.planDetailsContainer .card-body {
+  padding: 3rem;
+}
+
+.planDetailsContainer .card-text p {
+  margin: 2rem 0;
+}
