@@ -52,11 +52,25 @@ exports.getArtworkByArtistId = (req, res) => {
 
 exports.getArtworkByArtworkId = (req, res) => {
   let id = req.params.id;
+  let userID = req.params.userID;
 
   artworkModel
-    .findArtworkByArtworkId(id)
+    .findArtworkByArtworkId(id, userID)
     .then(artwork => {
       res.send(artwork);
+    })
+    .catch(err => {
+      res.send(err);
+    });
+};
+
+exports.favoriteArtworkToggle = (req, res) => {
+  let info = req.body;
+
+  artworkModel
+    .favoriteArtworkToggle(info)
+    .then(result => {
+      res.send(result);
     })
     .catch(err => {
       res.send(err);

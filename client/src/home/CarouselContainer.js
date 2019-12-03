@@ -11,8 +11,8 @@ import "./CarouselContainer.css";
 const items = [
   {
     src: "./img/carousel/AboutKnack.jpg",
-    altText: "",
-    caption: `Find your Knack for Art!`
+    altText: "Where collectors meet artists",
+    caption: `KNACK`
   },
   {
     src: "./img/carousel/Discovery.jpg",
@@ -25,7 +25,7 @@ const items = [
           className="carousel-icons"
         />
         <br />
-        Explore Public Art Installations and artworks from local Artists
+        Explore public art installations and artworks from local artists
       </React.Fragment>
     )
   },
@@ -40,7 +40,7 @@ const items = [
           className="carousel-icons"
         />
         <br />
-        Subscribe to Monthly Art and take home a new Artwork every month
+        Subscribe to Monthly Art and take home a new artwork every month
       </React.Fragment>
     )
   },

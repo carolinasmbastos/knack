@@ -25,9 +25,7 @@ const MonthlyArtBanner = props => {
             alt="Card image cap"
           />
           <CardImgOverlay className="monthlyArtContent">
-            <CardTitle className="text">
-              <h3>Subscribe to Monthly Art!</h3>
-            </CardTitle>
+            <CardTitle className="text"></CardTitle>
             <CardText className="bgtext">
               Switch to a new Artwork every month and revive the vibe of your
               place.

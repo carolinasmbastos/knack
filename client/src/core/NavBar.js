@@ -31,7 +31,7 @@ const NavBar = withRouter(({ history }) => {
             <NavItem>
               <Link
                 to="/discovery"
-                className="nav-link knack-btn knack-btn-light"
+                className="nav-link knack-link"
                 onClick={toggle}
               >
                 Discovery
@@ -40,7 +40,7 @@ const NavBar = withRouter(({ history }) => {
             <NavItem>
               <Link
                 to="/explore"
-                className="nav-link knack-btn knack-btn-light"
+                className="nav-link knack-link"
                 onClick={toggle}
               >
                 Explore
@@ -49,7 +49,7 @@ const NavBar = withRouter(({ history }) => {
             <NavItem>
               <Link
                 to="/monthlyArt"
-                className="nav-link knack-btn knack-btn-light"
+                className="nav-link knack-link"
                 onClick={toggle}
               >
                 Monthly Art

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Button, ButtonGroup } from "reactstrap";
 import { getTimelines } from "./api-artwork";
+import { formatTimePeriodForMobile } from "../helpers/formatter";
 
 const styles = {};
 
@@ -46,7 +47,10 @@ export default class TimelineSlider extends React.Component {
                 this.loadArtworksFromTimeline(parseInt(timeline.idPeriod))
               }
             >
-              {timeline.periodDescription}
+              {/* Abbreviate '18th Century' as '18th c.' on smaller screens */}
+              {window.innerWidth <= 767 && timeline.idPeriod != 0
+                ? formatTimePeriodForMobile(timeline.periodDescription)
+                : timeline.periodDescription}
             </Button>
           ))}
         </ButtonGroup>
