@@ -20,8 +20,9 @@ router.get("/artworks/:id(\\d+)/:userID(\\d+)", artworkController.getArtworkByAr
 router.get("/artworks/artists/:artistId(\\d+)", artworkController.getArtworkByArtistId);
 
 
-
-
+//Developer: Pratt
+// EndPoint to toggle on/off a favorite artwork for a customer
+// receives artworkId and CustomerId from req.body
 router.post("/artworks/favorites/toggle",artworkController.favoriteArtworkToggle);
 
 exports.artworkRouter = router;

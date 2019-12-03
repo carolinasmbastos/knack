@@ -8,6 +8,8 @@ let orderController = require('../controllers/orderController')
 // Handle the rent or purchase of an Artwork
 router.post('/orders', orderController.createOrder);
 
+// Developer: Pratt
+// Endpoint to fetch all the payment methods for a given userId
 router.get('/paymentMethods/:userID', orderController.getPaymentMethods)
 
 exports.orderRouter = router;
