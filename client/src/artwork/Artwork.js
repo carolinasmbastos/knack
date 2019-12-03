@@ -141,7 +141,7 @@ export default class Artwork extends React.Component {
     return (
       <Container style={styles.containerSpacing}>
         <img
-          src="/img/assets/88591.jpg"
+          src="/img/assets/view-in-space-background.jpg"
           alt="Room Background. Source: https://www.freepik.com/free-photo/pink-chair-white-room_4100643.htm"
           className={`backgroundImages ${
             this.state.viewinSpace ? "visible" : "hidden"

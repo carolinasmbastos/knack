@@ -21,7 +21,7 @@ const MonthlyArtBanner = props => {
           <CardImg
             className="monthlyArtBgImg"
             width="100%"
-            src="./artwork.jpg"
+            src="./img/assets/monthly-art-banner.jpg"
             alt="Card image cap"
           />
           <CardImgOverlay className="monthlyArtContent">
