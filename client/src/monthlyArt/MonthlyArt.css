@@ -10,7 +10,7 @@
   font-size: 1rem;
 }
 
-.monthlyArtPage>p {
+.monthlyArtPage > p {
   margin-top: 2rem;
 }
 
@@ -30,6 +30,13 @@
   margin-bottom: 2rem;
 }
 
+.subscriptionPlanBox .card.card-body,
+.planDetailsContainer .card.card-body,
+.paymentCard.card.card-body {
+  border-radius: 0;
+  box-shadow: 3px 3px 3px;
+}
+
 .subscriptionPlanBox p {
   font-size: 0.6rem;
 }
@@ -40,7 +47,8 @@
 
 .monthlyArtPage .selected,
 .monthlyArtPage .selected:hover {
-  background-color: #D9B226;
+  background-color: #d9b226;
+  border-color: #ae8d0b;
 }
 
 .paymentCard {
@@ -62,4 +70,12 @@
 
 .planDetailsContainer {
   margin: 3rem 0;
+}
+
+.planDetailsContainer .card-body {
+  padding: 3rem;
+}
+
+.planDetailsContainer .card-text p {
+  margin: 2rem 0;
 }

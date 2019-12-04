@@ -12,15 +12,17 @@ exports.findArtworkByArtistName = artistName => {
   return query(cp, options);
 };
 
-exports.findArtworkByArtworkId = id => {
+exports.findArtworkByArtworkId = (id, userID) => {
   var options = {
-    sql: `SELECT artwork.*, artist.name, medium.mediumType, seller.*, artGallery.*, artistSeller.*
+    sql: `SELECT artwork.*, artist.name, medium.mediumType, seller.*, artGallery.*, artistSeller.*, favorite.*
                     from Artwork artwork
                     inner join Artist artist on artwork.idArtist = artist.idArtist
                     inner join mediumType medium on artwork.idMediumType = medium.idMediumType
                     inner join Seller seller on artwork.idSeller = seller.idSeller
+                    left join Customer customer on customer.idCustomer = ${userID}
                     left join ArtGallery artGallery on seller.idSeller = artGallery.idSeller
                     left join Artist artistSeller on seller.idSeller = artistSeller.idSeller
+                    left join Favorite favorite on favorite.idArtwork = artwork.idArtwork and favorite.idCustomer = customer.idCustomer
                     where artwork.idArtwork = ${id}`,
     nestTables: true
   };
@@ -77,4 +79,24 @@ exports.findArtworkByArtistId = artistId => {
   };
 
   return query(cp, options);
+};
+
+exports.favoriteArtworkToggle = info => {
+  let sqlQuery;
+  if (info.operation == "insert") {
+    sqlQuery = `INSERT INTO owl_knack.Favorite (
+      idCustomer,
+      idArtwork
+  )
+  VALUES(
+    ${cp.escape(info.idCustomer)},
+    ${cp.escape(info.idArtwork)}
+    );`;
+  } else if (info.operation == "remove") {
+    sqlQuery = `DELETE FROM owl_knack.Favorite 
+    WHERE idCustomer = ${cp.escape(info.idCustomer)}
+    AND idArtwork = ${cp.escape(info.idArtwork)};`;
+  }
+
+  return query(cp, sqlQuery);
 };

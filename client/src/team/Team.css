@@ -1,0 +1,110 @@
+/******* mobile version ************/
+.block-card-team {
+    border: none;
+}
+.img-team {
+    width: 100px;
+    height: 100px;
+   
+    border: 5px solid #d9b227;
+}
+
+.card-team {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    display: flex;
+    justify-content: center;
+}
+
+.info-team-page h1,
+.info-team-page p {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info-team-page h1 {
+    font-weight: 900;
+    border-bottom: 1px solid black;
+    padding-bottom: 25px;
+    padding-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.info-team-page p {
+    padding-top: 25px;
+}
+
+.end-team-page {
+    text-align: center;
+    margin: 0 auto;
+}
+.end-team-page p {
+    padding-top: 30px;
+}
+
+/******* desktop version ************/
+@media only screen and (min-width: 600px) and (max-width:799px){
+    .img-team {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+       
+        border: 5px solid #d9b227;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+.designer-team {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.developer-team{ 
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.img-team {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+   
+    border: 5px solid #d9b227;
+}
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .designer-team {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .developer-team{ 
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    
+    .img-team {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+       
+        border: 5px solid #d9b227;
+    }
+    
+    }

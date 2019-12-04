@@ -18,7 +18,8 @@
   }
 
   circle:hover {
-    transform: scale(1.05, 1.05) ;
+    transform: scale(1.05, 1.05) translateX(1.5) translateY(1.5);
+     
   }
 
 .discoverySections h2 {

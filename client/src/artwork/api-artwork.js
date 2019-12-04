@@ -11,9 +11,9 @@ const searchArtworks = keyword => {
     });
 };
 
-const findArtwork = id => {
+const findArtwork = (id, userID) => {
   return axios
-    .get(`/api/artworks/${id}`)
+    .get(`/api/artworks/${id}/${userID}`)
     .then(res => {
       return res.data;
     })
@@ -62,10 +62,26 @@ const getTimelines = () => {
     });
 };
 
+const favoriteArtworkToggle = (info, operation) => {
+  return axios
+    .post(`/api/artworks/favorites/toggle`, {
+      idCustomer: info.idCustomer,
+      idArtwork: info.idArtwork,
+      operation: operation
+    })
+    .then(res => {
+      return res.data;
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
+
 export {
   searchArtworks,
   findArtwork,
   findArtworkByArtistId,
   requestOrder,
-  getTimelines
+  getTimelines,
+  favoriteArtworkToggle
 };

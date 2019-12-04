@@ -1,9 +1,12 @@
 import React from "react";
-import { findArtwork, requestOrder } from "../artwork/api-artwork.js";
+import {
+  findArtwork,
+  requestOrder,
+  favoriteArtworkToggle
+} from "../artwork/api-artwork.js";
 import { Col, Container, Row } from "reactstrap";
 import ArtworkInfo from "./ArtworkInfo";
 import OrderSummary from "./OrderSummary";
-import { formatDate } from "../helpers/dateOps";
 import { getMonthlyArtSubscriptionStatus } from "../monthlyArt/api-monthly-art";
 
 const styles = {
@@ -18,6 +21,7 @@ export default class Artwork extends React.Component {
     this.state = {
       viewMode: "info",
       viewinSpace: false,
+      isFav: false,
       id: "",
       artwork: {},
       artist: {},
@@ -31,8 +35,11 @@ export default class Artwork extends React.Component {
   }
 
   componentDidMount() {
-    findArtwork(this.props.match.params.id)
+    findArtwork(this.props.match.params.id, 2)
       .then(data => {
+        const isFav =
+          data[0].favorite.idCustomer != null &&
+          data[0].favorite.idArtwork != null;
         this.setState({
           artwork: data[0].artwork,
           artist: data[0].artist,
@@ -42,7 +49,8 @@ export default class Artwork extends React.Component {
             data[0].artGallery.idSeller == null
               ? data[0].artistSeller
               : data[0].artGallery, // Can be either Art Gallery or Artist
-          id: this.props.match.params.id
+          id: this.props.match.params.id,
+          isFav: isFav
         });
       })
       .catch(error => {
@@ -80,9 +88,6 @@ export default class Artwork extends React.Component {
       idArtwork: this.state.id,
       idCustomer: 2, // remove hardcoding when sign in is implemented
       orderType: "rent"
-      // idPaymentMethod: 26, // remove parameter since this isn't a purchase; it's a mere request
-      // rentalStartDate: formatDate(rentalStartDate), // DESIGN CHANGE! The designers are probably not looking to get any more updates to the designs, but we need a field for this in the interface!
-      // rentalEndDate: formatDate(rentalEndDate)
     };
     requestOrder(info)
       .then(data => {
@@ -102,6 +107,26 @@ export default class Artwork extends React.Component {
     });
   };
 
+  favoriteArtworkToggle = event => {
+    event.preventDefault();
+    const info = {
+      idArtwork: this.state.id,
+      idCustomer: 2 // remove hardcoding when sign in is implemented
+    };
+    const operation = this.state.isFav ? "remove" : "insert";
+    favoriteArtworkToggle(info, operation)
+      .then(data => {
+        const { affectedRows } = data;
+        if (affectedRows == 1)
+          this.setState({
+            isFav: !this.state.isFav
+          });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
   render() {
     let monthlyArtAvailability = false;
     if (
@@ -116,7 +141,7 @@ export default class Artwork extends React.Component {
     return (
       <Container style={styles.containerSpacing}>
         <img
-          src="/img/assets/88591.jpg"
+          src="/img/assets/view-in-space-background.jpg"
           alt="Room Background. Source: https://www.freepik.com/free-photo/pink-chair-white-room_4100643.htm"
           className={`backgroundImages ${
             this.state.viewinSpace ? "visible" : "hidden"
@@ -131,48 +156,62 @@ export default class Artwork extends React.Component {
         />
         <Row>
           <Col md="6" className="my-auto">
-            <Col md="12">
-              <img
-                src={`/img/artworks/${
-                  this.state.artwork.imageUrl
-                    ? this.state.artwork.imageUrl
-                    : "default.jpg"
-                }`}
-                className={`artwork-image ${
-                  this.state.viewinSpace ? "in-focus" : "default"
-                }`}
-                alt="Artwork"
-              />
-              <img
-                src={`/img/artworks/${
-                  this.state.artwork.imageUrl
-                    ? this.state.artwork.imageUrl
-                    : "default.jpg"
-                }`}
-                className={`artwork-image view-in-space ${
-                  this.state.viewinSpace ? "in-focus" : "default"
-                }`}
-                alt="Artwork View in Space"
-              />
-            </Col>
-            <Row className="auxiliaryActions">
-              <div id="favoriteArtwork">
-                <img
-                  src="/img/assets/favourite.svg"
-                  alt="Favourite Artwork"
-                  className="favouriteArtwork"
-                />
-                FAVORITE
-              </div>
-              <div id="viewInSpace" onClick={this.viewInSpace}>
-                <img
-                  src="/img/assets/viewInSpace.svg"
-                  alt="View Artwork in Space"
-                  className="viewInSpaceIcon"
-                />
-                VIEW IN SPACE
-              </div>
-            </Row>
+            {this.state.artwork.title && (
+              <React.Fragment>
+                <Col md="12">
+                  <img
+                    src={`/img/artworks/${
+                      this.state.artwork.imageUrl
+                        ? this.state.artwork.imageUrl
+                        : "default.jpg"
+                    }`}
+                    className={`artwork-image ${
+                      this.state.viewinSpace ? "in-focus" : "default"
+                    }`}
+                    alt="Artwork"
+                  />
+                  <img
+                    src={`/img/artworks/${
+                      this.state.artwork.imageUrl
+                        ? this.state.artwork.imageUrl
+                        : "default.jpg"
+                    }`}
+                    className={`artwork-image view-in-space ${
+                      this.state.viewinSpace ? "in-focus" : "default"
+                    }`}
+                    alt="Artwork View in Space"
+                  />
+                </Col>
+                <Row className="auxiliaryActions">
+                  <div
+                    id="favoriteArtwork"
+                    onClick={this.favoriteArtworkToggle}
+                    className={this.state.isFav ? "selected" : ""}
+                  >
+                    <img
+                      src="/img/assets/favourite.svg"
+                      alt="Favourite Artwork"
+                      className={`favouriteArtworkIcon ${
+                        this.state.isFav ? "selected" : ""
+                      }`}
+                    />
+                    <a href="#" className="knack-link">
+                      FAVORITE
+                    </a>
+                  </div>
+                  <div id="viewInSpace" onClick={this.viewInSpace}>
+                    <img
+                      src="/img/assets/viewInSpace.svg"
+                      alt="View Artwork in Space"
+                      className="viewInSpaceIcon"
+                    />
+                    <a href="#" className="knack-link">
+                      VIEW IN SPACE
+                    </a>
+                  </div>
+                </Row>
+              </React.Fragment>
+            )}
           </Col>
           <Col md="6" className="artworkDetails my-auto">
             {this.state.viewMode === "info" && (

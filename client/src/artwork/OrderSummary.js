@@ -13,25 +13,30 @@ export default class OrderSummary extends React.Component {
           Owned by: {this.props.sellerEntity.name}, {this.props.sellerInfo.city}
         </div>
         <div>Address: {this.props.sellerInfo.address}</div>
-        <br />
-        <h3>Rent: ${this.props.artwork.rentPrice}</h3>
-        <h3>Taxes: ${this.props.artwork.rentPrice * 0.12}</h3>
-        {this.props.monthlyArtSubscription && (
-          <h3>
-            Monthly Art: -$
-            {this.props.artwork.rentPrice + this.props.artwork.rentPrice * 0.12}
-          </h3>
-        )}
-        <h3>
+        <div class="cost-breakdown">
+          Rent: ${this.props.artwork.rentPrice}
+          <br />
+          Taxes: ${this.props.artwork.rentPrice * 0.12}
+          <br />
+          {this.props.monthlyArtSubscription && (
+            <React.Fragment>
+              Monthly Art: -$
+              {this.props.artwork.rentPrice +
+                this.props.artwork.rentPrice * 0.12}
+              <br />
+            </React.Fragment>
+          )}
           Total: ${this.props.monthlyArtSubscription && "0"}
           {!this.props.monthlyArtSubscription &&
             this.props.artwork.rentPrice + this.props.artwork.rentPrice * 0.12}
-        </h3>
-        <br />
+        </div>
         <div className="artworkActions">
-          <Button color="info" onClick={this.props.onClickRequest}>
+          <button
+            className="knack-btn knack-btn-dark"
+            onClick={this.props.onClickRequest}
+          >
             REQUEST
-          </Button>
+          </button>
         </div>
       </Col>
     );

@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
               <Link to="/contact">Contact</Link>
             </li>
             <li className="desktop-footer-links">
-              <a href="#">Team</a>
+              <Link to="/team">Team</Link>
             </li>
             <li className="desktop-footer-links">
               <a href="#">Privacy Policy</a>

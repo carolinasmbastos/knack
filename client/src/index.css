@@ -34,7 +34,9 @@ h6 {
 
 input#artist.form-control {
   border-radius: 0px;
-  border: 0.1rem solid #000;
+  border: none;
+  border-bottom: 0.1rem solid #000;
+  border-right: none;
   color: #000;
   font-size: 0.8rem;
   transition: 0.8s;
@@ -42,9 +44,9 @@ input#artist.form-control {
 
 input#artist.form-control:focus {
   /* box-shadow: 0 0 5px rgba(217, 178, 38, 0.5), 0 0 5px rgba(217, 178, 38, 0.5); */
-  box-shadow: 0 0 0 0.2rem rgba(217, 178, 38, 0.25);
+  box-shadow: 0 0 0 rgba(217, 178, 38, 0.25);
   /* border: none; */
-  border-color: #d9b226;
+  border-bottom-color: #d9b226;
   transition: 0.8s;
 }
 
@@ -53,12 +55,12 @@ input#artist.form-control::placeholder {
   text-transform: uppercase;
 }
 
-.navbar-light .navbar-nav a.nav-link {
-  text-transform: uppercase;
-  border: 0.1rem solid black;
+/* .navbar-light .navbar-nav a.nav-link {
+  
+  border: 2px solid black;
   color: black;
   font-size: 0.8rem;
-}
+} */
 
 /* Core */
 /* html {
@@ -118,7 +120,9 @@ img {
 }
 
 a.nav-link {
-  margin: 0 25px;
+  margin: 0 0.5rem;
+  border-width: 1px;
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -131,17 +135,57 @@ a.nav-link {
   color: #ffffff;
 }
 
+/* Shrink font size of VIEW/READ links used in Browse Artworks, News and Events */
+a.knack-btn {
+  font-size: 0.8rem;
+}
+
+.knack-btn {
+  border: 2px solid black;
+  text-transform: uppercase;
+  padding: 0.5rem 5rem;
+}
+
+.knack-btn:hover {
+  border: 2px solid #ae8d0b;
+  background: rgba(217, 178, 38, 0.8);
+  color: black;
+  transition: 0.3s;
+}
+
+.knack-btn-light {
+  background-color: white;
+  color: black;
+}
+
+.knack-btn-dark {
+  background-color: black;
+  color: white;
+}
+
+a.knack-link {
+  color: black !important;
+}
+
+a.knack-link:hover {
+  color: #d9b226 !important;
+  text-decoration: none;
+}
+
+a.knack-link:active {
+  color: #ae8d0b !important;
+}
+
 /* Search Artworks */
 .searchBoxWrapper {
   display: flex;
 }
 
 .searchBoxWrapper button {
-  background: #000;
-  color: white;
+  background: white;
   border: none;
-  margin: 4px;
-  margin-left: -35px;
+  margin: 0.25rem;
+  margin-left: -2rem;
 }
 
 .artworksGrid .searchBoxWrapper {
@@ -186,7 +230,10 @@ a.nav-link {
 
 /* Cards components */
 
-.artworksGrid .card, .eventsContainer .card, .newsContainer .card, .artworkGallery .card {
+.artworksGrid .card,
+.eventsContainer .card,
+.newsContainer .card,
+.artworkGallery .card {
   border: none;
 }
 
@@ -208,9 +255,9 @@ a.nav-link {
   margin-bottom: 0.1rem;
 }
 
-
 .card-body .cardActions a {
-  border: 0.05rem solid black;
+  border-width: 0.05rem;
+  /* .artworksGrid .card-body .cardActions a { */
   padding: 0.5rem;
   text-transform: uppercase;
 }
@@ -253,6 +300,20 @@ a.nav-link {
   max-height: 67.5vh;
   visibility: visible;
   /* transition: 0.5s ease-out; */
+}
+
+.cost-breakdown {
+  margin: 2rem 0;
+  font-size: 1.25rem;
+}
+
+.artwork-price {
+  font-weight: bold;
+}
+
+.artworkActions .cost-breakdown {
+  text-align: center;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 499px) {
@@ -334,6 +395,31 @@ a.nav-link {
   box-sizing: border-box;
 }
 
+#favoriteArtwork:hover .favouriteArtworkIcon,
+.favouriteArtworkIcon.selected {
+  background: url(./assets/favouriteSelcted.svg) no-repeat;
+  height: 16px;
+  width: 18px;
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+
+#favoriteArtwork.selected a {
+  color: #d9b226 !important;
+}
+
+#favoriteArtwork.selected:hover a {
+  color: black !important;
+}
+
+#favoriteArtwork.selected:hover .favouriteArtworkIcon {
+  background: url(./assets/favourite.svg) no-repeat;
+  height: 16px;
+  width: 18px;
+  padding-left: 18px;
+  box-sizing: border-box;
+}
+
 #cancelViewInSpace {
   padding: 1rem;
   height: 100px;
@@ -342,7 +428,7 @@ a.nav-link {
 }
 
 .viewInSpaceIcon,
-.favouriteArtwork {
+.favouriteArtworkIcon {
   height: 16px;
 
   margin-right: 0.5rem;
@@ -352,7 +438,7 @@ a.nav-link {
   width: 25px;
 }
 
-.favouriteArtwork {
+.favouriteArtworkIcon {
   width: 18px;
 }
 
@@ -389,9 +475,9 @@ a.nav-link {
   transition: 1s;
 }
 
-/* .rentBtn {
+.rentBtn {
   margin-right: 1rem;
-} */
+}
 
 .confirmationBox {
   margin-top: 2rem;
@@ -620,26 +706,33 @@ a.nav-link {
 }
 
 /* Events */
-.eventsContainer .card-body .card-subtitle, .newsContainer .card-body .card-subtitle {
-    margin-top: 0.5rem;
-    font-size: 0.65rem;
-  }
+.eventsContainer .card-body .card-subtitle,
+.newsContainer .card-body .card-subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+}
 
-  /* Artist */
+/* News */
+.eventsContainer .card img,
+.newsContainer .card img {
+  height: 200px;
+}
+
+/* Artist */
 .artistDetails h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 .artistDetails h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .artistDetails span {
-    font-weight: bold;
+  font-weight: bold;
 }
 .artworkGallery .card {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 .galleryHeader {
-    padding-bottom: 1.5rem;
-    margin: auto;
+  padding-bottom: 1.5rem;
+  margin: auto;
 }

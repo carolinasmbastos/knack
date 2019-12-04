@@ -6,7 +6,9 @@ import ArtworkSearchForm from "../artwork/ArtworkSearchForm";
 const NavBar = withRouter(({ history }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => {
+    if (window.innerWidth < 768) setIsOpen(!isOpen);
+  };
 
   return (
     <div>
@@ -27,17 +29,29 @@ const NavBar = withRouter(({ history }) => {
           </Nav>
           <Nav navbar>
             <NavItem>
-              <Link to="/discovery" className="nav-link" onClick={toggle}>
+              <Link
+                to="/discovery"
+                className="nav-link knack-link"
+                onClick={toggle}
+              >
                 Discovery
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/explore" className="nav-link" onClick={toggle}>
+              <Link
+                to="/explore"
+                className="nav-link knack-link"
+                onClick={toggle}
+              >
                 Explore
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/monthlyArt" className="nav-link" onClick={toggle}>
+              <Link
+                to="/monthlyArt"
+                className="nav-link knack-link"
+                onClick={toggle}
+              >
                 Monthly Art
               </Link>
             </NavItem>

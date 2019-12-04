@@ -17,7 +17,7 @@ import {
   getPlans,
   subscribeToMonthlyArt
 } from "./api-monthly-art.js";
-import { formatDate } from "../helpers/dateOps";
+import { formatDate, formatDateTime } from "../helpers/dateOps";
 
 export default class MonthlyArt extends React.Component {
   constructor(props) {
@@ -98,8 +98,8 @@ export default class MonthlyArt extends React.Component {
           idCustomer: 2, // We gotta remove hardcoding the User ID FFS!
           idPlan: this.state.plan,
           idPaymentMethod: this.state.payment,
-          startDate: startDate,
-          endDate: endDate
+          startDate: formatDateTime(startDate),
+          endDate: formatDateTime(endDate)
         };
 
         subscribeToMonthlyArt(subscriptionInfo)
@@ -122,14 +122,16 @@ export default class MonthlyArt extends React.Component {
   render() {
     return (
       <Container className="monthlyArtPage">
-        <h1>Monthly Subscription Plans</h1>
+        <h1>
+          <b>Monthly Subscription Plans</b>
+        </h1>
         <p>
           Knack gives an amazing opportunity to all its members to subscribe for
           a monthly art rental plan. Each plan allows members to choose from a
           variety of artworks, carefully curated according to their interests.
           This way the members can update their interiors with new artworks
           every month without worrying about paying a hefty price for original
-          artworks. Ww will help you find your KNACK for art!
+          artworks. We will help you find your KNACK for art!
         </p>
 
         {this.state.subscriptionDetails == null && (
@@ -149,14 +151,14 @@ export default class MonthlyArt extends React.Component {
                     <hr />
                     <CardText>
                       <h3>
-                        <b>${subscriptionPlan.price} / Month</b>
+                        <b>${subscriptionPlan.price}/month</b>
                       </h3>
                       <Col md={{ size: 8, offset: 2 }}>
                         {subscriptionPlan.description}
                       </Col>
                     </CardText>
-                    <Button
-                      className={`subscriptionButton col-md-8 offset-md-2 ${
+                    <button
+                      className={`subscriptionButton col-md-12 knack-btn knack-btn-dark ${
                         this.state.plan == subscriptionPlan.idPlan
                           ? "selected"
                           : ""
@@ -169,7 +171,7 @@ export default class MonthlyArt extends React.Component {
                       {this.state.plan == subscriptionPlan.idPlan
                         ? "REMOVE"
                         : "SELECT"}
-                    </Button>
+                    </button>
                     <small>Terms and Conditions apply</small>
                   </Card>
                 </Col>
@@ -178,7 +180,9 @@ export default class MonthlyArt extends React.Component {
 
             <hr />
 
-            <h1>Choose Payment Method</h1>
+            <h3>
+              <b>Choose Payment Method</b>
+            </h3>
             <Row>
               {this.state.paymentMethods.map((paymentMethod, key) => (
                 <Col md={{ size: 4, offset: key % 2 == 0 ? 2 : 0 }}>
@@ -196,8 +200,8 @@ export default class MonthlyArt extends React.Component {
                         <input type="text" name="cvv" size="3" />
                       </div>
                     </CardText> */}
-                    <Button
-                      className={`paymentButton col-md-8 offset-md-2 ${
+                    <button
+                      className={`paymentButton col-md-12 knack-btn knack-btn-dark ${
                         this.state.payment == paymentMethod.idPaymentMethod
                           ? "selected"
                           : ""
@@ -210,7 +214,7 @@ export default class MonthlyArt extends React.Component {
                       {this.state.payment == paymentMethod.idPaymentMethod
                         ? "REMOVE"
                         : "SELECT"}
-                    </Button>
+                    </button>
                   </Card>
                 </Col>
               ))}
@@ -221,12 +225,22 @@ export default class MonthlyArt extends React.Component {
                 name="tnc"
                 onChange={e => this.handleSelect(e, 1)}
               />{" "}
-              I agree to Knack’s <a href="#">Terms of Use</a> and{" "}
-              <a href="#">Privacy Policy</a>, and to receive emails from Knack.
+              I agree to Knack’s{" "}
+              <a href="#" className="knack-link">
+                Terms of Use
+              </a>{" "}
+              and{" "}
+              <a href="#" className="knack-link">
+                Privacy Policy
+              </a>
+              , and to receive emails from Knack.
             </div>
-            <Button color="info" onClick={this.subscribeToMonthlyArt}>
+            <button
+              className="knack-btn knack-btn-light"
+              onClick={this.subscribeToMonthlyArt}
+            >
               Proceed
-            </Button>
+            </button>
           </React.Fragment>
         )}
 
