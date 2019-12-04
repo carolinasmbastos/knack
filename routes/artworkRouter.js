@@ -9,20 +9,20 @@ let artworkController = require("../controllers/artworkController");
 // When keyword === 'featured', returns featured artwork
 router.get("/artworks/search/:keyword?", artworkController.getArtworkByKeyword);
 
+
 //Developer: Carol
 // EndPoint to fetch all the artwork by id
-router.get("/artworks/:id/:userID", artworkController.getArtworkByArtworkId);
+router.get("/artworks/:id(\\d+)/:userID(\\d+)", artworkController.getArtworkByArtworkId);
+
 
 //Developer: Carol
 // EndPoint to fetch all the artwork by the artistid
-router.get(
-  "/artworks/artists/:artistId",
-  artworkController.getArtworkByArtistId
-);
+router.get("/artworks/artists/:artistId(\\d+)", artworkController.getArtworkByArtistId);
 
-router.post(
-  "/artworks/favorites/toggle",
-  artworkController.favoriteArtworkToggle
-);
+
+//Developer: Pratt
+// EndPoint to toggle on/off a favorite artwork for a customer
+// receives artworkId and CustomerId from req.body
+router.post("/artworks/favorites/toggle",artworkController.favoriteArtworkToggle);
 
 exports.artworkRouter = router;

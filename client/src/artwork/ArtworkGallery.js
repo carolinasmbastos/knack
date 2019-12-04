@@ -15,7 +15,8 @@ export default class ArtworkGallery extends React.Component {
     }
 
     loadArtwork() {
-        if (this.state.galleryItems.length === 0) {
+        if (this.state.galleryItems.length === 0 && this.props.artist !== undefined) {
+            console.log("===>"+this.props.artist)
             findArtworkByArtistId(this.props.artist)
                 .then(result => {
                     //console.log("result:" + result);
@@ -48,7 +49,7 @@ export default class ArtworkGallery extends React.Component {
                                             </CardSubtitle>
                                         </div>
                                         <div className="cardActions">
-                                            <Link to={`/artwork/${artwork.artwork.idArtwork}`}>
+                                            <Link to={`/artwork/${artwork.artwork.idArtwork}`} className="knack-btn knack-btn-light">
                                             View
                                             </Link>
                                         </div>
