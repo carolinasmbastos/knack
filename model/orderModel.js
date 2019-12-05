@@ -4,7 +4,7 @@ const mysql = require("mysql");
 
 // Place a rental or purchase order
 exports.createOrder = purchaseInfo => {
-  let sqlQuery = `INSERT INTO owl_knack.Order (
+  let sqlQuery = `INSERT INTO \`Order\` (
                         idCustomer,
                         idArtwork,
                         orderType,
