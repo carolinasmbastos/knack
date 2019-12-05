@@ -20,7 +20,7 @@ exports.fetchPopularArtists = () => {
                         FROM 
                             Artist artist 
                             INNER JOIN Artwork artwork ON artist.idArtist = artwork.idArtist 
-                            INNER JOIN owl_knack.Order orders ON artwork.idArtwork = orders.idArtwork 
+                            INNER JOIN \`Order\` orders ON artwork.idArtwork = orders.idArtwork 
                         GROUP BY 
                             artist.idArtist, 
                             artist.name 

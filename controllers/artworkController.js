@@ -52,7 +52,7 @@ exports.getArtworkByArtistId = (req, res) => {
 
 exports.getArtworkByArtworkId = (req, res) => {
   let id = req.params.id;
-  let userID = req.params.userID;
+  let userID = (req.params.userID === undefined ? 0 : req.params.userID);
 
   artworkModel
     .findArtworkByArtworkId(id, userID)

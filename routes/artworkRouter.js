@@ -12,7 +12,7 @@ router.get("/artworks/search/:keyword?", artworkController.getArtworkByKeyword);
 
 //Developer: Carol
 // EndPoint to fetch all the artwork by id
-router.get("/artworks/:id(\\d+)/:userID(\\d+)", artworkController.getArtworkByArtworkId);
+router.get("/artworks/:id(\\d+)/:userID(\\d+)?", artworkController.getArtworkByArtworkId);
 
 
 //Developer: Carol

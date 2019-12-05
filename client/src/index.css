@@ -731,6 +731,7 @@ a.knack-link:active {
 }
 .artworkGallery .card {
   margin-left: 5%;
+  margin-right: 5%;
 }
 .galleryHeader {
   padding-bottom: 1.5rem;
