@@ -14,8 +14,9 @@ app.use(express.urlencoded({ extended: false }));
 const { indexRouter } = require("./routes/index.js");
 app.use("/api", indexRouter);
 
-// Serve static assets if in production
-if (process.env.NODE_ENV === "production") {
+// Serve static assets if in production or Cloud9
+if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "Cloud9") {
+    
   app.use(express.static("client/build"));
 
   app.get("/*", (req, res) => {

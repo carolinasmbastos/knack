@@ -84,7 +84,7 @@ exports.findArtworkByArtistId = artistId => {
 exports.favoriteArtworkToggle = info => {
   let sqlQuery;
   if (info.operation == "insert") {
-    sqlQuery = `INSERT INTO owl_knack.Favorite (
+    sqlQuery = `INSERT INTO Favorite (
       idCustomer,
       idArtwork
   )
@@ -93,7 +93,7 @@ exports.favoriteArtworkToggle = info => {
     ${cp.escape(info.idArtwork)}
     );`;
   } else if (info.operation == "remove") {
-    sqlQuery = `DELETE FROM owl_knack.Favorite 
+    sqlQuery = `DELETE FROM Favorite 
     WHERE idCustomer = ${cp.escape(info.idCustomer)}
     AND idArtwork = ${cp.escape(info.idArtwork)};`;
   }
