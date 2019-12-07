@@ -26,10 +26,10 @@ NOTE: Originally, the server side application code has been written in the root 
 5. Upload the file **owl_knack_dump.sql** to the project root folder in Cloud9 environment.
 6. Run the command **mysql -u root -p knack < owl_knack_dump.sql**
 7. To point the application to this new database, change the variables in .env file to the following:
-**DB_HOST=localhost**
-**DB_USER=root**
-**DB_PASS=**
-**DB_NAME=knack**
+**DB_HOST=localhost**<br/>
+**DB_USER=root**<br/>
+**DB_PASS=**<br/>
+**DB_NAME=knack**<br/>
 
 
 # GitHub repo
