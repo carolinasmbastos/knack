@@ -195,9 +195,7 @@ export default class Artwork extends React.Component {
                         this.state.isFav ? "selected" : ""
                       }`}
                     />
-                    <a href="#" className="knack-link">
-                      FAVORITE
-                    </a>
+                    <a href="#">FAVORITE</a>
                   </div>
                   <div id="viewInSpace" onClick={this.viewInSpace}>
                     <img

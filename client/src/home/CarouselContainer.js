@@ -6,6 +6,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./CarouselContainer.css";
 
 const items = [
@@ -19,13 +20,15 @@ const items = [
     altText: "",
     caption: (
       <React.Fragment>
-        <img
-          src="/img/carousel/icons/DiscoveryIcon.svg"
-          alt=""
-          className="carousel-icons"
-        />
-        <br />
-        Explore public art installations and artworks from local artists
+        <Link to="/explore">
+          <img
+            src="/img/carousel/icons/DiscoveryIcon.svg"
+            alt=""
+            className="carousel-icons"
+          />
+          <br />
+          Explore public art installations and artwork from local artists
+        </Link>
       </React.Fragment>
     )
   },
@@ -34,13 +37,15 @@ const items = [
     altText: "",
     caption: (
       <React.Fragment>
-        <img
-          src="/img/carousel/icons/MonthlyArtIcon.svg"
-          alt=""
-          className="carousel-icons"
-        />
-        <br />
-        Subscribe to Monthly Art and take home a new artwork every month
+        <Link to="/monthlyArt">
+          <img
+            src="/img/carousel/icons/MonthlyArtIcon.svg"
+            alt=""
+            className="carousel-icons"
+          />
+          <br />
+          Subscribe to Monthly Art and take home a new artwork every month
+        </Link>
       </React.Fragment>
     )
   },
@@ -55,7 +60,7 @@ const items = [
           className="carousel-icons"
         />
         <br />
-        Preview artworks and find the right match to your tastes
+        Preview artwork and find the right match to your tastes
       </React.Fragment>
     )
   }

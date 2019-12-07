@@ -1,7 +1,6 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
-  
 }
 /*************** Info Contact *******************************/
 
@@ -9,25 +8,22 @@
   text-align: center;
   border-bottom: 1px solid black;
   padding-bottom: 50px;
-  width: 80%;
-  margin-left: 60px;
-
+  width: 100%;
+  /* margin-left: 60px; */
 }
 .info-contact h1 {
   font-size: 40px;
   font-weight: bold;
   padding-top: 25px;
-
 }
 
 .info-contact h3 {
-  font-size: 25px; 
+  font-size: 25px;
   font-weight: 700;
   padding-top: 20px;
 }
 
-.title-name-form
-{
+.title-name-form {
   font-size: 25px;
   font-weight: 700;
   text-align: center;
@@ -38,22 +34,20 @@
   text-align: center;
 }
 
-.form-position{ 
-
+.form-position {
   height: 50px;
   width: 80%;
- margin-left: 50px;
- 
+  margin-left: 50px;
 }
 
 textarea.message-box {
   height: 150px;
-  width:80%
-}
-.checkbox-form {
   width: 80%;
 }
-.label-name{
+.checkbox-form {
+  /* width: 80%; */
+}
+.label-name {
   text-align: left;
   padding-left: 70px;
 }
@@ -62,34 +56,32 @@ textarea.message-box {
   margin-right: 20px;
   background-color: black;
 }
-.form-check-label{
+.form-check-label {
   padding: 10px;
 }
 
 @media only screen and (min-width: 800px) {
-.contact-page {
-  display: flex;
-}
-.info-contact {
-  width: 40%;
-  border-right: 1px solid black;
-  border-bottom: 0;
-}
-.info-contact1 {
- margin-top: 200px;
-}
-.contact_form{
-  width: 60%;
-}
-.label-name{
-  padding-left: 30px;
-}
-.form-position {
-  margin-right: 200px;
-}
-.title-name-form{
-  margin-left: 120px;
-}
-
-
+  .contact-page {
+    display: flex;
+  }
+  .info-contact {
+    width: 40%;
+    border-right: 1px solid black;
+    border-bottom: 0;
+  }
+  .info-contact1 {
+    margin-top: 200px;
+  }
+  .contact_form {
+    width: 60%;
+  }
+  .label-name {
+    padding-left: 30px;
+  }
+  .form-position {
+    margin-right: 200px;
+  }
+  .title-name-form {
+    margin-left: 120px;
+  }
 }
