@@ -196,6 +196,22 @@ a.knack-link:active {
   nav .searchBoxWrapper {
     display: none;
   }
+
+  div.artworkDetails {
+    margin-top: 3rem !important;
+  }
+
+  .knack-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .knack-btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -257,7 +273,6 @@ a.knack-link:active {
 
 .card-body .cardActions a {
   border-width: 0.05rem;
-  /* .artworksGrid .card-body .cardActions a { */
   padding: 0.5rem;
   text-transform: uppercase;
 }
@@ -299,7 +314,6 @@ a.knack-link:active {
   height: auto;
   max-height: 67.5vh;
   visibility: visible;
-  /* transition: 0.5s ease-out; */
 }
 
 .cost-breakdown {
@@ -381,6 +395,12 @@ a.knack-link:active {
   padding: 0 1rem;
 }
 
+.auxiliaryActions a,
+.auxiliaryActions a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 #viewInSpace,
 #cancelViewInSpace,
 #favoriteArtwork {
@@ -395,7 +415,7 @@ a.knack-link:active {
   box-sizing: border-box;
 }
 
-#favoriteArtwork:hover .favouriteArtworkIcon,
+/* #favoriteArtwork:hover .favouriteArtworkIcon, */
 .favouriteArtworkIcon.selected {
   background: url(./assets/favouriteSelcted.svg) no-repeat;
   height: 16px;
@@ -404,21 +424,25 @@ a.knack-link:active {
   box-sizing: border-box;
 }
 
+#viewInSpace:hover a.knack-link {
+  color: #d9b226 !important;
+}
+
 #favoriteArtwork.selected a {
   color: #d9b226 !important;
 }
 
-#favoriteArtwork.selected:hover a {
+/* #favoriteArtwork.selected:hover a {
   color: black !important;
-}
+} */
 
-#favoriteArtwork.selected:hover .favouriteArtworkIcon {
+/* #favoriteArtwork.selected:hover .favouriteArtworkIcon {
   background: url(./assets/favourite.svg) no-repeat;
   height: 16px;
   width: 18px;
   padding-left: 18px;
   box-sizing: border-box;
-}
+} */
 
 #cancelViewInSpace {
   padding: 1rem;
@@ -668,28 +692,19 @@ a.knack-link:active {
   position: relative;
 }
 
-/* .btn-group .btn.timelineButton.selected::after {
-  content: url(./assets/TimelineSliderArrow.png);
-  position: absolute;
-  margin-top: 20px;
-  margin-left: -20%;
-  transition: 0.5s;
-} */
-
 .timelineSliderArrow {
   height: 15px;
   width: auto;
   position: absolute;
   margin-top: 30px;
   transition: 0.5s;
-  /* margin-left: 11%;  */
-  /* 85, 60, 36, 11 */
   z-index: 1;
 }
 
-.timelineContainer {
+.timelineContainer.container {
   position: relative;
   margin-top: 2rem;
+  padding: 0;
 }
 
 /* Artist */
